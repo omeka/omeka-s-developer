@@ -16,7 +16,13 @@ There are six discrete user roles, each in a large part having greater access th
 There are three ways to run a permission check. 
 
 ### ACL Service
-Where the ACL service is available, there are two methods: `userIsAllowed()` and `isAllowed()`. See [Services and Factories](services_and_factories.md) for more information.
+Where the ACL service is available, there are three methods: `userIsAllowed()`, `isAdmin()`, and `isAllowed()`. See [Services and Factories](services_and_factories.md) for more information.
+
+`userIsAllowed($resource, $privilege)` checks whether the current user has access to a resource and privilege.
+
+`isAllowed($user, $resource, $privilege)` can be used to check the same access for any user.
+
+`isAdminRole($role)` checks whether a user role is among the ones with admin privileges (i.e., `site_admin` or `global_admin`).
 
 ```php
 // Get the ACL service:
@@ -24,9 +30,17 @@ $acl = $this->getServiceLocator()->get('Omeka\Acl');
 if ($acl->userIsAllowed($resource, $privilege)) {
     // current user is allowed
 }
+
 if ($acl->isAllowed($user, $resource, $privilege)) {
     // passed user is allowed
 }
+
+
+$role = $user->getRole();
+if ($acl->isAdminRole($role) {
+    // allow admin access
+}
+
 ```
 
 ### From within a Resource Representation

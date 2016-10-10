@@ -16,6 +16,8 @@ There are six discrete user roles, each in a large part having greater access th
 There are three ways to run a permission check. 
 
 ### ACL Service
+Where the ACL service is available, there are two methods: `userIsAllowed()` and `isAllowed()`. See Services and Factories for more information.
+
 ```php
 // Get the ACL service:
 $acl = $this->getServiceLocator()->get('Omeka\Acl');
@@ -27,7 +29,10 @@ if ($acl->isAllowed($user, $resource, $privilege)) {
 }
 ```
 
-### Resource Representation
+### From within a Resource Representation
+
+When you have a resource representation, use `userIsAllowed()` to check for privileges on it. See Api for information on how and where to obtain a resource representation.
+
 ```php
 // Get a resource representation via the API manager:
 $api = $this->getServiceLocator()->get('Omeka\ApiManager');
@@ -37,7 +42,10 @@ if ($item->userIsAllowed($privilege)) {
 }
 ```
 
-### View Helper
+### From within a View or Controller
+
+From within a view or a controller, the `userIsAllowed()` helper is available:
+
 ```php
 // In a view script:
 if ($this->userIsAllowed($resource, $privilege)) {

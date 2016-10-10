@@ -16,7 +16,7 @@ There are six discrete user roles, each in a large part having greater access th
 There are three ways to run a permission check. 
 
 ### ACL Service
-Where the ACL service is available, there are two methods: `userIsAllowed()` and `isAllowed()`. See Services and Factories for more information.
+Where the ACL service is available, there are two methods: `userIsAllowed()` and `isAllowed()`. See [Services and Factories](services_and_factories.md) for more information.
 
 ```php
 // Get the ACL service:
@@ -31,7 +31,7 @@ if ($acl->isAllowed($user, $resource, $privilege)) {
 
 ### From within a Resource Representation
 
-When you have a resource representation, use `userIsAllowed()` to check for privileges on it. See Api for information on how and where to obtain a resource representation.
+When you have a resource representation, use `userIsAllowed()` to check for privileges on it. See [Internal Api](internal_api.md) for information on how and where to obtain a resource representation.
 
 ```php
 // Get a resource representation via the API manager:

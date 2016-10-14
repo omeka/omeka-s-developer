@@ -12,7 +12,7 @@ This applies to these forms
 
 Use the `Event::ADD_ELEMENTS` and `Event::ADD_INPUT_FILTERS` events, respectively.
 
-See [Modules]('modules.md') for the broader structure of modules.
+See [Modules](modules.md) for the broader structure of modules.
 
 ```php
 

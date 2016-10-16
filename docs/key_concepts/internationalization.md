@@ -66,6 +66,6 @@ return [
 
 ## See also
 
-[Config File](config.md)
-[Forms](forms.md)
-[Translate Helper]()
+* [Config File](config.md)
+* [Forms](forms.md)
+* [Translate Helper]()

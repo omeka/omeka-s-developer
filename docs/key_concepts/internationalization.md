@@ -44,7 +44,6 @@ return [
         ];
 ```
 
-
 #### From a Form that extends `Zend\Form\Form`
 
 ```php
@@ -63,3 +62,10 @@ return [
         ]);
     };
 ```
+
+
+## See also
+
+[Config File](config.md)
+[Forms](forms.md)
+[Translate Helper]()

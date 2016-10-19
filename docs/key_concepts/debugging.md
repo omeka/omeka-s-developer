@@ -45,7 +45,7 @@ The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\Logg
 If you need to do some debugging work elsewhere, such as within an Entity, you need to inject the Logger via a factory for the object. See [Services and Factories](services_and_factories.md) for details.
 
 
-Within the of your factory, add
+Within the `__invoke()` method of your factory, add
 
 ```php
 $logger = $serviceLocator->get('Omeka\Logger');

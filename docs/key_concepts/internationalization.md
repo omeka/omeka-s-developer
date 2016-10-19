@@ -68,4 +68,5 @@ return [
 
 * [Config File](config.md)
 * [Forms](forms.md)
+* [Routes and Navigation](routes_and_navigation.md)
 * [Translate Helper]()

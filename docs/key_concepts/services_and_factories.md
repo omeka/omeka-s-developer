@@ -28,12 +28,27 @@ class IndexControllerFactory implements FactoryInterface
     }
 }
 ```
+The constructor for `Omeka2Importer\Controller\IndexController\IndexController` then assigns the client to its corresponding property, and uses it as needed.
+
 
 ### Factory Configuration
 
 See config file. // to write
 
+In `module.config.php`, you will need to assert that the class in question is produced by a factory:
 
+```php
+    'controllers' => array(
+        'factories' => array(
+            'Omeka2Importer\Controller\Index' =>                'Omeka2Importer\Service\Controller\IndexControllerFactory',
+        ),
+    ),
+
+```
+
+## See also
+
+Configuration // to write
 
 
 

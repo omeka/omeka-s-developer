@@ -21,11 +21,11 @@ In `config/local.config.php`, add
         'log' => true,
     ],
 ```
-Log messages are written to `data/logs/application.log`
+Log messages are written to `logs/application.log`
 
-## Logging within Controllers
+## Logging within Controllers and Jobs
 
-Omeka S provides a `logger()` plugin for Controllers. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`
+Omeka S provides a `logger()` plugin. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`
 
 The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\LoggerInterface`, which makes it easy to give messages at different log levels:
 
@@ -38,4 +38,18 @@ The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\Logg
 * info()
 * debug()
 
+## Logging within Views
+
+## Logging elsewhere
+
+If you need to do some debugging work elsewhere, such as within an Entity, you need to inject the Logger via a factory for the object. See [Services and Factories](services_and_factories.md) for details.
+
+
+Within the of your factory, add
+
+```php
+$logger = $serviceLocator->get('Omeka\Logger');
+```
+
+and add it as a property for your class.
 

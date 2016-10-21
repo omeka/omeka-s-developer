@@ -18,7 +18,7 @@ We use Zend Framework's EventManager component, so many questions can be answere
 
 ## API Adapter Events
 
-All classes that extend `Omeka\Api\Adapter\AbstractAdapter` trigger these events. Use the event's `getTarget()` to get the adapter object.
+All classes that extend `Omeka\Api\Adapter\AbstractAdapter` trigger these events. Use the event's `getTarget()` method to get the adapter object, and the `getParam()` method to get the values of parameteres, if there are any.
 
 ### api.execute.pre
 

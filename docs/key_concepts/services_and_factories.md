@@ -4,6 +4,24 @@ See config file. // to write
 
 ## Services
 
+Following Zend Framework 3, services, taken together, comprise most the the core functionality of Omeka S. For example, to execute a database query, you need first to get the `Omeka\Connection` service:
+
+```php
+$connection = $serviceLocator->get('Omeka\Connection');
+
+$sql = ''; // whatever SQL you need to execute
+$connection->exec($sql);
+```
+
+For many common tasks, Omeka S provides helpers for obtaining the necessary service. Thus, when you need to use the `Omeka\Logger` service, you need not get it via the `$serviceLocator` (indeed, often you cannot -- more on that below). Instead, within a controller you can simply do:
+
+```php
+$this->logger()->warn('Something bad is happening.');
+```
+
+
+
+
 ## Factories
 
 Among other things, factories are used to instantiate a class and inject other related data and classes into it. In Omeka S, this commonly means making a service available to address a special condition in which the service serves a special need.

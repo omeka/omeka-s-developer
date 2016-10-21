@@ -192,6 +192,22 @@ Triggered when creating the section navigation for edit pages. To add a section 
 
 Triggered after advanced search form markup, within the advanced search partial script.
 
+### view.manage-sites.before
+
+Triggered before the list of sites on the admin dashboard.
+
+### view.manage-sites.after
+
+Triggered before the list of sites on the admin dashboard.
+
+### view.manage-resources.before
+
+Triggered before the list of resources on the admin dashboard.
+
+### view.manage-resources.after
+
+Triggered before the list of resources on the admin dashboard.
+
 ## Miscellaneous Events
 
 ### js.translate_strings

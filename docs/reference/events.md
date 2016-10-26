@@ -253,6 +253,20 @@ Triggered in the invocation of the jsTranslate view helper.
 
 Triggered in the site admin settings action. Use the event's `getTarget()` to get the controller object.
 
+### form.add_elements
+
+Triggered within Form objects (usually in forms that produce tabs). Used to directly add form elements to the form.
+
+The target is the Form itself.
+
+### form.add_input_filters
+
+* **inputFilters** The input filter object for the form.
+
+Triggered with Form objects, after elements have been added, including from the `form.add_elements` event. Used to adjust filters, especially the `required` setting.
+
+The target is the form itself.
+
 ### service.registered_names
 
 * **registered_names**: An array of registered names.

@@ -143,9 +143,18 @@ The `trigger` view helper triggers these events at strategic locations within vi
 
 Triggered within a view layout.
 
+
+### view.show.before
+
+Triggered before show page markup.
+
 ### view.show.after
 
 Triggered after show page markup.
+
+### view.browse.before
+
+Triggered before browse page markup.
 
 ### view.browse.after
 
@@ -159,11 +168,27 @@ Triggered after add page markup.
 
 Triggered after edit page markup.
 
+### view.add.form.before
+
+* **form**: The form being created.
+
+Triggered before add page form markup, within the form.
+
 ### view.add.form.after
+
+* **form**: The form being created.
 
 Triggered after add page form markup, within the form.
 
+### view.edit.form.before
+
+* **form**: The form being created.
+
+Triggered before edit page form markup, within the form.
+
 ### view.edit.form.after
+
+* **form**: The form being created.
 
 Triggered after edit page form markup, within the form.
 
@@ -207,6 +232,12 @@ Triggered before the list of resources on the admin dashboard.
 ### view.manage-resources.after
 
 Triggered before the list of resources on the admin dashboard.
+
+### view.details
+
+* **entity** The entity whose details are being displayed
+
+Triggered inside the details display on the admin side.
 
 ## Miscellaneous Events
 

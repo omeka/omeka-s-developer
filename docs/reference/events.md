@@ -141,7 +141,7 @@ The `trigger` view helper triggers these events at strategic locations within vi
 
 ### view.layout
 
-Triggered within a view layout.
+Triggered within a view layout. Use this event to add to the HTML head on every page in installation.
 
 
 ### view.show.before

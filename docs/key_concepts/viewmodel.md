@@ -21,7 +21,9 @@ class IndexController extends AbstractActionController
 }
 ```
 
-## Adding <head> content to a View
+## From an Event
+
+### Adding <head> content to a View
 
 Views are made available via a number of `Event`s. This allows adding to the <head> element of a page in many ways.
 
@@ -52,6 +54,11 @@ Javascript files are added similarly, using
 ```php
     $view->headScript()->appendFile($view->assetUrl('js/mymodule.js', 'MyModule'));
 ```
+
+## From a Module::getConfigForm() function
+
+All of the above applies to working with a module's `getConfigForm` function, but the object passed in is a `Zend\View\Renderer\PhpRenderer` object. The same methods can be used.
+
 
 ## See Also
 

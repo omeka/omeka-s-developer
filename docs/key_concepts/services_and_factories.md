@@ -1,7 +1,5 @@
 # Services and Factories
 
-See config file. // to write
-
 ## Services
 
 Following Zend Framework 3, services, taken together, comprise most the the core functionality of Omeka S. For example, to execute a database query, you need first to get the `Omeka\Connection` service:
@@ -18,8 +16,6 @@ For many common tasks, Omeka S provides helpers for obtaining the necessary serv
 ```php
 $this->logger()->warn('Something bad is happening.');
 ```
-
-
 
 
 ## Factories
@@ -96,8 +92,6 @@ Those services will now be available within the form.
 
 ### Factory Configuration
 
-See config file. // to write
-
 In `module.config.php`, you will need to assert that the class in question is produced by a factory:
 
 ```php
@@ -111,7 +105,7 @@ In `module.config.php`, you will need to assert that the class in question is pr
 
 ## See also
 
-Configuration // to write
+[Configuration files](config.md)
 
 
 

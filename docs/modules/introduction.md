@@ -40,13 +40,13 @@ Every module must have an INI file, a file containing basic information about th
 * configurable (optional): Whether the module is configurable, true or false
 * description (optional): A description of the module
 * module_link (optional): An absolute URL to a page about the module
-* author_link (module): An absolute URL to a page about the author
+* author_link (optional): An absolute URL to a page about the author
 
 ```ini
 name         = "My Module"
 version      = "1.0"
 author       = "My Organization"
-configurable = true
+configurable = true ## whether there is a configuration for the module
 description  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 module_link  = "http://my-organization.com/my-module"
 author_link  = "http://my-organization.com"
@@ -114,8 +114,8 @@ class Module extends AbstractModule
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)
     {
         $sharedEventManager->attach(
-            'Omeka\Controller\Admin\Item', // identifier(s) for event emitting component(s)
-            'view.show.after', // event name(s)
+            'Omeka\Controller\Admin\Item', // identifier for event emitting component
+            'view.show.after', // event name
             function (Event $event) { // any callback
                 // do something during the `view.show.after` event for a `Omeka\Controller\Admin\Item`
             }

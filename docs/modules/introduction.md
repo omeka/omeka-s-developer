@@ -123,3 +123,20 @@ class Module extends AbstractModule
     }
 }
 ```
+### Packaging a Module
+
+* All of the above MUST be included in a module package
+* It SHOULD be made available as a .zip file
+
+#### Adding to omeka.org
+
+TBD
+
+
+
+
+
+
+
+
+

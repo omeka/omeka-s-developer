@@ -40,7 +40,7 @@ Every module must have an INI file, a file containing basic information about th
 * configurable (optional): Whether the module is configurable, true or false
 * description (optional): A description of the module
 * module_link (optional): An absolute URL to a page about the module
-* author_link (module): An absolute URL to a page about the author
+* author_link (optional): An absolute URL to a page about the author
 
 ```ini
 name         = "My Module"
@@ -143,7 +143,7 @@ Now stage and commit the resulting changes.
 
 ### Attaching to Omeka Events
 
-Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. A list of events and where they're fired is found in the `Omeka\Event\Event.php` class. Use the `attachListeners` method in your module class, like below:
+Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. Use the `attachListeners` method in your module class, like below:
 
 ```php
 use Omeka\Module\AbstractModule;
@@ -162,8 +162,8 @@ class Module extends AbstractModule
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)
     {
         $sharedEventManager->attach(
-            'Omeka\Controller\Admin\Item', // identifier(s) for event emitting component(s)
-            'view.show.after', // event name(s)
+            'Omeka\Controller\Admin\Item', // identifier for event emitting component
+            'view.show.after', // event name
             function (Event $event) { // any callback
                 // do something during the `view.show.after` event for a `Omeka\Controller\Admin\Item`
             }
@@ -171,3 +171,7 @@ class Module extends AbstractModule
     }
 }
 ```
+
+## See Also
+
+[Events](events.md)

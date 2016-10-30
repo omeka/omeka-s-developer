@@ -1,3 +1,5 @@
+# Introduction
+
 Omeka S uses an access control list for privilege management.
 
 ## User Roles

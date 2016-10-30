@@ -23,6 +23,16 @@ In `config/local.config.php`, add
 ```
 Log messages are written to `logs/application.log`
 
+To use internal assests, such as a local copy of jQuery, add this to `local.config.php`
+
+```php
+    'assets' => [
+        'use_externals' => false,
+    ],
+```
+
+
+
 ## Logging within Controllers and Jobs
 
 Omeka S provides a `logger()` plugin. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`

@@ -1,14 +1,26 @@
 # Javascript Events
 
+In the admin interface, the following events use jQuery's trigger function.
+
 ## o:sidebar-content-loaded
+
+Triggered in global.js when sidebar content is loaded
 
 ## o:resource-selected
 
+Triggered in resource-select.js when a resource is selected from the sidebar.
+
 ## o:block-added
+
+Triggered in site-page-edit.js when a block is added to the page.
 
 ## o:form-loaded
 
+Triggered in global.js when a form is loaded.
+
 ## o:before-form-unload
+
+Triggered in global.js when a form is about to be unloaded, i.e. when moving away from a page.
 
 ## o:expanded
 

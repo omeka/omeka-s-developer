@@ -52,6 +52,31 @@ module_link  = "http://my-organization.com/my-module"
 author_link  = "http://my-organization.com"
 ```
 
+## config/module.config.php
+
+This file is automatically added to Omeka S's configuration. This is where you take care of many required tasks, such as registering controllers, entities, routes, and navigation. It is a keyed array that should be returned. Here is an excerpt from the MetadataBrowse module as an example:
+
+```php
+
+return [
+    'view_manager' => [
+        'template_path_stack' => [
+            OMEKA_PATH.'/modules/MetadataBrowse/view',
+        ],
+    ],
+    'controllers' => [
+        'invokables' => [
+            'MetadataBrowse\Controller\Admin\Index' => 'MetadataBrowse\Controller\Admin\IndexController',
+        ],
+    ],
+    'form_elements' => [
+        'factories' => [
+            'MetadataBrowse\Form\ConfigForm' => 'MetadataBrowse\Service\Form\ConfigFormFactory',
+        ],
+    ],
+];
+```
+
 ## Module.php
 
 The Module.php file is required. It provides the methods needed to integrate your custom functionality with Omeka S.
@@ -171,6 +196,8 @@ class Module extends AbstractModule
     }
 }
 ```
+
+
 
 ## See Also
 

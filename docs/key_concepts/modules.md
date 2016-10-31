@@ -174,4 +174,4 @@ class Module extends AbstractModule
 
 ## See Also
 
-[Events](events.md)
+[Omeka Events](omeka_events.md)

@@ -47,7 +47,7 @@ if ($acl->isAdminRole($role) {
 
 ### From within a Resource Representation
 
-When you have a resource representation, use `userIsAllowed()` to check for privileges on it. See [Internal Api](internal_api.md) for information on how and where to obtain a resource representation.
+When you have a resource representation, use `userIsAllowed()` to check for privileges on it.
 
 ```php
 // Get a resource representation via the API manager:

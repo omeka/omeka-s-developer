@@ -1,4 +1,4 @@
-# Introduction
+# Modules
 
 You can extend the functionality of Omeka S by writing an add-on component called a *module.* Zend Framework 2 provides a substantial [framework for writing modules](http://framework.zend.com/manual/2.3/en/modules/zend.module-manager.intro.html), but Omeka S provides extra structure that makes the modules installable, upgradeable, and integratable.
 

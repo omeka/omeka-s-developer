@@ -1,4 +1,4 @@
-# Introduction
+# Themes
 
 ## Working with SASS and CSS
 

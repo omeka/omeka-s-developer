@@ -1,4 +1,4 @@
-# Introduction
+# API
 
 Omeka S executes most operations through API calls. Let's say you want to get item \#100 from the database:
 

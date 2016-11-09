@@ -41,7 +41,7 @@ Every module must have an INI file, a file containing basic information about th
 * description (optional): A description of the module
 * module_link (optional): An absolute URL to a page about the module
 * author_link (optional): An absolute URL to a page about the author
-* omeka_version_constraint (optional): A Composer version constraint for what versions of the Omeka S core this module works with
+* omeka_version_constraint (optional): A [Composer version constraint](https://getcomposer.org/doc/articles/versions.md) for what versions of the Omeka S core this module works with
 
 ```ini
 name         = "My Module"

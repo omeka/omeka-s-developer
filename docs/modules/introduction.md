@@ -41,6 +41,7 @@ Every module must have an INI file, a file containing basic information about th
 * description (optional): A description of the module
 * module_link (optional): An absolute URL to a page about the module
 * author_link (optional): An absolute URL to a page about the author
+* omeka_version_constraint (optional): A Composer version constraint for what versions of the Omeka S core this module works with
 
 ```ini
 name         = "My Module"
@@ -50,6 +51,7 @@ configurable = true ## whether there is a configuration for the module
 description  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 module_link  = "http://my-organization.com/my-module"
 author_link  = "http://my-organization.com"
+omeka_version_constraint = "^1.0.0"
 ```
 
 ## Module.php

@@ -12,7 +12,7 @@ We aim to adhere to the Zend Framework Coding Standards, but do not always meet 
 
 Please resist the (understandable) urge to commit style changes within the same commits that change features or functionality. That will help us differentiate the functionality changes in your submissions from the stylistic changes, and make it more likely that your pull requests will be quickly evaluated and accepted.
 
-We use the `php-cs-fixer` library in our testing suite. After including functional changes, we recommend running that test with `ant test-cs` and applying the suggested changes in a distinct commit for the pull request.
+We use the `php-cs-fixer` library in our testing suite. After including functional changes, we recommend running that test with `gulp test` (or `gulp test:cs` to just run the code style tests) and applying the suggested changes in a distinct commit for the pull request.
 
 ## Helping with documentation
 

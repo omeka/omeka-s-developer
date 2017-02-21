@@ -151,13 +151,13 @@ First you need to get the SQL necessary to update an existing, installed databas
 
 Copy the resulting statements. Then you need to make a migration for the changes:
 
-    $ ant create-migration
+    $ gulp db:create-migration
 
 This will prompt you to name the migration. Do so and press enter. Once the task is finished, open the newly created migration file in data/migration/ (it's now prefixed with a datestamp) and use the provided connection object to make whatever changes need to be made, using the SQL you copied previously.
 
 Then you need to update the static database-related files:
 
-    $ ant update-db-data
+    $ gulp db
 
 This will overwrite the existing installation schema with the most updated version of the data model, and re-generate Doctrine's proxy classes.
 

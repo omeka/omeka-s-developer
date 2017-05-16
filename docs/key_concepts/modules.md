@@ -124,9 +124,9 @@ If your module needs to create database tables for Entities, follow this process
 
 Run
 
-    $ vendor/bin/doctrine orm:schema-tool:update --dump-sql
+    $ php application/data/scripts/update-db-data-module.php <ModuleName>
 
-and copy the relevant statements. In your `Module.php` file's `install` function, copy it into the `$sql` variable with this pattern:
+and copy the statements it outputs. In your `Module.php` file's `install` function, copy it into the `$sql` variable with this pattern:
 
 ```php
     public function install(ServiceLocatorInterface $serviceLocator)
@@ -140,31 +140,54 @@ and copy the relevant statements. In your `Module.php` file's `install` function
 
 ```
 
+This command will also create Doctrine "proxy" class files for your entities and place them in your module at "data/doctrine-proxies."
+
 
 ### Updating the Data Model
 
-In the course of developing Omeka you'll probably find reason to modify the data model. Whether you add or remove an entity, or add, remove, or modify a column, you'll need to reflect these changes in the database.
+When you've made a change in the data model for a module, you need to follow mostly the same process as
+getting the initial installation SQL from the previous section. As above, run the `update-db-data-module`
+script to get the SQL statements, and update the module's `install` method to use the updated statements.
 
-First you need to get the SQL necessary to update an existing, installed database:
+In addition, you'll need to handle updating the database for users who've already installed the old version
+of your module (otherwise they'd be forced to uninstall and reinstall it, losing their data in the process).
+The first step is to increase the version number of the module in its `config/module.ini` file. Omeka S can
+only detect that an upgrade is necessary for a module if the version number increases. Version numbers should
+follow [Semantic Versioning](http://semver.org/).
 
-    $ vendor/bin/doctrine orm:schema-tool:update --dump-sql
+Exactly what needs to be done for an upgrade can vary based on the kinds of changes you've made, but usually
+it's sufficient to just compare the previous installation SQL statements to the new ones, and create ALTER
+statements as appropriate to add, remove, or change the necessary tables, columns, and indexes. More involved
+changes may require you to also UPDATE or INSERT actual rows as well.
 
-Copy the resulting statements. Then you need to make a migration for the changes:
+Just as the initial SQL goes in the Module class `install` method, upgrade SQL goes in the `upgrade` method.
+Unlike, `install`, `upgrade` has some additional important arguments: `$oldVersion` and `$newVersion`,
+representing the version of the plugin the user is upgrading from and the version they're upgrading to,
+respectively. For most cases, `$oldVersion` is what's important here: you want to check if the previous version
+is lower than the new version you just incremented to. If so, you need to run the update SQL.
 
-    $ gulp db:create-migration
+Since the versions for modules follow Semantic Versioning, you should use the
+[Comparator](https://github.com/composer/semver#comparator) class from Composer's "Semver" package
+to compare version numbers. Omeka S already includes this as a dependency, so you simply need to `use`
+it.
 
-This will prompt you to name the migration. Do so and press enter. Once the task is finished, open the newly created migration file in data/migration/ (it's now prefixed with a datestamp) and use the provided connection object to make whatever changes need to be made, using the SQL you copied previously.
+```php
+use Composer\Semver\Comparator;
 
-Then you need to update the static database-related files:
+// ...
 
-    $ gulp db
+public function upgrade($oldVersion, $newVersion, ServiceLocatorInterface $serviceLocator)
+{
+    $connection = $serviceLocator->get('Omeka\Connection');
+    
+    if (Comparator::lessThan($oldVersion, '1.1.0')) { 
+        $sql = $sqlDump; // your upgrade SQL statements 
+        $connection->exec($sql);
+    }
+}
+```
 
-This will overwrite the existing installation schema with the most updated version of the data model, and re-generate Doctrine's proxy classes.
-
-In order for Omeka to detect a new migration, you'll need to update the Omeka version number. Open `application/Module.php` and increment the `VERSION` constant.
-
-Now stage and commit the resulting changes.
-
+As you continue to make updates and add to the `upgrade` method, users will be able to upgrade many versions at once.
 
 ### Attaching to Omeka Events
 

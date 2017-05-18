@@ -32,7 +32,7 @@ When using a shared directory in the `view` directory (such as `common` above) b
 
 ## config/module.ini
 
-Every module must have an INI file, a file containing basic information about the module. The file must be named `module.ini` and be saved in your module's `config/` directory.
+Every module must have an INI file, a file containing basic information about the module. The file must be named `module.ini`, be saved in your module's `config/` directory and start with `[info]` on first line.
 
 * name (required): The human-readable name of the module
 * version (required): The version of the current code state
@@ -43,6 +43,7 @@ Every module must have an INI file, a file containing basic information about th
 * author_link (optional): An absolute URL to a page about the author
 
 ```ini
+[info]
 name         = "My Module"
 version      = "1.0"
 author       = "My Organization"

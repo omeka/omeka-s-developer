@@ -4,7 +4,7 @@ Omeka S executes most operations through API calls. Let's say you want to get it
 
 ```php
 // Compose the request object
-$request = new Request(Request::READ, 'item');
+$request = new Request(Request::READ, 'items');
 $request->setId(100);
 // Execute the request
 $response = $apiManager->execute($request);
@@ -12,10 +12,10 @@ $response = $apiManager->execute($request);
 $item = $response->getContent();
 
 // The above could be written more concisely (recommended usage)
-$item = $apiManager->read('item', 100)->getContent();
+$item = $apiManager->read('items', 100)->getContent();
 
 // Do something with the representation.
-echo $item->jsonSerialize();
+echo json_encode($item);
 ```
 
 For HTTP clients we provide a RESTful interface on top of the API. An HTTP request for the above example looks something like this:

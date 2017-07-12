@@ -4,7 +4,7 @@ View helpers are used to consolidate code for creating or modifying HTML, simpli
 
 ## Using A View Helper
 
-Helpers are typically called from view scripts. An common example using one of Zend Framework's view helpers is the `Url`, helper, which generates a URL for a route and action:
+Helpers are typically called from view scripts. A common example using one of Zend Framework's view helpers is the `Url`, helper, which generates a URL for a route and action:
 
 ```php
 $this->url(null, ['action' => 'log'], true);
@@ -54,13 +54,13 @@ For Omeka S to be aware of your View Helper, you must add it to your module's `c
 return [
     'view_helpers' => [
         'invokables' => [
-            'myModule' => 'MyModule\View\Helper\ViewHelper',
+            'myModule' => 'MyModule\View\Helper\MyModuleViewHelper',
         ],
     ],
 ]
 ```
 
-The `invokables` key signals that the View Helper class can be directly instantiated. Each value in the subsequent array refers to the domain-specific class to refer to.
+The `invokables` key signals that the View Helper class can be directly instantiated (see below on invokables vs factories). Each value in the subsequent array refers to the domain-specific class to refer to.
 
 invokable vs factory
 
@@ -74,7 +74,18 @@ MyModule/
     Service/
       ViewHelper/
         MyModuleViewHelperFactory.php
+```
 
+Instead of declaring an `invokable` in `module.config.php`'s array, declare a factory:
+
+```php
+return [
+    'view_helpers' => [
+        'factories'  => [
+            'myModule' => 'MyModule\Service\ViewHelper\MyModuleViewHelperFactory',
+        ],
+    ],
+];
 ```
 
 The file structure for the factory will be akin to:
@@ -97,10 +108,9 @@ class MyModuleViewHelperFactory implements FactoryInterface
 }
 
 ```
-
 In this example, the View Helper needs information about the currently logged in user, so it passes along that data to the View Helper.
 
-As such, the View Helper's construct method must deal with it:
+As such, the View Helper's `__construct` method must deal with it:
 
 ```php
 
@@ -120,9 +130,6 @@ class ViewHelper extends AbstractHelper
     }
 }
 ```
-
-
-
 
 [using partials with helpers]
 

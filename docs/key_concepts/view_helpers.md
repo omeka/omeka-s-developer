@@ -46,8 +46,21 @@ class MyModuleViewHelper extends AbstractHelper
 
 ```
 
-config.ini
+### Config file
 
+For Omeka S to be aware of your View Helper, you must add it to your module's `config/module.config.php` array. That file will contain a great deal more than this information, but this is what will be relevant to the helper:
+
+```php
+return [
+    'view_helpers' => [
+        'invokables' => [
+            'myModule' => 'MyModule\View\Helper\ViewHelper',
+        ],
+    ],
+]
+```
+
+The `invokables` key signals that the View Helper class can be directly instantiated. Each value in the subsequent array refers to the domain-specific class to refer to.
 
 invokable vs factory
 

@@ -15,6 +15,7 @@ Note that while view helper names begin with an uppercase letter, the method inv
 ### From outside a view
 
 
+
 ## Creating A View Helper In A Module
 
 View Helpers should be placed here in the module's directory structure:
@@ -112,6 +113,9 @@ In this example, the View Helper needs information about the currently logged in
 As such, the View Helper's `__construct` method must deal with it:
 
 ```php
+namespace MyModule\View\Helper;
+
+use Zend\View\Helper\AbstractHelper;
 
 class ViewHelper extends AbstractHelper
 {

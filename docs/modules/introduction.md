@@ -95,6 +95,30 @@ class Module extends AbstractModule
 }
 ```
 
+### Module Installation
+
+Omeka allows modules to execute code whenever a module is installed or uninstalled.  This allows modules to do some setup tasks, like creating new schemas or seeding the database
+with data.  To enable this, override the `install()` and `uninstall()` methods defined in `AbstractModule`.
+
+```php
+use Omeka\Module\AbstractModule;
+use Zend\ServiceManager\ServiceLocatorInterface;
+
+class Module extends AbstractModule
+{
+
+    public function install(ServiceLocatorInterface $serviceLocator)
+    {
+        // create database schema
+    }
+
+    public function uninstall(ServiceLocatorInterface $serviceLocator)
+    {
+        // drop database schema
+    }
+}
+```
+
 ### Attaching to Omeka Events
 
 Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. A list of events and where they're fired is found [here](Events (Server)). Use the `attachListeners` method in your module class, like below:

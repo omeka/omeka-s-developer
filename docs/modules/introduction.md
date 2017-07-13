@@ -119,6 +119,26 @@ class Module extends AbstractModule
 }
 ```
 
+#### Module Upgrades
+
+As well as having hooks for `install` and `uninstall` events, a module can also choose to implement upgrade functionality.  This is especially useful if a module creates schema
+on installation that has changed in a later version.  The option to upgrade a module will become available when the version in 'module.ini' is greater than the version stored in
+the database.  Override the `upgrade()` method in your module class to execute code when a user chooses to upgrade a module, like below:
+
+```php
+use Omeka\Module\AbstractModule;
+use Zend\ServiceManager\ServiceLocatorInterface;
+
+class Module extends AbstractModule
+{
+    public function upgrade($oldVersion, $newVersion, ServiceLocatorInterface $serviceLocator)
+    {
+        // run database schema migrations
+    }
+}
+```
+
+
 ### Attaching to Omeka Events
 
 Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. A list of events and where they're fired is found [here](Events (Server)). Use the `attachListeners` method in your module class, like below:

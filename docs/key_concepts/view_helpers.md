@@ -134,7 +134,65 @@ class ViewHelper extends AbstractHelper
 }
 ```
 
-[using partials with helpers]
+### Using Partials Within View Helpers
+
+A common tactic in Omeka S is to invoke a View Helper to create HTML content, but also for that helper itself to use a view page. That is achieved by using a partial within the helper.
+
+These usualy appear in a `common` directory within the plugin:
+
+```
+MyModule/
+  views/
+    common/
+      my-module-view-helper-partial.phtml
+```
+
+A shorter, more readable name is in order for the readability of a real module.
+
+A View Helper might then create its HTML like so:
+
+```php
+
+<?php
+namespace MyModule\View\Helper;
+
+use Zend\View\Helper\AbstractHelper;
+
+class MyModuleViewHelper extends AbstractHelper
+{
+    protected $user;
+
+    public function __construct($user)
+    {
+        $this->user = $user;
+    }
+
+    public function __invoke()
+    {
+        $userRole = $this->user->getRole();
+        return $this->getView()->partial(
+            'my-module-view-helper-partial',
+            [
+                'userRole' => $userRole,
+            ]
+        );
+    }
+}
+```
+
+The `__invoke` method then depends upon the partial in `common` to produce the HTML. The second parameter also passes along a `$userRole` variable to the partial for it to use. Depending on the needs of the module, that might or might not be needed.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Omeka S View Helpers
 

@@ -62,7 +62,7 @@ return [
 
 The `invokables` key signals that the View Helper class can be directly instantiated (see below on invokables vs factories). Each value in the subsequent array refers to the domain-specific class to refer to.
 
-invokable vs factory
+### Invokables vs Factories
 
 Sometimes, additional data beyond the View object must be passed to the helper. In this case, the View Helper must be created via a factory, rather than an invokable, as defined in the `config.php` file.
 
@@ -106,7 +106,6 @@ class MyModuleViewHelperFactory implements FactoryInterface
         return new ViewHelper($user);
     }
 }
-
 ```
 In this example, the View Helper needs information about the currently logged in user, so it passes along that data to the View Helper.
 
@@ -132,8 +131,6 @@ class ViewHelper extends AbstractHelper
 ```
 
 [using partials with helpers]
-
-
 
 ## Omeka S View Helpers
 

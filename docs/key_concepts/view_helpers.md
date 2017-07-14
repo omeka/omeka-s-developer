@@ -196,36 +196,36 @@ Helper for direct access to API read and search operations.
 * [AssetUrl](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/AssetUrl.php)
 * [BlockAttachmentsForm](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockAttachmentsForm.php)
 * [BlockLayout](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockLayout.php)
-* [BlockShowTitleSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockShowTitleSelect.php)
+* [BlockShowTitleSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockShowTitleSelect.php) Render an attachment title display select element.
 * [BlockThumbnailTypeSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockThumbnailTypeSelect.php)
 * [CkEditor](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/CkEditor.php)
 * [DataType](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/DataType.php)
 * [DeleteConfirm](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/DeleteConfirm.php)
 * [HtmlElement](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/HtmlElement.php)
-* [Hyperlink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Hyperlink.php)
+* [Hyperlink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Hyperlink.php) Render an HTML hyperlink.
 * [I18n](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/I18n.php)
-* [ItemSetSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelect.php)
-* [ItemSetSelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelector.php)
-* [JsTranslate](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/JsTranslate.php)
+* [ItemSetSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelect.php) A select menu containing all item sets.
+* [ItemSetSelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelector.php) Return the item set selector form control.
+* [JsTranslate](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/JsTranslate.php) Provide translations for JavaScript strings.
 * [Media](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Media.php)
-* [Messages](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Messages.php)
+* [Messages](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Messages.php) Helper to proxy the messenger controller plugin.
 * [NavigationLink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/NavigationLink.php)
-* [PageTitle](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PageTitle.php)
+* [PageTitle](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PageTitle.php) Render a title heading for a page.
 * [Pagination](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Pagination.php)
-* [Params](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Params.php)
-* [PropertySelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelector.php)
-* [PropertySelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelect.php)
-* [QueryToHiddenInputs](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/QueryToHiddenInputs.php)
-* [ResourceClassSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceClassSelect.php)
-* [ResourceSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceSelect.php)
+* [Params](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Params.php) Helper to get params from the request.
+* [PropertySelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelector.php) 
+* [PropertySelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelect.php) A select menu containing all properties.
+* [QueryToHiddenInputs](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/QueryToHiddenInputs.php) Build a hidden form input for every query in the URL query string.
+* [ResourceClassSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceClassSelect.php) A select menu containing all resource classes.
+* [ResourceSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceSelect.php) A select menu containing all of some resource.
 * [SearchFilters](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SearchFilters.php)
-* [SectionNav](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SectionNav.php)
-* [Setting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Setting.php)
+* [SectionNav](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SectionNav.php) Helper that renders section navigation.
+* [Setting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Setting.php) Helper to get settings from the settings service.
 * [SitePagePagination](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SitePagePagination.php)
 * [SortLink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SortLink.php)
 * [SortSelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SortSelector.php)
-* [ThemeSettingAssetUrl](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSettingAssetUrl.php)
-* [ThemeSetting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSetting.php)
+* [ThemeSettingAssetUrl](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSettingAssetUrl.php) Return a path to a theme setting asset.
+* [ThemeSetting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSetting.php) Helper to get theme settings.
 * [Trigger](https://github.com/omeka/omeka-s/blob/develop/application/src/View/HeUlper/Trigger.php)
 * [UploadLimit](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/UploadLimit.php)
-* [UserIsAllowed](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/UserIsAllowed.php)
+* [UserIsAllowed](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/UserIsAllowed.php) Authorize the current user.

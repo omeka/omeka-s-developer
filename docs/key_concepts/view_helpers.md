@@ -14,7 +14,13 @@ Note that while view helper names begin with an uppercase letter, the method inv
 
 ### From outside a view
 
+Use the `getView()` method to find the view object,
 
+```php
+$view = $this->getView();
+```
+
+then proceed in the same way. Note that, depending on the class, the `getView` method might or might not be available.
 
 ## Creating A View Helper In A Module
 
@@ -69,7 +75,7 @@ Sometimes, additional data beyond the View object must be passed to the helper. 
 
 To create a factory for your View Helper, put the factory in the following directory:
 
-```
+```php
 MyModule/
   src/
     Service/
@@ -183,20 +189,10 @@ class MyModuleViewHelper extends AbstractHelper
 The `__invoke` method then depends upon the partial in `common` to produce the HTML. The second parameter also passes along a `$userRole` variable to the partial for it to use. Depending on the needs of the module, that might or might not be needed.
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Omeka S View Helpers
 
-* Api
+* [Api](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Api.php)
+Helper for direct access to API read and search operations.
 * AssetUrl
 * BlockAttachmentsForm
 * BlockLayout

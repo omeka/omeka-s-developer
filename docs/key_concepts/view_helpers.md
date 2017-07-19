@@ -12,16 +12,6 @@ $this->url(null, ['action' => 'log'], true);
 
 Note that while view helper names begin with an uppercase letter, the method invoked from `$this` (the View object) begins with a lowercase letter. Each helper will use its own signature, so consult each helper's documentation for its `__invoke` method.
 
-### From outside a view
-
-Use the `getView()` method to find the view object,
-
-```php
-$view = $this->getView();
-```
-
-then proceed in the same way. Note that, depending on the class, the `getView` method might or might not be available.
-
 ## Creating A View Helper In A Module
 
 View Helpers should be placed here in the module's directory structure:
@@ -53,6 +43,14 @@ class MyModuleViewHelper extends AbstractHelper
 
 ```
 
+There are no restrictions on the signature for `__invoke`, so any necessary data from the view can be added as needed, as in the first example of `Url` above. Its __invoke method thus looks like:
+
+```php
+
+
+```
+
+
 ### Config file
 
 For Omeka S to be aware of your View Helper, you must add it to your module's `config/module.config.php` array. That file will contain a great deal more than this information, but this is what will be relevant to the helper:
@@ -71,7 +69,7 @@ The `invokables` key signals that the View Helper class can be directly instanti
 
 ### Invokables vs Factories
 
-Sometimes, additional data beyond the View object must be passed to the helper. In this case, the View Helper must be created via a factory, rather than an invokable, as defined in the `config.php` file.
+Sometimes, a helper will need access to additional services, or data that is accessible only via a service. In this case, the View Helper must be created via a factory, rather than an invokable, as defined in the `config.php` file. (See also [Services and Factories](services_and_factories.md)).
 
 To create a factory for your View Helper, put the factory in the following directory:
 
@@ -108,15 +106,15 @@ class MyModuleViewHelperFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $services, $requestedName, array $options = null)
     {
-        $auth = $services->get('Omeka\AuthenticationService');
-        $user = $auth->getIdentity();
-        return new ViewHelper($user);
+        $config = $services->get('Config');
+        $mediaAdapters = $config['my_module_media_adapters'];
+        return new MyModuleViewHelper($services->get('Omeka\MediaIngesterManager'), $mediaAdapters);
     }
 }
 ```
-In this example, the View Helper needs information about the currently logged in user, so it passes along that data to the View Helper.
+In this example, the View Helper needs information added to the config array, and `Omeka\MediaIngesterManager` service. Those are not directly available within a ViewHelper, and so the factory is used to inject them into the ViewHelper.
 
-As such, the View Helper's `__construct` method must deal with it:
+As such, the View Helper's `__construct` method must deal with the data
 
 ```php
 namespace MyModule\View\Helper;
@@ -125,18 +123,26 @@ use Zend\View\Helper\AbstractHelper;
 
 class ViewHelper extends AbstractHelper
 {
-    protected $user;
+    protected $mediaIngester;
 
-    public function __construct($user)
+    protected $mediaAdapters;
+
+    public function __construct($mediaIngestManager, $mediaAdapters)
     {
-        $this->user = $user;
+        $this->mediaAdapters = $mediaAdapters;
+        $this->mediaIngester = $mediaIngestManager;
     }
 
     public function __invoke()
     {
-        $userRole = $this->user->getRole();
-        // return HTML based on the user
-    }
+        $mediaForms = [];
+        foreach ($this->mediaIngester->getRegisteredNames() as $ingester) {
+            if (array_key_exists($ingester, $this->mediaAdapters)) {
+                $mediaForms[$ingester] = [
+                    'label' => $this->mediaIngester->get($ingester)->getLabel(),
+                ];
+            }
+        }
 }
 ```
 
@@ -177,7 +183,7 @@ class MyModuleViewHelper extends AbstractHelper
     {
         $userRole = $this->user->getRole();
         return $this->getView()->partial(
-            'my-module-view-helper-partial',
+            'common/my-module-view-helper-partial',
             [
                 'userRole' => $userRole,
             ]

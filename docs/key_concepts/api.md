@@ -30,6 +30,26 @@ The HTTP response will be formatted in [JSON-LD](http://json-ld.org/), a method 
 
 Resources are registered in configuration and implemented with adapter and representation classes. The adapter is responsible for performing [SCRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations on a resource. A representation is a read-only, serializable object that represents a resource.
 
+Note: API use the plural names of the resource (`items` and not ~~`item`~~).
+
+Omeka S core integrates three RDF resource kinds:
+* `items` to CRUD an item, its properties and property values, its class, its template and its media.
+* `item-sets` to CRUD an item set, its properties and property values, its class, its template and its attached items.
+* `media` to CRUD a medium, its properties and property values, its class, its template and its content file (or value).
+* `resources` to perform generic SCRUD operations on resources.
+
+Omeka S API integrates ten other resource adapter:
+* `resource_classes` to add, list and look for RDF classes.
+* `resource_templates` to add, list and look for resource templates.
+* `jobs` to list jobs and their states.
+* `modules` to list and look for modules.
+* `users` to add and get users.
+* `sites` to add, list and look for sites.
+* `site_pages` to add and list site pages and managing their blocks.
+* `assets` to list and add (~~and [remove](https://github.com/omeka/omeka-s/issues/937)~~) files attached to a site theme.
+* `properties` to add, list and look for RDF properties.
+* `vocabularies` to add, list and look for RDF ontologies.
+
 ## API Operations
 
 ### Search

@@ -52,6 +52,10 @@ Omeka S API integrates ten other resource adapter:
 
 ## API Operations
 
+`api.execute.pre` and `api.{operation}.pre` events are triggered before each opertion, and after each one, `api.{operation}.post` and `api.execute.post` are triggered (where {operation} is the API used-method name).
+
+You can disable these events triggering by passing boolean options `initialize` and `finalize` respectively for pre events and post events, with `false` as value.
+
 ### Read
 
 Get one resource. The second paramater is the wanted-resource Id. 

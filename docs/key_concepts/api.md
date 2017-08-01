@@ -86,16 +86,32 @@ GET /api/your_resource?foo=bar
 
 ### Create
 
-Create a resource.
+Create a resource. The second parameter is the resource-to-create representation (PHP associative array in JSON-LD style).
 
+For example, to create an item called “My item title”:
 ```php
-$response = $apiManager->create('your_resource', array('foo' => 'bar'));
+$data = [
+	"dcterms:title" => [[
+		"type"=> "literal",
+		"property_id"=> 1,
+		"@value"=> "My item title"
+	]],
+];
+$response = $apiManager->create('items', $data);
 ```
 
 ```
-POST /api/your_resource
+POST /api/items
 Content-Type: application/json
-{"foo":"bar"}
+{
+  "dcterms:title":[
+    {
+      "type": "literal",
+      "property_id": 1,
+      "@value": "My item title"
+    }
+  ]
+}
 ```
 
 ### Batch Create

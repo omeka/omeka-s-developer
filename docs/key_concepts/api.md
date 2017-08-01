@@ -54,15 +54,19 @@ Omeka S API integrates ten other resource adapter:
 
 ### Read
 
-Get one resource.
+Get one resource. The second paramater is the wanted-resource Id. 
+
+For example, to get medium #101 representation:
 
 ```php
-$response = $apiManager->read('your_resource', 100);
+$response = $apiManager->read('media', 101);
 ```
 
 ```
-GET /api/your_resource/100
+GET /api/media/101
 ```
+
+Note: `api.find.post` event is triggered.
 
 ### Search
 

@@ -30,7 +30,7 @@ The HTTP response will be formatted in [JSON-LD](http://json-ld.org/), a method 
 
 Resources are registered in configuration and implemented with adapter and representation classes. The adapter is responsible for performing [SCRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations on a resource. A representation is a read-only, serializable object that represents a resource.
 
-Note: API use the plural names of the resource (`items` and not ~~`item`~~).
+Note: API use the plural names of the resource (`items` and not ~~`item`~~) as the first parameter of its methods (or as first component of the URL after API path in RESTful interface).
 
 Omeka S core integrates three RDF resource kinds:
 * `items` to CRUD an item, its properties and property values, its class, its template and its media.

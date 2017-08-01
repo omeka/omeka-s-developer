@@ -113,6 +113,30 @@ Content-Type: application/json
   ]
 }
 ```
+#### Attach a file
+
+You can upload a file and attach it to a new media resource using the third parameter of a create request.
+
+A `'o:ingester'` key is required in resource data (second parameter) with `'upload'` as value. You must set a `'file_index'` key too with an arbitrary value (e.g. `0`), indexing upload data in file data (third parameter).
+
+```php
+$fileIndex=0;
+$data=[ //Representation of the medium which will be created
+	"o:ingester" => "upload",
+	"file_index" => $fileIndex,
+	"o:item" => [
+		"o:id" => 100 //Id of the item to which attach the medium
+	],
+];
+$fileData = [
+	'file'=>[
+		$fileIndex => $_FILES['fileInputName'],
+	],
+];
+$response = $this->api->create('media', $data, $fileData)->getContent();
+```
+
+Note: you need to post the file (e.g. using a form) to allow the script to get it using `$_FILES`. Note that you should use Zend <code>[Request](https://docs.zendframework.com/zend-http/request/)->getFiles()->toArray()</code> instead of directly `$_FILES`.
 
 ### Batch Create
 

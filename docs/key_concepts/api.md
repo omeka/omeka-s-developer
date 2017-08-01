@@ -52,6 +52,18 @@ Omeka S API integrates ten other resource adapter:
 
 ## API Operations
 
+### Read
+
+Get one resource.
+
+```php
+$response = $apiManager->read('your_resource', 100);
+```
+
+```
+GET /api/your_resource/100
+```
+
 ### Search
 
 Search for resources by criteria.
@@ -87,18 +99,6 @@ $response = $apiManager->batchCreate('your_resource', array(
   array('foo' => 'bar'),
   array('baz' => 'bat'),
 ));
-```
-
-### Read
-
-Get one resource.
-
-```php
-$response = $apiManager->read('your_resource', 100);
-```
-
-```
-GET /api/your_resource/100
 ```
 
 ### Update

@@ -163,17 +163,37 @@ In Response content, the reference keys are the same as their representations in
 
 ### Update
 
-Update a resource.
+Update a resource. The second parameter is the ID of the resource which will be updated. The third parameter is the new representation of the resource.
 
+For example, to turn item #100 title into “My new item title”:
 ```php
-$response = $apiManager->update('your_resource', 100, array('foo' => 'bar'));
+$data = [
+	"dcterms:title" => [[
+		"type"=> "literal",
+		"property_id"=> 1,
+		"@value"=> "My new item title"
+	]],
+];
+$response = $apiManager->update('items', 100, $data);
 ```
 
 ```
-PUT /api/your_resource/100
+PUT /api/items/100
 Content-Type: application/json
-{"foo":"bar"}
+{
+  "dcterms:title":[
+    {
+      "type": "literal",
+      "property_id": 1,
+      "@value": "My new item title"
+    }
+  ]
+}
 ```
+
+By default, all previous properties are removed. In the previous example, all properties of item #100 will be removed (except dcterms:title). To preserve previous properties and to append new ones from given representation, you must set `'isPartial'` option to `true` and `'collectionAction'` to `'append'`.
+
+If you pass `['isPartial' => true, 'collectionAction' => 'remove']` as options, the data from the given represenation are removed from the updated item instead of to be appended.
 
 ### Delete
 

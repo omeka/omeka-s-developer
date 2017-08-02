@@ -133,21 +133,33 @@ $fileData = [
 		$fileIndex => $_FILES['fileInputName'],
 	],
 ];
-$response = $this->api->create('media', $data, $fileData)->getContent();
+$response = $this->api->create('media', $data, $fileData);
 ```
 
 Note: you need to post the file (e.g. using a form) to allow the script to get it using `$_FILES`. Note that you should use Zend <code>[Request](https://docs.zendframework.com/zend-http/request/)->getFiles()->toArray()</code> instead of directly `$_FILES`.
 
 ### Batch Create
 
-Create resources in batch.
+Create resources in batch. The second paramater is a list (PHP array with numerical indexes) of representations of resources to create.
+
+You can replace this code:
 
 ```php
-$response = $apiManager->batchCreate('your_resource', array(
-  array('foo' => 'bar'),
-  array('baz' => 'bat'),
-));
+$representations = [
+	$this->api->create('your_resource', $data1)->getContent(),
+	$this->api->create('your_resource', $data2)->getContent(),
+];
 ```
+
+by the following:
+
+```php
+$references = $apiManager->batchCreate('your_resource', [$data1, $data2] )->getContent();
+```
+
+However, batch operations return resource references instead of resource representations. From a reference you can only get entity ID.
+
+In Response content, the reference keys are the same as their representations in request content.
 
 ### Update
 

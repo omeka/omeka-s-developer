@@ -197,7 +197,7 @@ If you pass `['isPartial' => true, 'collectionAction' => 'remove']` as options, 
 
 ### Delete
 
-Delete a resource.
+Delete a resource. The second parameter is the resource-to-delete ID.
 
 ```php
 $response = $apiManager->delete('your_resource', 100);
@@ -206,3 +206,5 @@ $response = $apiManager->delete('your_resource', 100);
 ```
 DELETE /api/your_resource/100
 ```
+
+`api.find.query` and `api.find.post` events are triggered.

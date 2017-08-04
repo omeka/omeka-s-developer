@@ -50,6 +50,19 @@ Omeka S API integrates ten other resource adapter:
 * `properties` to add, list and look for RDF properties.
 * `vocabularies` to add, list and look for RDF ontologies.
 
+## API Response
+
+Each API operation return a Response object which has three properties: `request` (Request object created by the API), `totalResults` (total result number) and `content` (RepresentationInterface object or array of ResourceReference for batch operations). Each one has a public getter.
+
+RESTful interface response is a JSON serialization of the got representation, in the same manner as this code:
+```php
+//$response is a Response object (return value of an API operation)
+$representation = $response->getContent();
+echo json_encode($representation);
+```
+
+Instead of a representation, you can get an entity or a reference, passing `'responseContent'` option. This can have three different values: `'resource'` (entity), `'reference'` (references only have their ID hydrated) or `'representation'` (by default).
+
 ## API Operations
 
 `api.execute.pre` and `api.{operation}.pre` events are triggered before each opertion, and after each one, `api.{operation}.post` and `api.execute.post` are triggered (where {operation} is the API used-method name).

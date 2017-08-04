@@ -69,6 +69,29 @@ Instead of a representation, you can get an entity or a reference, passing `'res
 
 You can disable these events triggering by passing boolean options `initialize` and `finalize` respectively for pre events and post events, with `false` as value.
 
+### Operation options
+
+Each operation can be configured with several options. Actually, API allow to pass an option array as the **last method parameter**.
+
+Note that some operations (like [create](#create) and [read](#read)) can have a third param (file data), even a fourth parameter for [update](#update) operation, so not needed parameters should be empty arrays to ensure the option array is the last paramater.
+
+To read item #100 with `'initialize'` option set to `false`, use:
+```php
+$response = $apiManager->read('items', 100, [], ['initialize' => false]);
+```
+
+Operation(s)	| Option	| Value type	| Default value	| Description	|
+---------	| --------	| ----------	| ---------	| ----------	|
+all		| initialize	| boolean	| `true`	| Set whether to trigger API-pre events |
+all		| finalize	| boolean	| `true`	| Set whether to trigger API-post events and transform response content according to the "responseContent" option |
+all		| responseContent| string	| `'representation'`| Set the type of content the API response should contain. The types are:<ul><li>`'representation'`: an API resource representation (implements `Omeka\Api\Representation\RepresentationInterface`)</li><li>`'reference'`: an API resource reference (instance of `Omeka\Api\Representation\ResourceReference`)</li><li>`'resource'`: an API resource (implements `Omeka\Api\ResourceInterface`)</li></ul> |
+[search](#search)| returnScalar	| string	| `false`	| Set which field/column to return as an array of scalars. The request will not finalize when this option is set. |
+[update](#update)| isPartial	| boolean	| `false`	| Set whether this is a partial UPDATE request (aka PATCH). |
+[update](#update)| collectionAction| string	| `'replace'`	| Set which action to take on certain collections during a partial UPDATE request. The actions are: <ul><li>`'replace'`: the passed data replaces the collection</li><li>`'append'`: append passed data to collections</li><li>`'remove'`: remove passed data from collections</li></ul>
+batch ([create](#batch-create), [update](#batch-update), [delete](#batch-delete))| continueOnError| boolean| `false`| Set whether a batch operation should continue processing on error. |
+[create](#create), [update](#update), [delete](#delete)| flushEntityManager| boolean| `true`| Set whether to flush the entity manager.
+
+
 ### Read
 
 Get one resource. The second paramater is the wanted-resource Id. 

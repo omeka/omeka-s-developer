@@ -4,7 +4,9 @@
 
 Omeka development aims to adhere to the [PSR-2 style guide](http://www.php-fig.org/psr/psr-2), and uses the [git-flow](http://nvie.com/posts/a-successful-git-branching-model) branching model.
 
-Contributions should aim for that standard. 
+Contributions should aim for that standard.
+
+Omeka S contains a `.php_cs` file that you can use with [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to clean up code both in core and modules. When using it with modules, you will want to add `.php_cs.cache` to your `.gitignore` file. When submitting contributions, we encourage you to fix style issues in a single distinct commit in your pull request.
 
 ## Tips for pull requests
 

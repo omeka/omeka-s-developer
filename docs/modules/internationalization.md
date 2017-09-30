@@ -48,6 +48,8 @@ For example, when creating a form you can mark the label as follows:
 
 Any strings that have the `// @translate` comment will by picked up by Omeka S's tooling and added to the `template.pot` file.
 
+The strings must be on a single line. Breaking them up across multiple lines of code with result in Zend's translation mechanism failing to see them as one string, and so they will not be processed successfuly.
+
 Finally, you should create a `/language` directory at the root of your module, and make sure it is writable.
 
 ## Creating and compiling the strings 

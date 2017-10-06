@@ -171,12 +171,16 @@ class Module extends AbstractModule
 ```
 ### Packaging a Module
 
-* All of the above MUST be included in a module package
+* At minimum, a module MUST contain a `Module.php` file and a `config/module.ini` file, following the requirements described above.
 * It SHOULD be made available as a .zip file
 
 #### Adding to omeka.org
+(This section is under active development. If you have questions, please [file an issue](https://github.com/omeka/omeka-s-developer/issues).)
+To help you distribute your module, you can register it on omeka.org, and we will add it to our list of available modules. A few additional requirements are needed for our registration system.
 
-TBD
+* It MUST have a tagged release in GitHub
+* The release page MUST have a .zip file uploaded
+* The `module.ini` file MUST contain valid `support_link` information (the GitHub issues page is appropriate, but if you wish to provide support via a different system, that's fine).
 
 
 

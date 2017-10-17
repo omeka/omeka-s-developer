@@ -1,8 +1,6 @@
 # Registering a new module or theme with omeka.org
 
-After you [register your GitHub repository](http://dev.omeka.org/addons/register) as an Omeka addon we'll automatically
-identify and publish new versions of your addon if you follow these
-steps.
+After you [register your GitHub repository](http://dev.omeka.org/addons/register) as an Omeka addon we'llpublish new versions of your addon if you follow these steps.
 
 First, in your addon's GitHub repository, go to the releases page and click
 "Draft a new release". Enter a tag name (it does not have to be your addon
@@ -32,7 +30,6 @@ Before registring your releases we check that certain things are true:
 
 - Your repository has releases
 - The release is not a draft
-- The release is not a prerelease
 - The release has an attached binary (asset)
 - The release/asset combination is not already registered
 - The asset has the .zip extension

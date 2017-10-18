@@ -176,7 +176,7 @@ class Module extends AbstractModule
 
 #### Adding to omeka.org
 
-See [Register an addon](register_an_addon.md).
+See [Register an addon](../register_an_addon.md).
 
 
 

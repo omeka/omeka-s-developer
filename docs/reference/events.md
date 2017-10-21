@@ -143,7 +143,6 @@ The `trigger` view helper triggers these events at strategic locations within vi
 
 Triggered within a view layout. Use this event to add to the HTML head on every page in installation.
 
-
 ### view.show.before
 
 Triggered before show page markup.
@@ -160,9 +159,17 @@ Triggered before browse page markup.
 
 Triggered after browse page markup.
 
+### view.add.before
+
+Triggered before add page markup.
+
 ### view.add.after
 
 Triggered after add page markup.
+
+### view.edit.before
+
+Triggered before edit page markup.
 
 ### view.edit.after
 

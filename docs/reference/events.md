@@ -37,14 +37,14 @@ Triggered after executing any API operation. Does not trigger if a non-validatio
 
 * **request**: The API request.
 
-Triggered before executing a particular API operation. Replace the asterisk with one of the following operations: `search`, `create`, `batch_create`, `read`, `update`, or `delete`.
+Triggered before executing a particular API operation. Replace the asterisk with one of the following operations: `search`, `create`, `read`, `update`, `delete`, `batch_create`, `batch_update`, or `batch_delete`.
 
 ### api.*.post
 
 * **request**: The API request.
 * **response**: The API response.
 
-Triggered after executing a particular API operation. Replace the asterisk with one of the following operations: `search`, `create`, `batch_create`, `read`, `update`, or `delete`.
+Triggered after executing a particular API operation. Replace the asterisk with one of the following operations: `search`, `create`, `read`, `update`, `delete`, `batch_create`, `batch_update`, or `batch_delete`.
 
 ## API Entity Adapter Events
 
@@ -69,7 +69,7 @@ Triggered anytime an adapter attempts to find an entity.
 * **entity**: The found entity.
 * **request**: The API request.
 
-Triggered during the API `read` and `delete` operations, after an entity is found.
+Triggered during the API `read`, `delete`, and `batch_delete` operations, after an entity is found.
 
 ### api.hydrate.pre
 
@@ -77,7 +77,7 @@ Triggered during the API `read` and `delete` operations, after an entity is foun
 * **request**: The API request.
 * **errorStore**: The error store.
 
-Triggered during the API `create`, `batch_create`, and `update` operations, before validating the request and before entity hydration.
+Triggered during the API `create`, `update`, `batch_create`, and `batch_update` operations, before validating the request and before entity hydration.
 
 ### api.hydrate.post
 
@@ -85,7 +85,7 @@ Triggered during the API `create`, `batch_create`, and `update` operations, befo
 * **request**: The API request.
 * **errorStore**: The error store.
 
-Triggered during the API `create`, `batch_create`, and `update` operations, after entity hydration and before validating the entity.
+Triggered during the API `create`, `update`, `batch_create`, and `batch_update` operations, after entity hydration and before validating the entity.
 
 ## Doctrine Lifecycle Events
 

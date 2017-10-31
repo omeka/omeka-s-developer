@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Interface Omeka\DataType\DataTypeInterface
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-info">Interface</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.DataType.html">DataType</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">DataTypeInterface</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>DataTypeInterface</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Interface for data types.
+            </div>
+        </div>
+
+
+        <div>
+            <h2>Known implementers</h2>
+            <p>
+                    <a href="class-Omeka.DataType.AbstractDataType.html">
+                        Omeka\DataType\AbstractDataType
+                    </a>, 
+                    <a href="class-Omeka.DataType.Literal.html">
+                        Omeka\DataType\Literal
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.html">
+                        Omeka\DataType\Resource
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.AbstractResource.html">
+                        Omeka\DataType\Resource\AbstractResource
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.All.html">
+                        Omeka\DataType\Resource\All
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.Item.html">
+                        Omeka\DataType\Resource\Item
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.Itemset.html">
+                        Omeka\DataType\Resource\Itemset
+                    </a>, 
+                    <a href="class-Omeka.DataType.Resource.Media.html">
+                        Omeka\DataType\Resource\Media
+                    </a>, 
+                    <a href="class-Omeka.DataType.Uri.html">
+                        Omeka\DataType\Uri
+                    </a>
+            </p>
+        </div>
+
+    <div class="info">
+            <a href="source-interface-Omeka.DataType.DataTypeInterface.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-responsive table-bordered table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_getName">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getName">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#19">getName</a>( )</code>
+
+            <div class="description">
+                Get the name of this data type.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getLabel">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getLabel">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#26">getLabel</a>( )</code>
+
+            <div class="description">
+                Get a human-readable label for this data type.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getOptgroupLabel">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getOptgroupLabel">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#33">getOptgroupLabel</a>( )</code>
+
+            <div class="description">
+                Get a human-readable optgroup label for this data type, if any.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_prepareForm">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_prepareForm">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#42">prepareForm</a>( <span> Zend\View\Renderer\PhpRenderer <span class="property-name">$view</span> </span> )</code>
+
+            <div class="description">
+                Prepare the view to enable the data types.
+
+Typically used to append JavaScript to the head.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_form">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_form">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#50">form</a>( <span> Zend\View\Renderer\PhpRenderer <span class="property-name">$view</span> </span> )</code>
+
+            <div class="description">
+                Get the template markup used to render the value in the resource form.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_isValid">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_isValid">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#58">isValid</a>( <span> array <span class="property-name">$valueObject</span> </span> )</code>
+
+            <div class="description">
+                Is this value object valid?
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_hydrate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_hydrate">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#67">hydrate</a>( <span> array <span class="property-name">$valueObject</span> </span>, <span> <a href="class-Omeka.Entity.Value.html">Omeka\Entity\Value</a> <span class="property-name">$value</span> </span>, <span> <a href="class-Omeka.Api.Adapter.AbstractEntityAdapter.html">Omeka\Api\Adapter\AbstractEntityAdapter</a> <span class="property-name">$adapter</span> </span> )</code>
+
+            <div class="description">
+                Hydrate the value entity using the value object.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_render">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_render">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#76">render</a>( <span> Zend\View\Renderer\PhpRenderer <span class="property-name">$view</span> </span>, <span> <a href="class-Omeka.Api.Representation.ValueRepresentation.html">Omeka\Api\Representation\ValueRepresentation</a> <span class="property-name">$value</span> </span> )</code>
+
+            <div class="description">
+                Get the markup used to render the value.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_toString">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_toString">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#84">toString</a>( <span> <a href="class-Omeka.Api.Representation.ValueRepresentation.html">Omeka\Api\Representation\ValueRepresentation</a> <span class="property-name">$value</span> </span> )</code>
+
+            <div class="description">
+                Get the value as a simple string.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getJsonLd">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getJsonLd">#</a>
+            <code><a href="source-interface-Omeka.DataType.DataTypeInterface.html#92">getJsonLd</a>( <span> <a href="class-Omeka.Api.Representation.ValueRepresentation.html">Omeka\Api\Representation\ValueRepresentation</a> <span class="property-name">$value</span> </span> )</code>
+
+            <div class="description">
+                Get an array representation of this value using JSON-LD notation.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Db\Migration\Manager
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Db.html">Db</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Db.Migration.html">Migration</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">Manager</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>Manager</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Migration manager.
+            </div>
+        </div>
+
+
+
+
+    <div class="info">
+        
+
+            <a href="source-class-Omeka.Db.Migration.Manager.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___construct">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___construct">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#47-52">__construct</a>( <span> array <span class="property-name">$config</span> </span>, <span> Doctrine\DBAL\Connection <span class="property-name">$conn</span> </span>, <span> <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">Zend\ServiceManager\ServiceLocatorInterface</a> <span class="property-name">$serviceLocator</span> </span> )</code>
+
+            <div class="description">
+                Create the migration manager, passing configuration.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setConfig">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setConfig">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#59-68">setConfig</a>( <span> array <span class="property-name">$config</span> </span> )</code>
+
+            <div class="description">
+                Set config options from array.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_upgrade">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_upgrade">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#73-85">upgrade</a>( )</code>
+
+            <div class="description">
+                Perform the upgrade operation on all pending migrations.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_recordMigration">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_recordMigration">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#92-95">recordMigration</a>( <span> string <span class="property-name">$version</span> </span> )</code>
+
+            <div class="description">
+                Record a migration as complete in the database.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_loadMigration">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_loadMigration">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#104-123">loadMigration</a>( <span> string <span class="property-name">$path</span> </span>, <span> string <span class="property-name">$class</span> </span> )</code>
+
+            <div class="description">
+                Load a migration file and instantiate the class.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getMigrationsToPerform">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getMigrationsToPerform">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#130-137">getMigrationsToPerform</a>( )</code>
+
+            <div class="description">
+                Get pending migrations.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getCompletedMigrations">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getCompletedMigrations">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#144-153">getCompletedMigrations</a>( )</code>
+
+            <div class="description">
+                Get already-performed migrations.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getAvailableMigrations">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getAvailableMigrations">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#160-179">getAvailableMigrations</a>( )</code>
+
+            <div class="description">
+                Get available migrations.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getTranslator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getTranslator">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#186-192">getTranslator</a>( )</code>
+
+            <div class="description">
+                Get the translator service
+
+return TranslatorInterface
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_clearDoctrineCache">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_clearDoctrineCache">#</a>
+            <code><a href="source-class-Omeka.Db.Migration.Manager.html#197-207">clearDoctrineCache</a>( )</code>
+
+            <div class="description">
+                Clear Doctrine's cache to prevent errors after upgrade.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$path">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Migration.Manager.html#18" class="property-name">$path</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$path" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$namespace">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Migration.Manager.html#23" class="property-name">$namespace</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$namespace" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$translator">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            <a href="interface-Zend.I18n.Translator.TranslatorInterface.html">Zend\I18n\Translator\TranslatorInterface</a>
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Migration.Manager.html#28" class="property-name">$translator</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$translator" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$serviceLocator">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">Zend\ServiceManager\ServiceLocatorInterface</a>
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Migration.Manager.html#33" class="property-name">$serviceLocator</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$serviceLocator" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$conn">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            Doctrine\DBAL\Connection
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Migration.Manager.html#38" class="property-name">$conn</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$conn" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

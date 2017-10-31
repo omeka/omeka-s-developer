@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Api\Adapter\AbstractAdapter
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Api.html">Api</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Api.Adapter.html">Adapter</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">AbstractAdapter</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>AbstractAdapter</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Abstract API adapter.
+            </div>
+        </div>
+
+        <dl class="tree">
+            <dd>
+
+                    implements
+                        <a href="interface-Omeka.Api.Adapter.AdapterInterface.html">
+                            Omeka\Api\Adapter\AdapterInterface
+                        </a>, 
+                        <a href="interface-Zend.EventManager.EventManagerAwareInterface.html">
+                            Zend\EventManager\EventManagerAwareInterface
+                        </a>, 
+                        <a href="interface-Zend.EventManager.EventsCapableInterface.html">
+                            Zend\EventManager\EventsCapableInterface
+                        </a>, 
+                        <a href="interface-Zend.Permissions.Acl.Resource.ResourceInterface.html">
+                            Zend\Permissions\Acl\Resource\ResourceInterface
+                        </a>
+
+                    uses
+                        <a href="trait-Zend.EventManager.EventManagerAwareTrait.html">Zend\EventManager\EventManagerAwareTrait</a>
+            </dd>
+        </dl>
+
+
+        <div>
+            <h2>Known subclasses</h2>
+            <a href="class-Omeka.Api.Adapter.AbstractEntityAdapter.html">Omeka\Api\Adapter\AbstractEntityAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.AbstractResourceEntityAdapter.html">Omeka\Api\Adapter\AbstractResourceEntityAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.AssetAdapter.html">Omeka\Api\Adapter\AssetAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ItemAdapter.html">Omeka\Api\Adapter\ItemAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ItemSetAdapter.html">Omeka\Api\Adapter\ItemSetAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.JobAdapter.html">Omeka\Api\Adapter\JobAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.MediaAdapter.html">Omeka\Api\Adapter\MediaAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ModuleAdapter.html">Omeka\Api\Adapter\ModuleAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.PropertyAdapter.html">Omeka\Api\Adapter\PropertyAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ResourceAdapter.html">Omeka\Api\Adapter\ResourceAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ResourceClassAdapter.html">Omeka\Api\Adapter\ResourceClassAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.ResourceTemplateAdapter.html">Omeka\Api\Adapter\ResourceTemplateAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.SiteAdapter.html">Omeka\Api\Adapter\SiteAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.SitePageAdapter.html">Omeka\Api\Adapter\SitePageAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.UserAdapter.html">Omeka\Api\Adapter\UserAdapter</a>, 
+            <a href="class-Omeka.Api.Adapter.VocabularyAdapter.html">Omeka\Api\Adapter\VocabularyAdapter</a>
+        </div>
+
+    <div class="info">
+        <strong>Abstract</strong><br>
+
+            <a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_getRepresentationClass">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                abstract public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getRepresentationClass">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#33">getRepresentationClass</a>( )</code>
+
+            <div class="description">
+                Get the fully qualified name of the corresponding representation class.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_search">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_search">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#38-46">search</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_search">
+                                    Omeka\Api\Adapter\AdapterInterface::search()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_create">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_create">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#51-59">create</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_create">
+                                    Omeka\Api\Adapter\AdapterInterface::create()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_batchCreate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_batchCreate">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#64-72">batchCreate</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_batchCreate">
+                                    Omeka\Api\Adapter\AdapterInterface::batchCreate()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_read">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_read">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#77-85">read</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_read">
+                                    Omeka\Api\Adapter\AdapterInterface::read()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_update">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_update">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#90-98">update</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_update">
+                                    Omeka\Api\Adapter\AdapterInterface::update()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_batchUpdate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_batchUpdate">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#103-111">batchUpdate</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_batchUpdate">
+                                    Omeka\Api\Adapter\AdapterInterface::batchUpdate()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_preprocessBatchUpdate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_preprocessBatchUpdate">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#116-120">preprocessBatchUpdate</a>( <span> array <span class="property-name">$data</span> </span>, <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_preprocessBatchUpdate">
+                                    Omeka\Api\Adapter\AdapterInterface::preprocessBatchUpdate()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_delete">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_delete">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#125-133">delete</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_delete">
+                                    Omeka\Api\Adapter\AdapterInterface::delete()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_batchDelete">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_batchDelete">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#138-146">batchDelete</a>( <span> <a href="class-Omeka.Api.Request.html">Omeka\Api\Request</a> <span class="property-name">$request</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_batchDelete">
+                                    Omeka\Api\Adapter\AdapterInterface::batchDelete()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getAdapter">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getAdapter">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#154-159">getAdapter</a>( <span> string <span class="property-name">$resourceName</span> </span> )</code>
+
+            <div class="description">
+                Get an adapter by resource name.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getRepresentation">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getRepresentation">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#167-175">getRepresentation</a>( <span> <a href="interface-Omeka.Api.ResourceInterface.html">Omeka\Api\ResourceInterface</a> <span class="property-name">$data</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Compose a resource representation object.
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_getRepresentation">
+                                    Omeka\Api\Adapter\AdapterInterface::getRepresentation()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getTranslator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getTranslator">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#182-188">getTranslator</a>( )</code>
+
+            <div class="description">
+                Get the translator service
+
+return TranslatorInterface
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getResourceId">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceId">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#193-196">getResourceId</a>( )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Zend.Permissions.Acl.Resource.ResourceInterface.html#_getResourceId">
+                                    Zend\Permissions\Acl\Resource\ResourceInterface::getResourceId()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setServiceLocator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setServiceLocator">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#201-205">setServiceLocator</a>( <span> <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">Zend\ServiceManager\ServiceLocatorInterface</a> <span class="property-name">$serviceLocator</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_setServiceLocator">
+                                    Omeka\Api\Adapter\AdapterInterface::setServiceLocator()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getServiceLocator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getServiceLocator">#</a>
+            <code><a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#210-213">getServiceLocator</a>( )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Omeka.Api.Adapter.AdapterInterface.html#_getServiceLocator">
+                                    Omeka\Api\Adapter\AdapterInterface::getServiceLocator()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr><th>Methods used from <a href="trait-Zend.EventManager.EventManagerAwareTrait.html#methods">Zend\EventManager\EventManagerAwareTrait</a> trait</th></tr>
+            <tr>
+                <td>
+                    <code>
+                            <a href="trait-Zend.EventManager.EventManagerAwareTrait.html#_setEventManager">
+                                setEventManager()
+                            </a>
+                            <a href="trait-Zend.EventManager.EventManagerAwareTrait.html#_getEventManager">
+                                getEventManager()
+                            </a>
+                    </code>
+                </td>
+            </tr>
+        </table>
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$translator">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            <a href="interface-Zend.I18n.Translator.TranslatorInterface.html">Zend\I18n\Translator\TranslatorInterface</a>
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#21" class="property-name">$translator</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$translator" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$serviceLocator">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">Zend\ServiceManager\ServiceLocatorInterface</a>
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Api.Adapter.AbstractAdapter.html#26" class="property-name">$serviceLocator</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$serviceLocator" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr>
+                <th>Properties used from <a href="trait-Zend.EventManager.EventManagerAwareTrait.html#properties">Zend\EventManager\EventManagerAwareTrait</a></th>
+            </tr>
+            <tr>
+                <td>
+                    <code>
+                            <a href="trait-Zend.EventManager.EventManagerAwareTrait.html#$events" class="property-name">
+                                $events
+                            </a>
+                    </code>
+                </td>
+            </tr>
+        </table>
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

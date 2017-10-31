@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Interface Zend\Permissions\Acl\AclInterface
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-info">Interface</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Zend.html">Zend</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Zend.Permissions.html">Permissions</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Zend.Permissions.Acl.html">Acl</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">AclInterface</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>AclInterface</h1>
+
+
+
+        <div>
+            <h2>Known implementers</h2>
+            <p>
+                    <a href="class-Omeka.Permissions.Acl.html">
+                        Omeka\Permissions\Acl
+                    </a>, 
+                    <a href="class-Zend.Permissions.Acl.Acl.html">
+                        Zend\Permissions\Acl\Acl
+                    </a>
+            </p>
+        </div>
+
+    <div class="info">
+            <a href="source-interface-Zend.Permissions.Acl.AclInterface.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-responsive table-bordered table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_hasResource">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_hasResource">#</a>
+            <code><a href="source-interface-Zend.Permissions.Acl.AclInterface.html#22">hasResource</a>( <span> \Resource\ResourceInterface|string <span class="property-name">$resource</span> </span> )</code>
+
+            <div class="description">
+                Returns true if and only if the Resource exists in the ACL
+
+The $resource parameter can either be a Resource or a Resource identifier.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_isAllowed">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_isAllowed">#</a>
+            <code><a href="source-interface-Zend.Permissions.Acl.AclInterface.html#50">isAllowed</a>( <span> \Role\RoleInterface|string <span class="property-name">$role</span> = <span class="php-keyword1">NULL</span></span>, <span> \Resource\ResourceInterface|string <span class="property-name">$resource</span> = <span class="php-keyword1">NULL</span></span>, <span> string <span class="property-name">$privilege</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Returns true if and only if the Role has access to the Resource
+
+The $role and $resource parameters may be references to, or the string identifiers for,
+an existing Resource and Role combination.
+
+If either $role or $resource is null, then the query applies to all Roles or all Resources,
+respectively. Both may be null to query whether the ACL has a "blacklist" rule
+(allow everything to all). By default, Zend\Permissions\Acl creates a "whitelist" rule (deny
+everything to all), and this method would return false unless this default has
+been overridden (i.e., by executing $acl-&gt;allow()).
+
+If a $privilege is not provided, then this method returns false if and only if the
+Role is denied access to at least one privilege upon the Resource. In other words, this
+method returns true if and only if the Role is allowed all privileges on the Resource.
+
+This method checks Role inheritance using a depth-first traversal of the Role registry.
+The highest priority parent (i.e., the parent most recently added) is checked first,
+and its respective parents are checked similarly before the lower-priority parents of
+the Role are checked.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

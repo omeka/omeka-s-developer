@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Entity\Resource
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Entity.html">Entity</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">Resource</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>Resource</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                A resource, representing the subject in an RDF triple.
+
+Note that the discriminator map is loaded dynamically.
+            </div>
+        </div>
+
+        <dl class="tree">
+            <dd>
+                    extends
+                    <a href="class-Omeka.Entity.AbstractEntity.html">
+                        Omeka\Entity\AbstractEntity
+                    </a>
+
+
+            </dd>
+        </dl>
+
+
+
+    <div class="info">
+        <strong>Abstract</strong><br>
+
+            <br>
+            <br>
+            <br>
+            <a href="source-class-Omeka.Entity.Resource.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___construct">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___construct">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#70-73">__construct</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getResourceName">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                abstract public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceName">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#84">getResourceName</a>( )</code>
+
+            <div class="description">
+                Get the resource name of the corresponding entity API adapter.
+
+This can be used when the entity is known but the corresponding adapter
+is not. Primarily used when extracting children of this class (Item,
+Media, ItemSet, etc.) to an array when the adapter is unknown.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getId">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getId">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#86-89">getId</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setOwner">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setOwner">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#91-94">setOwner</a>( <span> <a href="class-Omeka.Entity.User.html">Omeka\Entity\User</a> <span class="property-name">$owner</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getOwner">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getOwner">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#96-99">getOwner</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setResourceClass">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setResourceClass">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#101-104">setResourceClass</a>( <span> <a href="class-Omeka.Entity.ResourceClass.html">Omeka\Entity\ResourceClass</a> <span class="property-name">$resourceClass</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getResourceClass">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceClass">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#106-109">getResourceClass</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setResourceTemplate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setResourceTemplate">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#111-114">setResourceTemplate</a>( <span> <a href="class-Omeka.Entity.ResourceTemplate.html">Omeka\Entity\ResourceTemplate</a> <span class="property-name">$resourceTemplate</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getResourceTemplate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceTemplate">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#116-119">getResourceTemplate</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setIsPublic">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setIsPublic">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#121-124">setIsPublic</a>( <span> <span class="property-name">$isPublic</span> </span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_isPublic">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_isPublic">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#126-129">isPublic</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setCreated">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setCreated">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#131-134">setCreated</a>( <span> DateTime <span class="property-name">$dateTime</span> </span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getCreated">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getCreated">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#136-139">getCreated</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setModified">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setModified">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#141-144">setModified</a>( <span> DateTime <span class="property-name">$dateTime</span> </span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getModified">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getModified">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#146-149">getModified</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getValues">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getValues">#</a>
+            <code><a href="source-class-Omeka.Entity.Resource.html#151-154">getValues</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr>
+                <th>
+                    Methods inherited from <a href="class-Omeka.Entity.AbstractEntity.html#methods">Omeka\Entity\AbstractEntity</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        <code><a href="class-Omeka.Entity.AbstractEntity.html#_getResourceId">getResourceId()</a></code>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$id">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#24" class="property-name">$id</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$id" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$owner">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#30" class="property-name">$owner</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$owner" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$resourceClass">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#36" class="property-name">$resourceClass</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$resourceClass" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$resourceTemplate">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#42" class="property-name">$resourceTemplate</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$resourceTemplate" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$isPublic">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#47" class="property-name">$isPublic</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$isPublic" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">true</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$created">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#52" class="property-name">$created</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$created" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$modified">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#57" class="property-name">$modified</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$modified" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$values">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Entity.Resource.html#68" class="property-name">$values</a>
+        </code>
+        <div class="description">
+            
+
+                <br>
+                <br>
+                <br>
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$values" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

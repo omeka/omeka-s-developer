@@ -9,7 +9,11 @@ version) and description (e.g. release notes, changelog, etc.), but it's not
 required.
 
 Then, on your own computer, create a ZIP archive of the packaged,
-ready-for-release addon; we recommend using Git's `archive` command:
+ready-for-release addon.
+
+This ZIP file must be distinct from the automatically generated ZIP file that GitHub creates. It should remove things like git and tx settings.
+
+We recommend using Git's `archive` command:
 
     $ git archive --output={AddonZipName}.zip --prefix={AddonDirName}/ {tagname}
 
@@ -19,7 +23,7 @@ same as `{AddonDirName}`. Afterwards, attach this ZIP file to the release as a
 binary.
 
 Then, to complete the process, click "Publish release". If everything checks
-out, we'll automatically register the release within 24 hours. If you
+out, we'll register the release shortly. After we have added it to the registry, updates following the same procedure will be automatically updated. If you
 subsequently set the release to be a prerelease or draft, we will remove the
 release from our registry.
 

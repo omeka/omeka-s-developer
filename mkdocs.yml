@@ -1,3 +1,5 @@
 site_name: Omeka S Documentation
 theme: 'readthedocs'
 repo_url: 'http://github.com/omeka/omeka-s-developer'
+extra_css:
+    - css/extra.css

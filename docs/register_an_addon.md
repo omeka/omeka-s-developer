@@ -17,6 +17,16 @@ We recommend using Git's `archive` command:
 
     $ git archive --output={AddonZipName}.zip --prefix={AddonDirName}/ {tagname}
 
+You should include a `.gitattributes` file so the `git archive` will exclude things like language and other git files that should not be included in the archive. In most cases, it will look like this:
+
+```
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.tx/ export-ignore
+/language/*.pot export-ignore
+/language/*.po export-ignore
+```
+
 Note that the `{AddonDirName}` must match the directory name you initially
 registered. The `{AddonZipName}` can be anything, but we recommend that it's the
 same as `{AddonDirName}`. Afterwards, attach this ZIP file to the release as a

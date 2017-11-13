@@ -50,6 +50,8 @@ Omeka S API integrates ten other resource adapter:
 * `properties` to add, list and look for RDF properties.
 * `vocabularies` to add, list and look for RDF ontologies.
 
+A full list of available resources is available at `api/api_resources`.
+
 ## API Response
 
 Each API operation return a Response object which has three properties: `request` (Request object created by the API), `totalResults` (total result number) and `content` (RepresentationInterface object or array of ResourceReference for batch operations). Each one has a public getter.

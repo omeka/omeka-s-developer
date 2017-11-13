@@ -4,8 +4,6 @@ Roy Rosezweig Center for History and New Media is commited to making Omeka S ava
 
 Here's how we are doing that in the core. The same principles apply to themes and modules.
 
-how will translations actually be produced, and will they be open for contribution for beta release?
-
 ## Within a view
 
 Use the `translate()` helper.

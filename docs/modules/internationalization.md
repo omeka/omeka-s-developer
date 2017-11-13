@@ -21,14 +21,14 @@ In view files, any strings to be translated should be wrapped in a call to `tran
 <?php echo $this->translate("The string to make translatable"); ?>
 ```
 
-When variables need to be added to a translatable string, use `sprintf` outside the call to `translate()`.
+When variables need to be added to a translatable string directly, use `sprintf` outside the call to `translate()`.
 
 ```php
 <?php echo sprintf($this->translate('version %s'), Omeka\Module::VERSION); ?>
 
 ```
 
-In other files (e.g., configuration, controllers, forms, etc.), mark the string for translation with a comment:
+In other files where the translation happens indirectly (e.g., configuration, controllers, forms, etc.), mark the string for translation with a comment:
 
 ```
 {code} // @translate
@@ -49,6 +49,18 @@ For example, when creating a form you can mark the label as follows:
 Any strings that have the `// @translate` comment will by picked up by Omeka S's tooling and added to the `template.pot` file.
 
 The strings must be on a single line. Breaking them up across multiple lines of code with result in Zend's translation mechanism failing to see them as one string, and so they will not be processed successfuly.
+
+When indirect translations also require string replacements as you would with `sprintf`, use an `Omeka\Stdlib\Message` object. The `sprintf` is not needed with this object.
+
+```php
+$message = new Message(
+    'API key successfully created.<br><br>Here is your key ID and credential for access to the API. WARNING: "key_credential" will be unretrievable after you navigate away from this page.<br><br>key_identity: <code>%s</code><br>key_credential: <code>%s</code>', // @translate
+$keyId, $keyCredential
+);
+$message->setEscapeHtml(false);
+$this->messenger()->addWarning($message);
+
+```
 
 Finally, you should create a `/language` directory at the root of your module, and make sure it is writable.
 

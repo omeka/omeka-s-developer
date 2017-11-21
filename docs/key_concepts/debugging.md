@@ -33,9 +33,9 @@ To use internal assests, such as a local copy of jQuery, add this to `local.conf
 
 
 
-## Logging within Controllers and Jobs
+## Logging within Controllers
 
-Omeka S provides a `logger()` plugin. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`
+Omeka S provides a `logger()` plugin withing Controllers. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`
 
 The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\LoggerInterface`, which makes it easy to give messages at different log levels:
 
@@ -47,6 +47,16 @@ The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\Logg
 * notice()
 * info()
 * debug()
+
+## Logging within Jobs
+
+Jobs that run in the background do not have access to the `logger()` plugin. Instead, you can get the logger from the ServiceManager anywhere inside the Job class:
+
+```php
+$logger = $this->getServiceLocator()->get('Omeka\Logger');
+```
+
+Then use as above, e.g. `$logger()->info('Importing page 1')`
 
 ## Logging within Views
 

@@ -58,6 +58,8 @@ $logger = $this->getServiceLocator()->get('Omeka\Logger');
 
 Then use as above, e.g. `$logger()->info('Importing page 1')`
 
+Log messages are not written to `application.log` from inside a Job. Instead, they are written to the Job's record. You can view the information by look at the Job record in the admin screen.
+
 ## Logging within Views
 
 ## Logging elsewhere

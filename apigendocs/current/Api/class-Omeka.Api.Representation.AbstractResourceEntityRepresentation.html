@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Api\Representation\AbstractResourceEntityRepresentation
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Api.html">Api</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Api.Representation.html">Representation</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">AbstractResourceEntityRepresentation</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>AbstractResourceEntityRepresentation</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Abstract resource entity representation.
+
+Provides functionality for entities that extend Omeka\Entity\Resource.
+            </div>
+        </div>
+
+        <dl class="tree">
+            <dd>
+                    extends
+                    <a href="class-Omeka.Api.Representation.AbstractEntityRepresentation.html">
+                        Omeka\Api\Representation\AbstractEntityRepresentation
+                    </a>
+
+
+            </dd>
+        </dl>
+
+
+        <div>
+            <h2>Known subclasses</h2>
+            <a href="class-Omeka.Api.Representation.ItemRepresentation.html">Omeka\Api\Representation\ItemRepresentation</a>, 
+            <a href="class-Omeka.Api.Representation.ItemSetRepresentation.html">Omeka\Api\Representation\ItemSetRepresentation</a>, 
+            <a href="class-Omeka.Api.Representation.MediaRepresentation.html">Omeka\Api\Representation\MediaRepresentation</a>
+        </div>
+
+    <div class="info">
+        <strong>Abstract</strong><br>
+
+            <a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_getResourceJsonLd">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                abstract public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceJsonLd">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#41">getResourceJsonLd</a>( )</code>
+
+            <div class="description">
+                Get the internal members of this resource entity.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getResourceJsonLdType">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                abstract public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getResourceJsonLdType">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#48">getResourceJsonLdType</a>( )</code>
+
+            <div class="description">
+                Get the JSON-LD type for this specific kind of resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="___construct">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___construct">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#50-53">__construct</a>( <span> Omeka\Entity\Resource <span class="property-name">$resource</span> </span>, <span> <a href="interface-Omeka.Api.Adapter.AdapterInterface.html">Omeka\Api\Adapter\AdapterInterface</a> <span class="property-name">$adapter</span> </span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+                        <h2>Overrides</h2>
+                        <div>
+                            <code>
+                                <a href="class-Omeka.Api.Representation.AbstractEntityRepresentation.html#___construct">
+                                    Omeka\Api\Representation\AbstractEntityRepresentation::__construct()
+                                </a>
+                            </code>
+                        </div>
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getJsonLdType">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getJsonLdType">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#58-69">getJsonLdType</a>( )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getJsonLd">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getJsonLd">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#74-123">getJsonLd</a>( )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_resourceName">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_resourceName">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#130-133">resourceName</a>( )</code>
+
+            <div class="description">
+                Get the resource name of the corresponding entity API adapter.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_resourceClass">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_resourceClass">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#140-144">resourceClass</a>( )</code>
+
+            <div class="description">
+                Get the resource class representation of this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_resourceTemplate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_resourceTemplate">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#151-155">resourceTemplate</a>( )</code>
+
+            <div class="description">
+                Get the resource template of this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_owner">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_owner">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#162-166">owner</a>( )</code>
+
+            <div class="description">
+                Get the owner representation of this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_isPublic">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_isPublic">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#173-176">isPublic</a>( )</code>
+
+            <div class="description">
+                Get whether this resource is public or not public.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_created">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_created">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#183-186">created</a>( )</code>
+
+            <div class="description">
+                Get the date-time when this resource was created.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_modified">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_modified">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#193-196">modified</a>( )</code>
+
+            <div class="description">
+                Get the date-time when this resource was last modified.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_values">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_values">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#217-273">values</a>( )</code>
+
+            <div class="description">
+                Get all value representations of this resource.
+
+&lt;code&gt;
+array(
+  {term} =&gt; array(
+    'property' =&gt; {PropertyRepresentation},
+    'alternate_label' =&gt; {label},
+    'alternate_comment' =&gt; {comment},
+    'values' =&gt; array(
+      {ValueRepresentation},
+      {ValueRepresentation},
+    ),
+  ),
+)
+&lt;/code&gt;
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_value">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_value">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#290-335">value</a>( <span> string <span class="property-name">$term</span> </span>, <span> array <span class="property-name">$options</span> = <span class="php-keyword1">array</span> ( )</span> )</code>
+
+            <div class="description">
+                Get value representations.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_subjectValues">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_subjectValues">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#345-354">subjectValues</a>( <span> int <span class="property-name">$page</span> = <span class="php-keyword1">NULL</span></span>, <span> int <span class="property-name">$perPage</span> = <span class="php-keyword1">NULL</span></span>, <span> int <span class="property-name">$property</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get value representations where this resource is the RDF object.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_subjectValueTotalCount">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_subjectValueTotalCount">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#362-365">subjectValueTotalCount</a>( <span> int <span class="property-name">$property</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get the total count of this resource's subject values.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_subjectValueProperties">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_subjectValueProperties">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#372-381">subjectValueProperties</a>( )</code>
+
+            <div class="description">
+                Get distinct properties (predicates) where this resource is the RDF object.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_objectValues">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_objectValues">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#388-399">objectValues</a>( )</code>
+
+            <div class="description">
+                Get value representations where this resource is the RDF subject.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_displayValues">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_displayValues">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#413-429">displayValues</a>( <span> array <span class="property-name">$options</span> = <span class="php-keyword1">array</span> ( )</span> )</code>
+
+            <div class="description">
+                Get the display markup for all values of this resource.
+
+Options:
+
++ hideVocabulary: Whether to hide vocabulary labels. Default: false
++ viewName: Name of view script, or a view model. Default
+  "common/resource-values"
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_displaySubjectValues">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_displaySubjectValues">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#439-455">displaySubjectValues</a>( <span> int <span class="property-name">$page</span> = <span class="php-keyword1">NULL</span></span>, <span> int <span class="property-name">$perPage</span> = <span class="php-keyword1">NULL</span></span>, <span> int <span class="property-name">$property</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get the display markup for values where this resource is the RDF object.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_displayTitle">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_displayTitle">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#463-479">displayTitle</a>( <span> string|null <span class="property-name">$default</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get the display title for this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_displayDescription">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_displayDescription">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#487-492">displayDescription</a>( <span> string|null <span class="property-name">$default</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get the display description for this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_displayResourceClassLabel">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_displayResourceClassLabel">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#500-504">displayResourceClassLabel</a>( <span> string|null <span class="property-name">$default</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get the display resource class label for this resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_linkPretty">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_linkPretty">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#516-535">linkPretty</a>( <span> string <span class="property-name">$thumbnailType</span> = <span class="php-quote">'square'</span></span>, <span> string|null <span class="property-name">$titleDefault</span> = <span class="php-keyword1">NULL</span></span>, <span> string|null <span class="property-name">$action</span> = <span class="php-keyword1">NULL</span></span>, <span> array <span class="property-name">$attributes</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Get a "pretty" link to this resource containing a thumbnail and
+display title.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_valueRepresentation">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_valueRepresentation">#</a>
+            <code><a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#543-559">valueRepresentation</a>( )</code>
+
+            <div class="description">
+                Get the representation of this resource as a value for linking from
+another resource.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr>
+                <th>
+                    Methods inherited from <a href="class-Omeka.Api.Representation.AbstractEntityRepresentation.html#methods">Omeka\Api\Representation\AbstractEntityRepresentation</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        <code><a href="class-Omeka.Api.Representation.AbstractEntityRepresentation.html#___construct">__construct()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractEntityRepresentation.html#_userIsAllowed">userIsAllowed()</a></code>
+                </td>
+            </tr>
+        </table>
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr>
+                <th>
+                    Methods inherited from <a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#methods">Omeka\Api\Representation\AbstractResourceRepresentation</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getJsonLd">getJsonLd()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getJsonLdType">getJsonLdType()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#___construct">__construct()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_id">id()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_jsonSerialize">jsonSerialize()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_setId">setId()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_setAdapter">setAdapter()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getAdapter">getAdapter()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getReference">getReference()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_apiUrl">apiUrl()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_url">url()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_adminUrl">adminUrl()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_siteUrl">siteUrl()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_link">link()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_linkRaw">linkRaw()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getFileUrl">getFileUrl()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_getControllerName">getControllerName()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#_embeddedJsonLd">embeddedJsonLd()</a></code>
+                </td>
+            </tr>
+        </table>
+        <table class="summary table table-bordered table-responsive table-striped">
+            <tr>
+                <th>
+                    Methods inherited from <a href="class-Omeka.Api.Representation.AbstractRepresentation.html#methods">Omeka\Api\Representation\AbstractRepresentation</a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_getAdapter">getAdapter()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_getDateTime">getDateTime()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_getTranslator">getTranslator()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_getViewHelper">getViewHelper()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_primaryMedia">primaryMedia()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_getServiceLocator">getServiceLocator()</a></code>, 
+                        <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#_setServiceLocator">setServiceLocator()</a></code>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$values">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            array
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Api.Representation.AbstractResourceEntityRepresentation.html#34" class="property-name">$values</a>
+        </code>
+        <div class="description">
+            All value representations of this resource, organized by property.
+
+&lt;code&gt;
+array(
+  {JSON-LD term} =&gt; array(
+    'property' =&gt; {property representation},
+    'values' =&gt; {
+      {value representation},
+      {value representation},
+      {...},
+    },
+  ),
+)
+&lt;/code&gt;
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$values" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+            <table class="summary table table-bordered table-responsive table-striped">
+                <tr>
+                    <th>
+                        Properties inherited from <a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#properties">Omeka\Api\Representation\AbstractResourceRepresentation</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                            <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#$id" class="property-name">$id</a></code>, 
+                            <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#$resource" class="property-name">$resource</a></code>, 
+                            <code><a href="class-Omeka.Api.Representation.AbstractResourceRepresentation.html#$adapter" class="property-name">$adapter</a></code>
+                    </td>
+                </tr>
+            </table>
+            <table class="summary table table-bordered table-responsive table-striped">
+                <tr>
+                    <th>
+                        Properties inherited from <a href="class-Omeka.Api.Representation.AbstractRepresentation.html#properties">Omeka\Api\Representation\AbstractRepresentation</a>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                            <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#$translator" class="property-name">$translator</a></code>, 
+                            <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#$viewHelperManager" class="property-name">$viewHelperManager</a></code>, 
+                            <code><a href="class-Omeka.Api.Representation.AbstractRepresentation.html#$services" class="property-name">$services</a></code>
+                    </td>
+                </tr>
+            </table>
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

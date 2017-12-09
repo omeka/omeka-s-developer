@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Interface Psr\Container\ContainerInterface
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-info">Interface</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Psr.html">Psr</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Psr.Container.html">Container</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">ContainerInterface</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>ContainerInterface</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Describes the interface of a container that exposes methods to read its entries.
+            </div>
+        </div>
+
+
+        <div>
+            <h2>Known implementers</h2>
+            <p>
+                    <a href="interface-Interop.Container.ContainerInterface.html">
+                        Interop\Container\ContainerInterface
+                    </a>, 
+                    <a href="class-Omeka.DataType.Manager.html">
+                        Omeka\DataType\Manager
+                    </a>, 
+                    <a href="class-Omeka.ServiceManager.AbstractPluginManager.html">
+                        Omeka\ServiceManager\AbstractPluginManager
+                    </a>, 
+                    <a href="class-Zend.ServiceManager.AbstractPluginManager.html">
+                        Zend\ServiceManager\AbstractPluginManager
+                    </a>, 
+                    <a href="interface-Zend.ServiceManager.PluginManagerInterface.html">
+                        Zend\ServiceManager\PluginManagerInterface
+                    </a>, 
+                    <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">
+                        Zend\ServiceManager\ServiceLocatorInterface
+                    </a>, 
+                    <a href="class-Zend.ServiceManager.ServiceManager.html">
+                        Zend\ServiceManager\ServiceManager
+                    </a>
+            </p>
+        </div>
+
+    <div class="info">
+            <a href="source-interface-Psr.Container.ContainerInterface.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-responsive table-bordered table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_get">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_get">#</a>
+            <code><a href="source-interface-Psr.Container.ContainerInterface.html#23">get</a>( <span> string <span class="property-name">$id</span> </span> )</code>
+
+            <div class="description">
+                Finds an entry of the container by its identifier and returns it.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_has">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_has">#</a>
+            <code><a href="source-interface-Psr.Container.ContainerInterface.html#36">has</a>( <span> string <span class="property-name">$id</span> </span> )</code>
+
+            <div class="description">
+                Returns true if the container can return an entry for the given identifier.
+
+Returns false otherwise.
+
+`has($id)` returning true does not mean that `get($id)` will not throw an exception.
+It does however mean that `get($id)` will not throw a `NotFoundExceptionInterface`.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

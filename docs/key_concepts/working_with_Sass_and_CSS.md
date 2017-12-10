@@ -1,6 +1,4 @@
-# Themes
-
-## Working with SASS and CSS
+# Working with Sass and CSS
 
 
 Omeka S's CSS is generated using Gulp and other Node packages. The necessary packages are installed with npm. From the top-level Omeka S directory:
@@ -15,7 +13,7 @@ For convenience, you may also want to install Gulp's CLI globally:
 npm install -g gulp-cli
 ```
 
-### Editing the Styles
+## Editing the Styles
 
 **Do not edit the files in the `css` directory manually!** They are automatically generated and your changes will be overwritten. 
 

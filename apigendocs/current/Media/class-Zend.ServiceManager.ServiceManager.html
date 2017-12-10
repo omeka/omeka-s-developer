@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Zend\ServiceManager\ServiceManager
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Zend.html">Zend</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Zend.ServiceManager.html">ServiceManager</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">ServiceManager</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>ServiceManager</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Service Manager.
+
+Default implementation of the ServiceLocatorInterface, providing capabilities
+for object creation via:
+
+- factories
+- abstract factories
+- delegator factories
+- lazy service factories (generated proxies)
+- initializers (interface injection)
+
+It also provides the ability to inject specific service instances and to
+define aliases.
+            </div>
+        </div>
+
+        <dl class="tree">
+            <dd>
+
+                    implements
+                        <a href="interface-Interop.Container.ContainerInterface.html">
+                            Interop\Container\ContainerInterface
+                        </a>, 
+                        <a href="interface-Psr.Container.ContainerInterface.html">
+                            Psr\Container\ContainerInterface
+                        </a>, 
+                        <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html">
+                            Zend\ServiceManager\ServiceLocatorInterface
+                        </a>
+
+            </dd>
+        </dl>
+
+
+        <div>
+            <h2>Known subclasses</h2>
+            <a href="class-Omeka.Media.FileRenderer.Manager.html">Omeka\Media\FileRenderer\Manager</a>, 
+            <a href="class-Omeka.Media.Ingester.Manager.html">Omeka\Media\Ingester\Manager</a>, 
+            <a href="class-Omeka.Media.Renderer.Manager.html">Omeka\Media\Renderer\Manager</a>, 
+            <a href="class-Omeka.ServiceManager.AbstractPluginManager.html">Omeka\ServiceManager\AbstractPluginManager</a>, 
+            <a href="class-Zend.ServiceManager.AbstractPluginManager.html">Zend\ServiceManager\AbstractPluginManager</a>
+        </div>
+
+    <div class="info">
+        
+
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___construct">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___construct">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#149-153">__construct</a>( <span> array <span class="property-name">$config</span> = <span class="php-keyword1">array</span> ( )</span> )</code>
+
+            <div class="description">
+                Constructor.
+
+See {@see \Zend\ServiceManager\ServiceManager::configure()} for details
+on what $config accepts.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getServiceLocator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getServiceLocator">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#164-171">getServiceLocator</a>( )</code>
+
+            <div class="description">
+                Implemented for backwards compatibility with previous plugin managers only.
+
+Returns the creation context.
+
+                    <h2>Deprecated</h2>
+                        <br>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_get">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_get">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#176-218">get</a>( <span> <span class="property-name">$name</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Psr.Container.ContainerInterface.html#_get">
+                                    Psr\Container\ContainerInterface::get()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_build">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_build">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#223-228">build</a>( <span> <span class="property-name">$name</span> </span>, <span> array <span class="property-name">$options</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Zend.ServiceManager.ServiceLocatorInterface.html#_build">
+                                    Zend\ServiceManager\ServiceLocatorInterface::build()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_has">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_has">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#233-250">has</a>( <span> <span class="property-name">$name</span> </span> )</code>
+
+            <div class="description">
+                {@inheritDoc}
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Psr.Container.ContainerInterface.html#_has">
+                                    Psr\Container\ContainerInterface::has()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setAllowOverride">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setAllowOverride">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#257-260">setAllowOverride</a>( <span> bool <span class="property-name">$flag</span> </span> )</code>
+
+            <div class="description">
+                Indicate whether or not the instance is immutable.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getAllowOverride">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getAllowOverride">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#267-270">getAllowOverride</a>( )</code>
+
+            <div class="description">
+                Retrieve the flag indicating immutability status.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_configure">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_configure">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#312-377">configure</a>( <span> array <span class="property-name">$config</span> </span> )</code>
+
+            <div class="description">
+                Configure the service manager
+
+Valid top keys are:
+
+- services: service name =&gt; service instance pairs
+- invokables: service name =&gt; class name pairs for classes that do not
+  have required constructor arguments; internally, maps the class to an
+  InvokableFactory instance, and creates an alias if the service name
+  and class name do not match.
+- factories: service name =&gt; factory pairs; factories may be any
+  callable, string name resolving to an invokable class, or string name
+  resolving to a FactoryInterface instance.
+- abstract_factories: an array of abstract factories; these may be
+  instances of AbstractFactoryInterface, or string names resolving to
+  classes that implement that interface.
+- delegators: service name =&gt; list of delegator factories for the given
+  service; each item in the list may be a callable, a string name
+  resolving to an invokable class, or a string name resolving to a class
+  implementing DelegatorFactoryInterface.
+- shared: service name =&gt; flag pairs; the flag is a boolean indicating
+  whether or not the service is shared.
+- aliases: alias =&gt; service name pairs.
+- lazy_services: lazy service configuration; can contain the keys:
+  - class_map: service name =&gt; class name pairs.
+  - proxies_namespace: string namespace to use for generated proxy
+    classes.
+  - proxies_target_dir: directory in which to write generated proxy
+    classes; uses system temporary by default.
+  - write_proxy_files: boolean indicating whether generated proxy
+    classes should be written; defaults to boolean false.
+- shared_by_default: boolean, indicating if services in this instance
+  should be shared by default.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setAlias">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setAlias">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#414-417">setAlias</a>( <span> string <span class="property-name">$alias</span> </span>, <span> string <span class="property-name">$target</span> </span> )</code>
+
+            <div class="description">
+                Add an alias.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setInvokableClass">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setInvokableClass">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#426-429">setInvokableClass</a>( <span> string <span class="property-name">$name</span> </span>, <span> null|string <span class="property-name">$class</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Add an invokable class mapping.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setFactory">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setFactory">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#438-441">setFactory</a>( <span> string <span class="property-name">$name</span> </span>, <span> string|callable|\Factory\FactoryInterface <span class="property-name">$factory</span> </span> )</code>
+
+            <div class="description">
+                Specify a factory for a given service name.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_mapLazyService">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_mapLazyService">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#450-453">mapLazyService</a>( <span> string <span class="property-name">$name</span> </span>, <span> null|string <span class="property-name">$class</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Create a lazy service mapping to a class.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addAbstractFactory">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addAbstractFactory">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#460-463">addAbstractFactory</a>( <span> string|\Factory\AbstractFactoryInterface <span class="property-name">$factory</span> </span> )</code>
+
+            <div class="description">
+                Add an abstract factory for resolving services.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addDelegator">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addDelegator">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#472-475">addDelegator</a>( <span> string <span class="property-name">$name</span> </span>, <span> string|callable|\Factory\DelegatorFactoryInterface <span class="property-name">$factory</span> </span> )</code>
+
+            <div class="description">
+                Add a delegator for a given service.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addInitializer">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addInitializer">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#482-485">addInitializer</a>( <span> string|callable|\Initializer\InitializerInterface <span class="property-name">$initializer</span> </span> )</code>
+
+            <div class="description">
+                Add an initializer.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setService">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setService">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#493-496">setService</a>( <span> string <span class="property-name">$name</span> </span>, <span> array|object <span class="property-name">$service</span> </span> )</code>
+
+            <div class="description">
+                Map a service.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_setShared">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_setShared">#</a>
+            <code><a href="source-class-Zend.ServiceManager.ServiceManager.html#504-507">setShared</a>( <span> string <span class="property-name">$name</span> </span>, <span> bool <span class="property-name">$flag</span> </span> )</code>
+
+            <div class="description">
+                Add a service sharing rule.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$abstractFactories">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            \Zend\ServiceManager\Factory\AbstractFactoryInterface[]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#44" class="property-name">$abstractFactories</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$abstractFactories" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$aliases">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string[]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#53" class="property-name">$aliases</a>
+        </code>
+        <div class="description">
+            A list of aliases
+
+Should map one alias to a service name, or another alias (aliases are recursively resolved)
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$aliases" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$allowOverride">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#60" class="property-name">$allowOverride</a>
+        </code>
+        <div class="description">
+            Whether or not changes may be made to this instance.
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$allowOverride" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">false</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$creationContext">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            <a href="interface-Interop.Container.ContainerInterface.html">Interop\Container\ContainerInterface</a>
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#65" class="property-name">$creationContext</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$creationContext" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$delegators">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string[][]|\Zend\ServiceManager\Factory\DelegatorFactoryInterface[][]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#70" class="property-name">$delegators</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$delegators" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$factories">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string[]|callable[]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#77" class="property-name">$factories</a>
+        </code>
+        <div class="description">
+            A list of factories (either as string name or callable)
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$factories" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$initializers">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            \Zend\ServiceManager\Initializer\InitializerInterface[]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#82" class="property-name">$initializers</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$initializers" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$lazyServices">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            array
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#87" class="property-name">$lazyServices</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$lazyServices" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$services">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            array
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#104" class="property-name">$services</a>
+        </code>
+        <div class="description">
+            A list of already loaded services (this act as a local cache)
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$services" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$shared">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            bool[]
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#118" class="property-name">$shared</a>
+        </code>
+        <div class="description">
+            Enable/disable shared instances by service name.
+
+Example configuration:
+
+'shared' =&gt; [
+    MyService::class =&gt; true, // will be shared, even if "sharedByDefault" is false
+    MyOtherService::class =&gt; false // won't be shared, even if "sharedByDefault" is true
+]
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$shared" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$sharedByDefault">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            bool
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#125" class="property-name">$sharedByDefault</a>
+        </code>
+        <div class="description">
+            Should the services be shared by default?
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$sharedByDefault" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">true</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$configured">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            bool
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Zend.ServiceManager.ServiceManager.html#132" class="property-name">$configured</a>
+        </code>
+        <div class="description">
+            Service manager was already configured?
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$configured" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">false</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

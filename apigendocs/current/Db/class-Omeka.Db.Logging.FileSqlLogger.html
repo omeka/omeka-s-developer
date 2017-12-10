@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Db\Logging\FileSqlLogger
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Db.html">Db</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Db.Logging.html">Logging</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">FileSqlLogger</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>FileSqlLogger</h1>
+
+
+        <dl class="tree">
+            <dd>
+
+                    implements
+                        <a href="interface-Doctrine.DBAL.Logging.SQLLogger.html">
+                            Doctrine\DBAL\Logging\SQLLogger
+                        </a>
+
+            </dd>
+        </dl>
+
+
+
+    <div class="info">
+        
+
+            <a href="source-class-Omeka.Db.Logging.FileSqlLogger.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___construct">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___construct">#</a>
+            <code><a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#44-47">__construct</a>( <span> string <span class="property-name">$path</span> </span> )</code>
+
+            <div class="description">
+                Set the file object.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_startQuery">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_startQuery">#</a>
+            <code><a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#56-74">startQuery</a>( <span> string <span class="property-name">$sql</span> </span>, <span> array <span class="property-name">$params</span> = <span class="php-keyword1">NULL</span></span>, <span> array <span class="property-name">$types</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Log SQL to file.
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Doctrine.DBAL.Logging.SQLLogger.html#_startQuery">
+                                    Doctrine\DBAL\Logging\SQLLogger::startQuery()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_stopQuery">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_stopQuery">#</a>
+            <code><a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#76-86">stopQuery</a>( )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Doctrine.DBAL.Logging.SQLLogger.html#_stopQuery">
+                                    Doctrine\DBAL\Logging\SQLLogger::stopQuery()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getType">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getType">#</a>
+            <code><a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#88-94">getType</a>( <span> <span class="property-name">$type</span> </span> )</code>
+
+            <div class="description">
+                
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+
+
+
+        <table class="summary table table-bordered table-responsive table-striped" id="properties">
+            <tr><th colspan="3">Properties Summary</th></tr>
+<tr id="$types">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#14-22" class="property-name">$types</a>
+        </code>
+        <div class="description">
+            List of PDO and Doctrine built-in types
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$types" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">array</span> (
+  <span class="php-num">5</span> =&gt; <span class="php-quote">'PARAM_BOOL'</span>,
+  <span class="php-num">0</span> =&gt; <span class="php-quote">'PARAM_NULL'</span>,
+  <span class="php-num">1</span> =&gt; <span class="php-quote">'PARAM_INT'</span>,
+  <span class="php-num">2</span> =&gt; <span class="php-quote">'PARAM_STR'</span>,
+  <span class="php-num">3</span> =&gt; <span class="php-quote">'PARAM_LOB'</span>,
+  <span class="php-num">101</span> =&gt; <span class="php-quote">'PARAM_INT_ARRAY'</span>,
+  <span class="php-num">102</span> =&gt; <span class="php-quote">'PARAM_STR_ARRAY'</span>,
+)</code>
+        </div>
+    </td>
+</tr>
+<tr id="$file">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            SplFileObject
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#27" class="property-name">$file</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$file" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$startTime">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            float
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#32" class="property-name">$startTime</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$startTime" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+<tr id="$entry">
+    <td class="attributes">
+        <code class="keyword">
+            protected 
+
+            string
+        </code>
+    </td>
+
+    <td class="name">
+        <code>
+            <a href="source-class-Omeka.Db.Logging.FileSqlLogger.html#37" class="property-name">$entry</a>
+        </code>
+        <div class="description">
+            
+
+        </div>
+    </td>
+    <td class="value">
+        <div>
+            <a href="#$entry" class="anchor pull-right">#</a>
+            <code><span class="php-keyword1">NULL</span></code>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

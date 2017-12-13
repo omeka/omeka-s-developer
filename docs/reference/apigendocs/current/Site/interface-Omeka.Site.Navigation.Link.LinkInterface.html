@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Interface Omeka\Site\Navigation\Link\LinkInterface
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+                            <li>
+                                <a href="traits.html">Traits</a>
+                            </li>
+
+
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-info">Interface</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Site.html">Site</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Site.Navigation.html">Navigation</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Site.Navigation.Link.html">Link</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">LinkInterface</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>LinkInterface</h1>
+
+
+
+        <div>
+            <h2>Known implementers</h2>
+            <p>
+                    <a href="class-Omeka.Site.Navigation.Link.Browse.html">
+                        Omeka\Site\Navigation\Link\Browse
+                    </a>, 
+                    <a href="class-Omeka.Site.Navigation.Link.BrowseItemSets.html">
+                        Omeka\Site\Navigation\Link\BrowseItemSets
+                    </a>, 
+                    <a href="class-Omeka.Site.Navigation.Link.Fallback.html">
+                        Omeka\Site\Navigation\Link\Fallback
+                    </a>, 
+                    <a href="class-Omeka.Site.Navigation.Link.Page.html">
+                        Omeka\Site\Navigation\Link\Page
+                    </a>, 
+                    <a href="class-Omeka.Site.Navigation.Link.Url.html">
+                        Omeka\Site\Navigation\Link\Url
+                    </a>
+            </p>
+        </div>
+
+    <div class="info">
+            <a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-responsive table-bordered table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="_getName">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getName">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#14">getName</a>( )</code>
+
+            <div class="description">
+                Get the link type name.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getFormTemplate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getFormTemplate">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#21">getFormTemplate</a>( )</code>
+
+            <div class="description">
+                Get the view template used to render the link form.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_isValid">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_isValid">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#29">isValid</a>( <span> array <span class="property-name">$data</span> </span>, <span> Omeka\Stdlib\ErrorStore <span class="property-name">$errorStore</span> </span> )</code>
+
+            <div class="description">
+                Validate link data.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_getLabel">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_getLabel">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#38">getLabel</a>( <span> array <span class="property-name">$data</span> </span>, <span> Omeka\Api\Representation\SiteRepresentation <span class="property-name">$site</span> </span> )</code>
+
+            <div class="description">
+                Get the link label.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_toZend">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_toZend">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#47">toZend</a>( <span> array <span class="property-name">$data</span> </span>, <span> Omeka\Api\Representation\SiteRepresentation <span class="property-name">$site</span> </span> )</code>
+
+            <div class="description">
+                Translate from site navigation data to Zend Navigation configuration.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_toJstree">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_toJstree">#</a>
+            <code><a href="source-interface-Omeka.Site.Navigation.Link.LinkInterface.html#56">toJstree</a>( <span> array <span class="property-name">$data</span> </span>, <span> Omeka\Api\Representation\SiteRepresentation <span class="property-name">$site</span> </span> )</code>
+
+            <div class="description">
+                Translate from site navigation data to jsTree configuration.
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

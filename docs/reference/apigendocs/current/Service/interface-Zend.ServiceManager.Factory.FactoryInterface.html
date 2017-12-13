@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Interface Zend\ServiceManager\Factory\FactoryInterface
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-info">Interface</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Zend.html">Zend</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Zend.ServiceManager.html">ServiceManager</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Zend.ServiceManager.Factory.html">Factory</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">FactoryInterface</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>FactoryInterface</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Interface for a factory
+
+A factory is an callable object that is able to create an object. It is
+given the instance of the service locator, the requested name of the class
+you want to create, and any additional options that could be used to
+configure the instance state.
+            </div>
+        </div>
+
+
+        <div>
+            <h2>Known implementers</h2>
+            <p>
+                    <a href="class-Omeka.Service.AclFactory.html">
+                        Omeka\Service\AclFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ApiAdapterManagerFactory.html">
+                        Omeka\Service\ApiAdapterManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ApiManagerFactory.html">
+                        Omeka\Service\ApiManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.AuthenticationServiceFactory.html">
+                        Omeka\Service\AuthenticationServiceFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.BlockLayout.HtmlFactory.html">
+                        Omeka\Service\BlockLayout\HtmlFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.BlockLayoutManagerFactory.html">
+                        Omeka\Service\BlockLayoutManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.CliFactory.html">
+                        Omeka\Service\CliFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ConnectionFactory.html">
+                        Omeka\Service\ConnectionFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.ItemControllerFactory.html">
+                        Omeka\Service\Controller\Admin\ItemControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.ItemSetControllerFactory.html">
+                        Omeka\Service\Controller\Admin\ItemSetControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.JobControllerFactory.html">
+                        Omeka\Service\Controller\Admin\JobControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.ModuleControllerFactory.html">
+                        Omeka\Service\Controller\Admin\ModuleControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.ResourceTemplateControllerFactory.html">
+                        Omeka\Service\Controller\Admin\ResourceTemplateControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.SystemInfoControllerFactory.html">
+                        Omeka\Service\Controller\Admin\SystemInfoControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.UserControllerFactory.html">
+                        Omeka\Service\Controller\Admin\UserControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.Admin.VocabularyControllerFactory.html">
+                        Omeka\Service\Controller\Admin\VocabularyControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.ApiControllerFactory.html">
+                        Omeka\Service\Controller\ApiControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.InstallControllerFactory.html">
+                        Omeka\Service\Controller\InstallControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.LoginControllerFactory.html">
+                        Omeka\Service\Controller\LoginControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.MigrateControllerFactory.html">
+                        Omeka\Service\Controller\MigrateControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Controller.SiteAdmin.IndexControllerFactory.html">
+                        Omeka\Service\Controller\SiteAdmin\IndexControllerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.ApiFactory.html">
+                        Omeka\Service\ControllerPlugin\ApiFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.GetFormFactory.html">
+                        Omeka\Service\ControllerPlugin\GetFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.JobDispatcherFactory.html">
+                        Omeka\Service\ControllerPlugin\JobDispatcherFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.LoggerFactory.html">
+                        Omeka\Service\ControllerPlugin\LoggerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.MailerFactory.html">
+                        Omeka\Service\ControllerPlugin\MailerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.PaginatorFactory.html">
+                        Omeka\Service\ControllerPlugin\PaginatorFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.SettingsFactory.html">
+                        Omeka\Service\ControllerPlugin\SettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.SiteSettingsFactory.html">
+                        Omeka\Service\ControllerPlugin\SiteSettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.StatusFactory.html">
+                        Omeka\Service\ControllerPlugin\StatusFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.TranslateFactory.html">
+                        Omeka\Service\ControllerPlugin\TranslateFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.UserIsAllowedFactory.html">
+                        Omeka\Service\ControllerPlugin\UserIsAllowedFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.UserSettingsFactory.html">
+                        Omeka\Service\ControllerPlugin\UserSettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ControllerPlugin.ViewHelpersFactory.html">
+                        Omeka\Service\ControllerPlugin\ViewHelpersFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.DataTypeManagerFactory.html">
+                        Omeka\Service\DataTypeManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.EntityManagerFactory.html">
+                        Omeka\Service\EntityManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.DownloaderFactory.html">
+                        Omeka\Service\File\DownloaderFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.Store.LocalFactory.html">
+                        Omeka\Service\File\Store\LocalFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.TempFileFactoryFactory.html">
+                        Omeka\Service\File\TempFileFactoryFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.Thumbnailer.GdFactory.html">
+                        Omeka\Service\File\Thumbnailer\GdFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.Thumbnailer.ImageMagickFactory.html">
+                        Omeka\Service\File\Thumbnailer\ImageMagickFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.Thumbnailer.ImagickFactory.html">
+                        Omeka\Service\File\Thumbnailer\ImagickFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.ThumbnailManagerFactory.html">
+                        Omeka\Service\File\ThumbnailManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.UploaderFactory.html">
+                        Omeka\Service\File\UploaderFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.File.ValidatorFactory.html">
+                        Omeka\Service\File\ValidatorFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.CkeditorFactory.html">
+                        Omeka\Service\Form\Element\CkeditorFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.CkeditorInlineFactory.html">
+                        Omeka\Service\Form\Element\CkeditorInlineFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.HtmlTextareaFactory.html">
+                        Omeka\Service\Form\Element\HtmlTextareaFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.ItemSetSelectFactory.html">
+                        Omeka\Service\Form\Element\ItemSetSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.LocaleSelectFactory.html">
+                        Omeka\Service\Form\Element\LocaleSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.PropertySelectFactory.html">
+                        Omeka\Service\Form\Element\PropertySelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.RecaptchaFactory.html">
+                        Omeka\Service\Form\Element\RecaptchaFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.ResourceClassSelectFactory.html">
+                        Omeka\Service\Form\Element\ResourceClassSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.ResourceSelectFactory.html">
+                        Omeka\Service\Form\Element\ResourceSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.Element.SiteSelectFactory.html">
+                        Omeka\Service\Form\Element\SiteSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.ModuleStateChangeFormFactory.html">
+                        Omeka\Service\Form\ModuleStateChangeFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.ResourceFormFactory.html">
+                        Omeka\Service\Form\ResourceFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.SettingFormFactory.html">
+                        Omeka\Service\Form\SettingFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.SiteFormFactory.html">
+                        Omeka\Service\Form\SiteFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.SiteSettingsFormFactory.html">
+                        Omeka\Service\Form\SiteSettingsFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Form.UserFormFactory.html">
+                        Omeka\Service\Form\UserFormFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.HtmlPurifierFactory.html">
+                        Omeka\Service\HtmlPurifierFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.HttpClientFactory.html">
+                        Omeka\Service\HttpClientFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.InstallerFactory.html">
+                        Omeka\Service\InstallerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Job.DispatcherFactory.html">
+                        Omeka\Service\Job\DispatcherFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Job.DispatchStrategy.PhpCliFactory.html">
+                        Omeka\Service\Job\DispatchStrategy\PhpCliFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Job.DispatchStrategy.SynchronousFactory.html">
+                        Omeka\Service\Job\DispatchStrategy\SynchronousFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.LoggerFactory.html">
+                        Omeka\Service\LoggerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.MailerFactory.html">
+                        Omeka\Service\MailerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.FileRenderer.ManagerFactory.html">
+                        Omeka\Service\Media\FileRenderer\ManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.HtmlFactory.html">
+                        Omeka\Service\Media\Ingester\HtmlFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.IIIFFactory.html">
+                        Omeka\Service\Media\Ingester\IIIFFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.ManagerFactory.html">
+                        Omeka\Service\Media\Ingester\ManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.OEmbedFactory.html">
+                        Omeka\Service\Media\Ingester\OEmbedFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.UploadFactory.html">
+                        Omeka\Service\Media\Ingester\UploadFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.UrlFactory.html">
+                        Omeka\Service\Media\Ingester\UrlFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Ingester.YoutubeFactory.html">
+                        Omeka\Service\Media\Ingester\YoutubeFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Renderer.FileFactory.html">
+                        Omeka\Service\Media\Renderer\FileFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Media.Renderer.ManagerFactory.html">
+                        Omeka\Service\Media\Renderer\ManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.MediaTypeMapFactory.html">
+                        Omeka\Service\MediaTypeMapFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.MigrationManagerFactory.html">
+                        Omeka\Service\MigrationManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ModuleManagerFactory.html">
+                        Omeka\Service\ModuleManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.NavigationLinkManagerFactory.html">
+                        Omeka\Service\NavigationLinkManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.PaginatorFactory.html">
+                        Omeka\Service\PaginatorFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.RdfImporterFactory.html">
+                        Omeka\Service\RdfImporterFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Settings.SettingsFactory.html">
+                        Omeka\Service\Settings\SettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Settings.SiteSettingsFactory.html">
+                        Omeka\Service\Settings\SiteSettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.Settings.UserSettingsFactory.html">
+                        Omeka\Service\Settings\UserSettingsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.SiteNavigationTranslatorFactory.html">
+                        Omeka\Service\SiteNavigationTranslatorFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.StatusFactory.html">
+                        Omeka\Service\StatusFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ThemeManagerFactory.html">
+                        Omeka\Service\ThemeManagerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewApiJsonStrategyFactory.html">
+                        Omeka\Service\ViewApiJsonStrategyFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ApiFactory.html">
+                        Omeka\Service\ViewHelper\ApiFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.AssetUrlFactory.html">
+                        Omeka\Service\ViewHelper\AssetUrlFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.BlockLayoutFactory.html">
+                        Omeka\Service\ViewHelper\BlockLayoutFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.BlockThumbnailTypeSelectFactory.html">
+                        Omeka\Service\ViewHelper\BlockThumbnailTypeSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.DataTypeFactory.html">
+                        Omeka\Service\ViewHelper\DataTypeFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.DeleteConfirmFactory.html">
+                        Omeka\Service\ViewHelper\DeleteConfirmFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.I18nFactory.html">
+                        Omeka\Service\ViewHelper\I18nFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ItemSetSelectFactory.html">
+                        Omeka\Service\ViewHelper\ItemSetSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.JsTranslateFactory.html">
+                        Omeka\Service\ViewHelper\JsTranslateFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.LangFactory.html">
+                        Omeka\Service\ViewHelper\LangFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.MediaFactory.html">
+                        Omeka\Service\ViewHelper\MediaFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.NavigationLinkFactory.html">
+                        Omeka\Service\ViewHelper\NavigationLinkFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.PaginationFactory.html">
+                        Omeka\Service\ViewHelper\PaginationFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ParamsFactory.html">
+                        Omeka\Service\ViewHelper\ParamsFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.PropertySelectFactory.html">
+                        Omeka\Service\ViewHelper\PropertySelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ResourceClassSelectFactory.html">
+                        Omeka\Service\ViewHelper\ResourceClassSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ResourceSelectFactory.html">
+                        Omeka\Service\ViewHelper\ResourceSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.SettingFactory.html">
+                        Omeka\Service\ViewHelper\SettingFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.SiteSelectFactory.html">
+                        Omeka\Service\ViewHelper\SiteSelectFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.SiteSettingFactory.html">
+                        Omeka\Service\ViewHelper\SiteSettingFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.ThemeSettingFactory.html">
+                        Omeka\Service\ViewHelper\ThemeSettingFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.TriggerFactory.html">
+                        Omeka\Service\ViewHelper\TriggerFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.UserIsAllowedFactory.html">
+                        Omeka\Service\ViewHelper\UserIsAllowedFactory
+                    </a>, 
+                    <a href="class-Omeka.Service.ViewHelper.UserSettingFactory.html">
+                        Omeka\Service\ViewHelper\UserSettingFactory
+                    </a>
+            </p>
+        </div>
+
+    <div class="info">
+            <a href="source-interface-Zend.ServiceManager.Factory.FactoryInterface.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-responsive table-bordered table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___invoke">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                
+                public
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___invoke">#</a>
+            <code><a href="source-interface-Zend.ServiceManager.Factory.FactoryInterface.html#37">__invoke</a>( <span> Interop\Container\ContainerInterface <span class="property-name">$container</span> </span>, <span> string <span class="property-name">$requestedName</span> </span>, <span> array <span class="property-name">$options</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Create an object
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

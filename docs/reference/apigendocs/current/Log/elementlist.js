@@ -1,0 +1,2 @@
+var ApiGen = ApiGen || {};
+ApiGen.elements = [{"file":"namespace-Omeka.Log.Writer.html","label":"Omeka\\Log\\Writer"},{"file":"namespace-Zend.Log.Writer.html","label":"Zend\\Log\\Writer"},{"file":"class-Omeka.Log.Writer.Job.html","label":"Omeka\\Log\\Writer\\Job"},{"file":"class-Zend.Log.Writer.AbstractWriter.html","label":"Zend\\Log\\Writer\\AbstractWriter"},{"file":"interface-Zend.Log.Writer.WriterInterface.html","label":"Zend\\Log\\Writer\\WriterInterface"}];

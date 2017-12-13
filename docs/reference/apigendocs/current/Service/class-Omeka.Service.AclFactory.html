@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="resources/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+        <title>
+            Class Omeka\Service\AclFactory
+        </title>
+    </head>
+
+    <body>
+<div id="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">
+                                Overview
+                            </a>
+                        </li>
+
+                            <li>
+                                <a href="classes.html">Classes</a>
+                            </li>
+
+                            <li>
+                                <a href="interfaces.html">Interfaces</a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="exceptions.html">Exceptions</a>
+                            </li>
+
+                    </ul>
+
+                    <form id="search" class="pull-right">
+                        <input type="text" name="q" class="form-control text" placeholder="Search class, function or namespace" autofocus>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+            <div id="breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+<div class="pull-left type">
+    <span class="label label-success">Class</span>
+</div>
+
+<ol class="breadcrumb pull-left">
+        <li>
+            <a href="namespace-Omeka.html">Omeka</a>
+        </li>
+            <li class="backslash">\</li>
+        <li>
+            <a href="namespace-Omeka.Service.html">Service</a>
+        </li>
+
+        <li class="backslash">\</li>
+        <li class="active">AclFactory</li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    <h1>AclFactory</h1>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                Access control list factory.
+            </div>
+        </div>
+
+        <dl class="tree">
+            <dd>
+
+                    implements
+                        <a href="interface-Zend.ServiceManager.Factory.FactoryInterface.html">
+                            Zend\ServiceManager\Factory\FactoryInterface
+                        </a>
+
+            </dd>
+        </dl>
+
+
+
+    <div class="info">
+        
+
+            <a href="source-class-Omeka.Service.AclFactory.html" class="open-source-code">Open source code</a>
+        <br>
+    </div>
+
+        <table class="summary table table-bordered table-responsive table-striped" id="methods">
+            <tr><th colspan="3">Methods Summary</th></tr>
+
+
+
+<tr id="___invoke">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 public 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#___invoke">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#26-47">__invoke</a>( <span> Interop\Container\ContainerInterface <span class="property-name">$serviceLocator</span> </span>, <span> <span class="property-name">$requestedName</span> </span>, <span> array <span class="property-name">$options</span> = <span class="php-keyword1">NULL</span></span> )</code>
+
+            <div class="description">
+                Create the access control list.
+
+
+
+
+
+
+
+
+                        <h2>Implementation of</h2>
+                        <div>
+                            <code>
+                                <a href="interface-Zend.ServiceManager.Factory.FactoryInterface.html#___invoke">
+                                    Zend\ServiceManager\Factory\FactoryInterface::__invoke()
+                                </a>
+                            </code>
+                        </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRoles">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRoles">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#54-62">addRoles</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add ACL roles.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addResources">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addResources">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#76-119">addResources</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span>, <span> Interop\Container\ContainerInterface <span class="property-name">$serviceLocator</span> </span> )</code>
+
+            <div class="description">
+                Add ACL resources.
+
+The following resources are added automatically:
+
+- API adapter classes that implement ResourceInterface
+- Entity classes that implement ResourceInterface
+- Controller classes
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRules">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRules">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#126-136">addRules</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add ACL rules.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForSites">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForSites">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#143-223">addRulesForSites</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for sites.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForAllRoles">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForAllRoles">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#230-277">addRulesForAllRoles</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for all roles, including users that aren't authenticated.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForResearcher">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForResearcher">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#284-344">addRulesForResearcher</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "researcher" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForAuthor">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForAuthor">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#351-471">addRulesForAuthor</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "author" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForReviewer">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForReviewer">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#478-594">addRulesForReviewer</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "reviewer" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForEditor">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForEditor">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#601-713">addRulesForEditor</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "editor" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForSiteAdmin">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForSiteAdmin">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#720-768">addRulesForSiteAdmin</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "site_admin" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_addRulesForGlobalAdmin">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_addRulesForGlobalAdmin">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#775-784">addRulesForGlobalAdmin</a>( <span> Omeka\Permissions\Acl <span class="property-name">$acl</span> </span> )</code>
+
+            <div class="description">
+                Add rules for "global_admin" role.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+
+<tr id="_aggregate">
+
+    <td class="attributes col-md-1">
+        <code class="keyword">
+                 protected 
+                
+                
+        </code>
+    </td>
+
+    <td class="name">
+        <div>
+            <a class="anchor pull-right" href="#_aggregate">#</a>
+            <code><a href="source-class-Omeka.Service.AclFactory.html#796-802">aggregate</a>( <span> array <span class="property-name">$assertions</span> </span>, <span> string <span class="property-name">$mode</span> = <span class="php-quote">'all'</span></span> )</code>
+
+            <div class="description">
+                Create an assertion aggregate from the given assertions and the given mode.
+
+This is just a convenience method to avoid having to write the somewhat verbose aggregate
+code over and over within the grants.
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </td>
+</tr>
+        </table>
+
+
+
+
+
+
+
+    <div id="footer">
+        Generated by <a href="https://github.com/apigen/apigen">ApiGen</a>
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="resources/jquery-3.2.1.min.js"></script>
+        <script src="resources/jquery-ui-1.12.1.min.js"></script>
+
+        <script src="elementlist.js"></script>
+        <script src="resources/main.js"></script>
+    </body>
+</html>
+
+

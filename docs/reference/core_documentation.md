@@ -8,7 +8,7 @@ Essential classes for using and understanding the Omeka S API, including Adapter
 
 ## [Authentication](apigendocs/current/Authentication/index.html)
 
-Classes for authenticating users and establishing permissions to the storage.
+Classes for authenticating users and establishing permissions to the storage. See also [Zend\Authentication](https://docs.zendframework.com/zend-authentication/)
 
 ## [Controller](apigendocs/current/Controller/index.html)
 
@@ -32,7 +32,7 @@ Classes defining File data, including derivatives and their storage data.
 
 ## [Form](apigendocs/current/Form/index.html)
 
-Subclasses of Zend\Form\Form used in Views for entering data.
+Subclasses of [Zend\Form\Form](https://docs.zendframework.com/zend-form) used in Views for entering data.
 
 ## [I18n](apigendocs/current/I18n/index.html)
 
@@ -56,21 +56,23 @@ Classes defining how Media (images, YouTube videos, HTML, etc.) are created and 
 
 ## [Module](apigendocs/current/Module/index.html)
 
-Classes for the installation, status, reading .ini files, for addon Modules for Omeka S.
+Classes for the installation, status, reading .ini files, etc. for addon modules for Omeka S.
 
 ## [Mvc](apigendocs/current/Mvc/index.html)
 
-
+Top level classes for routing and handling requests. See also [Zend\Mvc](https://docs.zendframework.com/zend-mvc/)
 
 ## [Permissions](apigendocs/current/Permissions/index.html)
 
-Classes defining the Access Control List behavior for Omeka S.
+Classes defining the Access Control List behavior for Omeka S. See also [Zend\Permissions\(https://docs.zendframework.com/zend-permissions-acl/).
 
 ## [Service](apigendocs/current/Service/index.html)
 
-
+Classes for creating Omeka S objects and injecting the appropriate dependencies. See also [Zend\ServiceManager](https://docs.zendframework.com/zend-servicemanager/)
 
 ## [ServiceManager](apigendocs/current/ServiceManager/index.html)
+
+Class to manage the creation of Services. See also [Zend\ServiceManager](https://docs.zendframework.com/zend-servicemanager/)
 
 ## [Session](apigendocs/current/Session/index.html)
 
@@ -90,10 +92,10 @@ Utility classes used throughout Omeka S for basic tasks, like sending email, han
 
 ## [Test](apigendocs/current/Test/index.html)
 
-Classes for the core test suite.
+Classes for the core test suite, found in `/test`.
 
 ## [View](apigendocs/current/View/index.html)
 
-Mostly helper classes used to create content display, but also some classes for the JSON-LD output from the API.
+Mostly helper classes used to create content display, but also some classes for the JSON-LD output from the API. See also [Zend\View](https://docs.zendframework.com/zend-view/)
 
 

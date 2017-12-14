@@ -64,7 +64,7 @@ Top level classes for routing and handling requests. See also [Zend\Mvc](https:/
 
 ## [Permissions](apigendocs/current/Permissions/index.html)
 
-Classes defining the Access Control List behavior for Omeka S. See also [Zend\Permissions\(https://docs.zendframework.com/zend-permissions-acl/).
+Classes defining the Access Control List behavior for Omeka S. See also [Zend\Permissions](https://docs.zendframework.com/zend-permissions-acl/).
 
 ## [Service](apigendocs/current/Service/index.html)
 

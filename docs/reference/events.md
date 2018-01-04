@@ -18,7 +18,7 @@ We use Zend Framework's EventManager component, so many questions can be answere
 
 ## API Adapter Events
 
-All classes that extend `Omeka\Api\Adapter\AbstractAdapter` trigger these events. Use the event's `getTarget()` method to get the adapter object, and the `getParam()` method to get the values of parameteres, if there are any.
+All classes that extend `Omeka\Api\Adapter\AbstractAdapter` trigger these events. Use the event's `getTarget()` method to get the adapter object, and the `getParam()` method to get the values of parameters, if there are any.
 
 ### api.execute.pre
 
@@ -137,7 +137,7 @@ Triggered after getting a Value representation's text (for display on a webpage)
 
 ## View Events
 
-The `trigger` view helper triggers these events at strategic locations within view templates. Use the controller's invokable service name as the event identifier. Use the event's `getTarget()` to get the view renderer. Any markup echoed in listeners will render on page.
+The `trigger` view helper triggers these events at strategic locations within view templates. Use the controller's invokable service name as the event identifier. Look for these under `application/config/module.config.php`, under the `controllers` key. It name might be listed under either its `invokable` or `factory` key. For example, instead of the name being `Omeka\Controller\Admin\ItemController`, it could be `Omeka\Controller\Admin\Item`. Use the event's `getTarget()` to get the view renderer. Any markup echoed in listeners will render on page.
 
 ### view.layout
 

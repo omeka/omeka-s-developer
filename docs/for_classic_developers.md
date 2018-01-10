@@ -15,7 +15,7 @@ Omeka Classic was built on Zend Framework 1, which has now reach end of life. Om
 
 ### Doctrine ORM
 
-Omeka S has adopted the Doctrine Object Relation Mapper for database queries and to define records. Thus, records no longer extend from an `Omeka_Record_AbstractRecord` class. Instead, they will extend from 
+Omeka S has adopted the Doctrine Object Relation Mapper for database queries and to define records. Thus, records no longer extend from an `Omeka_Record_AbstractRecord` class. Instead, they will extend from `Omeka\Entity\Resource`.
 
 This also lets Omeka S separate concerns between `Entities`, `Api Adapters`, and `Representations` This replaces the Omeka Classic system of defining a record and optional table class as the model.
 

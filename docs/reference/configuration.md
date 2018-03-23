@@ -1,10 +1,11 @@
-# Configuration Options
+# Configuration Settings
 
 See [Configuration Key Concepts](../key_concepts/config.md) for a general
-configuration overview and how to use `/config/local.config.php` to customize
-your installation's configuration.
+configuration overview and how to use `/config/local.config.php` and your
+module's `config/module.config.php` to customize your installation's
+configuration settings.
 
-The following configuration options are available (more may be added by modules):
+The following configuration settings are available (more may be added by modules):
 
 ## Api Adapters
 
@@ -44,7 +45,7 @@ Configuration for executing PHP-CLI.
 
 ## Entity Manager
 
-Doctrine entity manager options.
+Doctrine entity manager settings.
 
 - `entity_manager`:
     - `is_dev_mode`: Whether to run the entity manager in development mode (see [Doctrine docs](http://doctrine-orm.readthedocs.io/projects/doctrine-orm/en/latest/reference/configuration.html#obtaining-an-entitymanager))
@@ -106,7 +107,7 @@ Configuration for Omeka S installation.
 
 ## Logger
 
-Logging options for application-level messages.
+Logging settings for application-level messages.
 
 - `logger`
     - `log`: Log errors? (`false` (default) or `true`)
@@ -206,7 +207,7 @@ to one of the following:
 
 ## Translator
 
-Translator options.
+Translator settings.
 
 - `translator`
     - `locale`: The language code for your locale
@@ -218,4 +219,4 @@ Translator options.
 
 ## View Manager
 
-- `view_manager`: View manager options (see [zend-view docs](https://docs.zendframework.com/zend-view/quick-start/#configuration))
+- `view_manager`: View manager settings (see [zend-view docs](https://docs.zendframework.com/zend-view/quick-start/#configuration))

@@ -1,43 +1,27 @@
 # Configuration
 
-Following Zend Framework 3, the configuration file (`application/config/module.config.php`) defines many things that Omeka S depends on, including
+You can configure Omeka S by editing `config/local.config.php`. Options from the
+application and module configuration files are merged into local configuration
+and used by Omeka S services to operate the application. See the following files
+to reference default options and their format (do not modify these files):
 
-* Routes and navigation
-* Controllers
-* Entities
-  * API adapters
-* Forms
+- `application/config/module.config.php`: read-only default configurations (see [Configuration Reference](../reference/configuration.md))
+- `application/config/navigation.config.php`: read-only navigation configuration (see [zend-navigation docs](https://docs.zendframework.com/zend-navigation/pages/#mvc-pages))
+- `application/config/routes.config.php`: read-only routing configuration (see [zend-mvc docs](http://zendframework.github.io/zend-mvc/routing/))
 
-Modules add their own configuration setting via their own `module.config.php` files. See [Modules](modules.md) for more information. These configuration settings add to, and possibly modify, the core configuration.
+Local configuration comes with options that are most likely to be changed from
+one installation to another. Feel free to add more depending on your system's
+requirements.
 
-## Most important keys
+## Invocables and Factories
 
-The following keys in configuration are mostly likely to be of interest:
-
-* `logger`
-* `router`
-* `navigation`
-
-See also [Services and Factories](services_and_factories.md)
-
-
-## Invocables vs Factories
-
-You will often see subkeys of `invocables` and `factories` in the configuration file. These refer to how Omeka S creates new objects -- either directly ('invocable') or indirectly ('factory'). Factories are used to add data or classes into the object that would otherwise be directly created (i.e., invoced). See [Services and Factories](services_and_factories.md) for more details.
-
-## Accessing the configuration
-
-When a `ServiceLocator` object is available, do 
-
-```php
-$config = $this->getServiceLocator()->get('Config');
-
-```
-
-`$config` will be the array of information. In all cases, you should know the key of the information you need.
-
+You will often see subkeys of `invocables`, `factories`, etc. in the configuration
+file. These refer to how the various Omeka S service managers create new services.
+See the [zend-servicemanager docs](https://docs.zendframework.com/zend-servicemanager/configuring-the-service-manager/)
+to learn how to configure your services.
 
 ## See also
 
-* [Services and Factories](services_and_factories.md)
-* [Modules](modules.md)
+- [Configuration Reference](../reference/configuration.md)
+- [Services and Factories](services_and_factories.md)
+- [Modules](modules.md)

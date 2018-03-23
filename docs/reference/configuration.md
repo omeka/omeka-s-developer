@@ -1,14 +1,10 @@
-# Configuration
+# Configuration Options
 
-The following configuration files contain options required to run Omeka S.
+See [Configuration Key Concepts](../key_concepts/config.md) for a general
+configuration overview and how to use `/config/local.config.php` to customize
+your installation's configuration.
 
-- `application/config/module.config.php`: read-only default configurations (see below)
-- `application/config/navigation.config.php`: read-only navigation configuration (see [zend-navigation docs](https://docs.zendframework.com/zend-navigation/pages/#mvc-pages))
-- `application/config/routes.config.php`: read-only routing configuration (see [zend-mvc docs](http://zendframework.github.io/zend-mvc/routing/))
-
-See [Configuration Key Concepts](../key_concepts/config.md) for an overview of
-configuration and the use of `local.config.php` to customize the options for
-your installation. Here's a list of configuration options available in `application/config/module.config.php`:
+The following configuration options are available (more may be added by modules):
 
 ## Api Adapters
 
@@ -114,7 +110,7 @@ Logging options for application-level messages.
 
 - `logger`
     - `log`: Log errors? (`false` (default) or `true`)
-    - `priority` => The priority level at which to start logging (default `\Zend\Log\Logger::NOTICE`; see [zend-log docs](https://docs.zendframework.com/zend-log/intro/#using-built-in-priorities))
+    - `priority`: The priority level at which to start logging (default `\Zend\Log\Logger::NOTICE`; see [zend-log docs](https://docs.zendframework.com/zend-log/intro/#using-built-in-priorities))
     - `path`: The server path to the log file
 
 ## Mail

@@ -54,7 +54,7 @@ Doctrine entity manager options.
     - `functions`: A list of user defined numeric, strine, and datetime DQL functions (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html))
     - `proxy_paths`: A list of server paths to directories containing Doctrine proxies
 
-## file_renderers
+## File Renderers
 
 - `file_renderers`: A list of renderers for Omeka S file media
 
@@ -204,7 +204,7 @@ to one of the following:
 - `Omeka\File\Thumbnailer\Imagick`: Use PHP's ImageMagick extension
 - `Omeka\File\Thumbnailer\Gd`: Use PHP's GD extension
 
-## translator
+## Translator
 
 Translator options.
 

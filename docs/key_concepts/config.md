@@ -19,9 +19,9 @@ files. Note that these configuration settings are merged into local
 configuration, and can extend, and possibly modify, the core configuration. See
 [Modules](modules.md) for more information.
 
-## Invocables and Factories
+## Invokables and Factories
 
-You will often see subkeys of `invocables`, `factories`, etc. in the
+You will often see subkeys of `invokables`, `factories`, etc. in the
 configuration file. These refer to how the various Omeka S service managers
 create new services. See [Services and Factories](services_and_factories.md) and
 the [zend-servicemanager docs](https://docs.zendframework.com/zend-servicemanager/configuring-the-service-manager/)

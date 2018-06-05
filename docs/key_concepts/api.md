@@ -124,7 +124,7 @@ GET /api/items?resource_class_label=Person
 ```
 #### Search criteria
 
-#### Pagination controls
+##### Pagination controls
 Search results are paginated in pages of 25 results by default.
 
 Links to additional pages are given in the `Link` header. The link with `rel="next"` is the next page in the sequence.

@@ -62,8 +62,22 @@ $this->messenger()->addWarning($message);
 
 ```
 
-Finally, you should create a `/language` directory at the root of your module, and make sure it is writable.
+Finally, you should create a `/language` directory at the root of your module, and reference it in your module's config/module.config.php file:
 
+```php
+return [
+// ...
+    'translator' => [
+        'translation_file_patterns' = [
+            'type' => 'gettext',
+            'base_dir' => dirname(__DIR__) . '/language',
+            'pattern' => '%s.mo',
+            'text_domain' => null,
+        ],
+    ],
+// ...
+];
+```
 ## Creating and compiling the strings 
 
 The `gulp i18n:module:template --module MyModule` task will generate the `template.pot` file in the `/language` directory. The `--module MyModule` parameter refers to the directory name of your module. The task can be run from any directory within your module.

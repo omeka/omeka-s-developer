@@ -221,8 +221,10 @@ Triggered when creating the section navigation for edit pages. To add a section 
 
 * **query**: The current query array, if any
 * **resourceType**: The type of resource being queried (`item`, `itemSet`, or `media`)
+* **partials**: Array of partials representing the parts of the form to render
 
-Triggered after advanced search form markup, within the advanced search partial script.
+This event is intended to be used to filter the `partials` parameter: listeners can add, remove, or reorder the partials in the array
+to change what is displayed on the form. Any added partial will be passed one parameter when it is rendered: `query`.
 
 ### view.manage-sites.before
 

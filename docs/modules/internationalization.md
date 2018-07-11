@@ -98,3 +98,11 @@ After creating the `debug.po` file and compiling its `debug.mo` counterpart, in 
 ```
 
 Then browse all your module's pages and update any untranslated strings, and repeat the process.
+
+## Static translations
+
+As of Omeka S version 1.2, you can also include a template file of static translations that will be included in the final template.
+This can be useful if you have strings that need to be translated but can't easily be found by `xgettext` or marked with an `@translate`
+comment.
+
+The `gulp i18n:module:template` command will look for a static template at `language/template.static.pot`.

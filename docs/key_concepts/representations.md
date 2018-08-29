@@ -59,7 +59,6 @@ including data stored in the database. Using other methods as the input to this 
 themselves produce "safe" output is usually a good idea.
 
 ```php
-
 echo $item->link('View Item'); // Print a link to $item
 
 echo $item->link('Edit Item', 'edit'); // Print a link to the edit form for $item
@@ -154,7 +153,6 @@ is transparent to a developer because a ValueRepresentation will print itself as
 echoed.
 
 ```php
-
 echo $item->value('dcterms:subject'); // Print the first Dublin Core Subject for $item
 
 // Print all the Subject values marked as being in Spanish

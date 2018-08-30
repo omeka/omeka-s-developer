@@ -65,7 +65,7 @@ echo $item->link('Edit Item', 'edit'); // Print a link to the edit form for $ite
 
 echo $item->link('View Item', null, ['title' => 'Not an interesting example, sorry']); // Print a link to $item with the given title attribute
 
-echo $item->linkRaw($item->thumbnail()); // Print a thumbnail for $item that links to the item's page
+echo $item->linkRaw($this->thumbnail($item, 'medium')); // Print a thumbnail for $item that links to the item's page
 ```
 
 An additional method, `linkPretty`, is only available for Resource-type representations: those

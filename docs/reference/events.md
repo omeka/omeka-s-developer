@@ -248,6 +248,43 @@ Triggered before the list of resources on the admin dashboard.
 
 Triggered inside the details display on the admin side.
 
+### view.sort-selector
+
+* **sortBy**: Array of sorting options, each a sub-array with keys "label" and "value" (filterable)
+* **sortByQuery**: Query string parameter for current active sort field
+* **sortOrderQuery** Query string parameter for current active sort direction
+
+Event for filtering options in the sorting `select` element on browse pages. Triggered in the sortSelector view helper. Added in Omeka S 1.3.0.
+
+## View Helper Events
+
+### view_helper.media.render_options
+
+* **options**: Array of options passed to the media renderer (filterable)
+* **media**: MediaRepresentation for the media being rendered
+
+Event for filtering options passed to media renderers. Triggered in the Media view helper. Added in Omeka S 1.3.0.
+
+### view_helper.thumbnail.attribs
+
+* **attribs**: Array of HTML attributes for thumbnail `img` tag (filterable)
+* **thumbnail**: The URL for the thumbnail
+* **primaryMedia**: MediaRepresentation for the media being thumbnailed
+* **representation**: Representation object for the representation being thumbnailed (could be, e.g. an item or item set and therefore different from `primaryMedia`)
+* **type**: Type of thumbnail being displayed
+
+Event for filtering HTML attributes for thumbnails. Triggered in the Thumbnail view helper. Added in Omeka S 1.2.0.
+
+## User Events
+
+### user.login
+
+Triggered when a user logs in. Target is the User entity that logged in. Added in Omeka S 1.2.0.
+
+### user.logout
+
+Triggered when a user logs out. Added in Omeka S 1.1.0.
+
 ## Miscellaneous Events
 
 ### js.translate_strings
@@ -287,3 +324,9 @@ Triggered when getting the registered names of certain Omeka services (using `ge
 * **context**: The JSON-LD context array
 
 Triggered when visiting the `api-context` route. To add term definitions to the JSON-LD context, listeners may modify the `context` parameter and set it back to the event.
+
+### htmlpurifier_config
+
+* **config**: The HTMLPurifier_Config object (filterable).
+
+Event for filtering the configuration of the HTMLPurifier library. Added in Omeka S 1.2.0.

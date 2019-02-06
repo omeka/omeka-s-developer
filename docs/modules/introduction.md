@@ -14,7 +14,7 @@ MyModule/
         module.config.php
     src/
         <library-directories-and-files>
-    assets/
+    asset/
         <asset-directories-and files>/
     view/
         <module-namespace>/

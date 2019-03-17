@@ -52,7 +52,7 @@ Doctrine entity manager settings.
     - `mapping_classes_paths`: A list of paths containing Doctrine entity classes
     - `resource_discriminator_map`: A list of entities that are mapped to Omeka's `Resource` entity (for first-class resources that can be described using values)
     - `filters`: A list of SQL filters (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html))
-    - `functions`: A list of user defined numeric, strine, and datetime DQL functions (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html))
+    - `functions`: A list of user defined numeric, string, and datetime DQL functions (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html))
     - `proxy_paths`: A list of server paths to directories containing Doctrine proxies
 
 ## File Renderers

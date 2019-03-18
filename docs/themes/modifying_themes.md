@@ -98,7 +98,7 @@ The function `appendFile()` will place the javascript file at the top of the que
 
 Themers have access to a greater variety of fonts to use via hosted webfont libraries. Common examples include free resources like [Google Fonts](https://fonts.google.com) and [Adobe Edge Web Fonts](https://edgewebfonts.adobe.com/), as well as paid subscription sites such as [Fonts by Hoefler & Co](https://www.typography.com/webfonts/) and [Mosaic](https://www.monotype.com/fonts/mosaic). Hosted webfont usage often looks like the following:
 
-`<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">`
+`//fonts.googleapis.com/css?family=Lato"`
 
 This line sources the font family “Lato” hosted by Google Fonts. To start using a library's webfont, look for where they provide a similar markup line. This line essentially calls a stylesheet that imports the hosted font files to a page. As such, themers will use the functionality to include a CSS file for the purposes of including a webfont in layout.phtml. For example:
 
@@ -120,7 +120,7 @@ Once you have your media object, you may use media methods to control the render
 
 This produces HTML to display the primary media's default thumbnail:
 
-`<img src="[http://yourdomain.com/omeka-s/files/medium/file.jpg](http://yourdomain.com/omeka-s/files/medium/file.jpg)" alt="Description of image.">`
+`<img src="http://yourdomain.com/omeka-s/files/medium/file.jpg" alt="Description of image.">`
 
 The default thumbnail, "medium", is one of the file derivatives Omeka S generates when files are uploaded to be associated with resources. These file derivatives are the square thumbnail, medium, and large. You can define your preferred file derivative, or even the original file, for the render() function to use. In the following example, the thumbnail type is set to the square thumbnail.
 

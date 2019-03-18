@@ -18,8 +18,6 @@ One of the best ways to start working with themes is to experiment with existing
 
 [Mozilla Firefox - Examine and Edit CSS](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)
 
-[Microsoft Edge - Styles](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/elements/styles)
-
 [Apple Safari - Inspecting Overview](https://support.apple.com/guide/safari-developer/inspecting-overview-dev1a8227029/mac)
 
 ## Sass

@@ -110,13 +110,9 @@ Omeka S's sites are primarily concerned with the presentation of Omeka S resourc
 
 #### Displaying Resource Images
 
-When an Omeka S resource can be visually represented by an associated image, it possesses a primary media. Accessing a resource's primary media object looks like this:
+When an Omeka S resource can be visually represented by an associated image, it has a selection of usable thumbnails. Accessing a resource's thumbnail looks like this:
 
-`<?php $resourcePrimaryMedia = $resource->primaryMedia(); ?>`
-
-Once you have your media object, you may use media methods to control the rendering of the resource image. The most straightforward means of displaying the image is to use the render() method.
-
-`<?php echo $resourcePrimaryMedia->render(); ?>`
+`<?php echo $this->thumbnail($resource, 'thumbnailSize', [/* array of attributes */]); ?>`
 
 This produces HTML to display the primary media's default thumbnail:
 
@@ -124,7 +120,7 @@ This produces HTML to display the primary media's default thumbnail:
 
 The default thumbnail, "medium", is one of the file derivatives Omeka S generates when files are uploaded to be associated with resources. These file derivatives are the square thumbnail, medium, and large. You can define your preferred file derivative, or even the original file, for the render() function to use. In the following example, the thumbnail type is set to the square thumbnail.
 
-`<?php echo $resourcePrimaryMedia->render($resourcePrimaryMedia, ['thumbnailType' => 'square']); ?>`
+`<?php echo $this->thumbnail($resource, ['thumbnailType' => 'square']); ?>`
 
 The widths of these file derivatives are defined within `application/config/module.config.php`. If an image within your theme appears at a different size than expected, it is most likely due to the theme's CSS.
 

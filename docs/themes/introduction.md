@@ -10,6 +10,16 @@ Themes for Omeka S live within the `themes` directory within the root directory 
 * `asset`: Theme creators use this directory to house assets such as CSS, Javascript, images, and more. It mimics the directory structure of `application/asset` within an Omeka S installation.
 * `view`: Files within this directory are the meat of a theme. These customized theme files override Omeka S default view template files located in `application/views/`.
 
+## Exploring Existing Themes
+
+One of the best ways to start working with themes is to experiment with existing themes. Omeka S does not use a consistent pool of CSS selectors across our officially supported themes, but most web browsers provide beginner themers tools for exploring the HTML and CSS of a given site.
+
+[Google Chrome - Inspect and Edit Pages and Styles](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/)
+
+[Mozilla Firefox - Examine and Edit CSS](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)
+
+[Apple Safari - Inspecting Overview](https://support.apple.com/guide/safari-developer/inspecting-overview-dev1a8227029/mac)
+
 ## Sass
 
 Themes officially supported by the Omeka team ([the Omeka S default theme](http://github.com/omeka-s-themes/default), [Center Row](http://github.com/omeka-s-themes/centerrow), [Cozy](http://github.com/omeka-s-themes/cozy), and [The Daily](http://github.com/omeka-s-themes/thedaily)), use SASS to generate their CSS. For users who want to start using SASS, here are recommended tutorials for installation. 

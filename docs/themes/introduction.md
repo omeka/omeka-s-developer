@@ -8,7 +8,7 @@ Themes for Omeka S live within the `themes` directory within the root directory 
 
 * `config/theme.ini`: This is a **required** file for a theme to be recognized by Omeka S. It includes the theme name, author, support information, theme version, Omeka S version requirements, and theme configuration options for users.
 * `asset`: Theme creators use this directory to house assets such as CSS, Javascript, images, and more. It mimics the directory structure of `application/asset` within an Omeka S installation.
-* `view`: Files within this directory are the meat of a theme. These customized theme files override Omeka S default view template files located in `application/views/`.
+* `view`: Files within this directory are the meat of a theme. These customized theme files override Omeka S default view template files located in `application/view/`.
 
 ## Exploring Existing Themes
 

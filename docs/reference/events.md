@@ -135,6 +135,14 @@ The `Omeka\Api\Representation\ValueRepresentation` class triggers this event. Al
 
 Triggered after getting a Value representation's text (for display on a webpage). To filter the text, listeners may modify the `html` parameter and set it back to the event.
 
+### rep.resource.display_values
+
+* **values**: The resource values
+
+All classes that extend `Omeka\Api\Representation\AbstractResourceEntityRepresentation` trigger this event.
+
+Triggered in method `displayValues` to modify the values passed to the partial.
+
 ## View Events
 
 The `trigger` view helper triggers these events at strategic locations within view templates. Use the controller's invokable service name as the event identifier. Look for these under `application/config/module.config.php`, under the `controllers` key. It name might be listed under either its `invokable` or `factory` key. For example, instead of the name being `Omeka\Controller\Admin\ItemController`, it could be `Omeka\Controller\Admin\Item`. Use the event's `getTarget()` to get the view renderer. Any markup echoed in listeners will render on page.
@@ -307,11 +315,27 @@ The target is the Form itself.
 
 ### form.add_input_filters
 
-* **inputFilters** The input filter object for the form.
+* **inputFilters**: The input filter object for the form.
 
 Triggered with Form objects, after elements have been added, including from the `form.add_elements` event. Used to adjust filters, especially the `required` setting.
 
 The target is the form itself.
+
+### form.vocab_member_select.query
+
+* **query**: The query to filter the select.
+
+All classes that extend `Omeka\Form\Element\AbstractVocabularyMemberSelect` trigger this event, in particular `PropertySelect` and `ResourceClassSelect`.
+
+Allow to filter the query used to limit the list of terms (properties or resources classes) displayed in a `select` html element.
+
+### form.vocab_member_select.value_options
+
+* **value_options**: The query to filter the select.
+
+All classes that extend `Omeka\Form\Element\AbstractVocabularyMemberSelect` trigger this event, in particular `PropertySelect` and `ResourceClassSelect`.
+
+Allow to filter the resulting list of terms (properties or resources classes) displayed in a `select` html element.
 
 ### service.registered_names
 

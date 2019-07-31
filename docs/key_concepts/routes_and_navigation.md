@@ -23,7 +23,7 @@ Routes define the connections between URL paths and the controllers and actions 
         ),
 ```
 
-There are many options for defining the route. See the Zend Framework documentation for details.
+There are many options for defining the route. See the [Zend Framework documentation](https://docs.zendframework.com/zend-router/routing/) for details.
 
 ## Navigation
 

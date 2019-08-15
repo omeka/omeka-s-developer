@@ -148,16 +148,17 @@ The options array is an associative array with several possible keys for differe
 - `'default'`: the value passed here will be returned if there are no results
 - `'lang'`: pass a language code here to restrict the results to only values matching that langauge. By default there is no restriction on the languages of values.
 
-The values returned by this method are actually ValueRepresentation objects. Generally this
-is transparent to a developer because a ValueRepresentation will print itself as HTML if
-echoed.
+The values returned by this method are actually ValueRepresentation objects (or an array of those objects,
+if the `'all'` option was used). To display them on a page, the simplest option is to use the `asHtml()`
+method, which will take care of escaping text properly, as well as displaying more complex values
+like links or data types added by modules.
 
 ```php
 echo $item->value('dcterms:subject'); // Print the first Dublin Core Subject for $item
 
 // Print all the Subject values marked as being in Spanish
 $values = $item->value('dcterms:subject', ['all' => true, 'lang' => 'es']);
-foreach ($values as $value) { echo $value; }
+foreach ($values as $value) { echo $value->asHtml(); }
 ```
 
 #### All Properties

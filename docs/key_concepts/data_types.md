@@ -29,7 +29,7 @@ With these data types, you could describe a book like this:
 Or, when viewing the JSON-LD representation of the example above:
 
 ```json
-[
+{
     "@context": "http:\/\/example.com\/api-context",
     "@id": "http:\/\/example.com\/api\/items\/1",
     "@type": "o:Item",
@@ -53,7 +53,7 @@ Or, when viewing the JSON-LD representation of the example above:
             "value_resource_id": 1,
         }
     ]
-]
+}
 ```
 
 Note the keys `@value`, `@language`, `@id`, `o:label`, and `value_resource_id`.
@@ -94,10 +94,9 @@ when it loads the value, acting on special attributes that you define in the mar
 
 ### Special Attributes
 
-The inputs don't include the `name` or `value` attributes becuase because they
-are populated dynamically, during page load and resource template selection. Omeka
-S detects inputs with special attributes and acts on them accordingly. The special
-attributes are:
+The inputs don't include the `name` or `value` attributes because they are populated
+dynamically, during page load and resource template selection. Omeka S detects inputs
+with special attributes and acts on them accordingly. The special attributes are:
 
 |Attribute|Maps to value key|Description|
 |---|---|---|
@@ -110,7 +109,7 @@ attributes are:
 ### Required Values
 
 Since resource template properties can be marked as required, Omeka S automatically
-performs client-side validation by detecting a `to-require"`class on inputs. Any
+performs client-side validation by detecting a `to-require`class on inputs. Any
 input(s) that will be submitted with the form should include this class.
 
 ## Adding a Custom Data Type
@@ -178,7 +177,7 @@ class Date extends Literal
     }
     public function form(PhpRenderer $view)
     {
-        return '<input name="" type="date" class="to-require" data-value-key="@value">';
+        return '<input type="date" class="to-require" data-value-key="@value">';
     }
     public function isValid(array $valueObject)
     {
@@ -198,12 +197,6 @@ class Date extends Literal
 Note that we're extending off the built-in `Literal` data type because we're sharing
 some functionality with it.
 
-After installing the module, set the new "Date" data type in a resource template
-for a property. Next add an item and set it to this template. The property value
-should change to a date input. Enter a date, save the form, and you should see a
-formatted date describing your resource. Edit the item and the date input should
-contain the date you entered.
-
 Let's take a closer look at the the markup returned from `Date::form()`:
 
 ```html
@@ -215,8 +208,8 @@ populate the `name` attribute to include the `@value` key. If the template conta
 say, an additional language input with a `data-value-key="@language"` attribute,
 then it would populate that `name` attribute to include the `@language` key.
 
-
-
-
-
-
+After installing the module, set the new "Date" data type in a resource template
+for a property. Next add an item and set it to this template. The property value
+should change to a date input. Enter a date, save the form, and you should see a
+formatted date describing your resource. Edit the item and the date input should
+contain the date you entered.

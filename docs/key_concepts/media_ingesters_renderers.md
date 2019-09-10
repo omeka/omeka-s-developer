@@ -271,4 +271,6 @@ class Tweet implements RendererInterface
 ```
 
 After installing the module, you'll be able to add an embedded tweet to an item
-by adding a "Tweet" media to an item and entering a URL to a single tweet.
+by adding a "Tweet" media to an item and entering a URL to a single tweet. (Note
+that this fuctionality is generally covered by the built-in "oembed" ingester, so
+you don't actually need a new ingester for this. It's a helpful example nonetheless.)

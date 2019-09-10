@@ -27,7 +27,7 @@ Omeka S comes with several commonly-used media ingesters and renderers:
 - **oembed**: Display an oEmbed image or HTML
 - **youtube**: Display a YouTube iframe
 
-Note that the "upload" and "url" ingesters don't have a correspondingly-named renderer.
+Note that the "upload" and "url" ingesters don't have a similarly-named renderer.
 This is because they both use the generic "file" renderer, which renders files according
 to their media type or extension (configurable in the `file_renderers` config).
 So, when writing a custom ingester, you may find that using an already-registered
@@ -142,8 +142,8 @@ class Module extends AbstractModule
     {
         return [
             'media_ingesters' => [
-                'invokables' => [
-                    'mymodule_tweet' => Media\Ingester\Tweet::class,
+                'factories' => [
+                    'mymodule_tweet' => Service\Media\Ingester\TweetFactory::class,
                 ],
             ],
             'media_renderers' => [
@@ -222,11 +222,13 @@ class Tweet implements IngesterInterface
     }
     public function ingest(Media $media, Request $request, ErrorStore $errorStore)
     {
+        // Validate the request data.
         $data = $request->getContent();
         if (!isset($data['o:source'])) {
             $errorStore->addError('o:source', 'No tweet URL specified');
             return;
         }
+        // Validate the URL.
         $isMatch = preg_match('/^https:\/\/twitter\.com\/[\w]+\/status\/[\d]+$/', $data['o:source']);
         if (!$isMatch) {
             $errorStore->addError('o:source', sprintf(
@@ -235,6 +237,7 @@ class Tweet implements IngesterInterface
             ));
             return;
         }
+        // Get the oEmbed JSON.
         $url = sprintf('https://publish.twitter.com/oembed?url=%s', urlencode($data['o:source']));
         $response = $this->client->setUri($url)->send();
         if (!$response->isOk()) {
@@ -245,6 +248,7 @@ class Tweet implements IngesterInterface
             ));
             return false;
         }
+        // Set the Media source and data.
         $media->setSource($data['o:source']);
         $media->setData(json_decode($response->getBody(), true));
     }
@@ -265,6 +269,7 @@ class Tweet implements RendererInterface
 {
     public function render(PhpRenderer $view, MediaRepresentation $media, array $options = [])
     {
+        // Return the oEmbed JSON's "html" value.
         return $media->mediaData()['html'];
     }
 }

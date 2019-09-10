@@ -27,6 +27,12 @@ Omeka S comes with several commonly-used media ingesters and renderers:
 - **oembed**: Display an oEmbed image or HTML
 - **youtube**: Display a YouTube iframe
 
+Note that the "upload" and "url" ingesters don't have a correspondingly-named renderer.
+This is because they both use the generic "file" renderer, which renders files according
+to their media type or extension (configurable in the `file_renderers` config).
+So, when writing a custom ingester, you may find that using an already-registered
+renderer will suffice.
+
 ## Interfaces
 
 ### Ingester
@@ -36,7 +42,7 @@ Every ingester class must implement `IngesterInterface`. The required methods ar
 |Method|Purpose|Comment|
 |---|---|---|
 |`getLabel()`|Returns a human-readable label for the ingester.|It should be unique across all media ingesters.|
-|`getRenderer()`|Returns the name of the renderer for media ingested by the ingester.|It should be the name of an existing media renderer.|
+|`getRenderer()`|Returns the name of the renderer for media ingested by the ingester.|It should be the name of a registered media renderer.|
 |`form()`|Returns the markup used to render the controls needed to add the media.||
 |`ingest()`|Processes an ingest (create) request.|Typically used to validate form data and fetch files or thumbnails|
 
@@ -91,13 +97,15 @@ handy `mediaIngestFile()` method designed specifically for ingesting a media fil
 It will automatically validate the file and set the storage ID to the media, among
 other things. The method signature, in order:
 
-- `Media $media`: The media object
-- `Request $request`: The request object
-- `ErrorStore $errorStore`: The error store object
-- `$storeOriginal = true`: Store original file?
-- `$storeThumbnails = true`: Store thumbnail images?
-- `$deleteTempFile = true`: Delete the temp file after ingest?
-- `$hydrateFileMetadataOnStoreOriginalFalse = false`
+|Argument|Type|Default|Definition|
+|---|---|---|---|
+|`$media`|`Media`|n/a|The media object|
+|`$request`|`Request`|n/a|The request object|
+|`$errorStore`|`ErrorStore`|n/a|The error store object|
+|`$storeOriginal`|`bool`|true|Do you want to store the original file?|
+|`$storeThumbnails`|`bool`|true|Do you want to store thumbnail images?|
+|`$deleteTempFile`|`bool`|true|Do you want to delete the temporary file after ingest?|
+|`$hydrateFileMetadataOnStoreOriginalFalse`|`bool`|false|Do you want to hydrate the file metadata when `$storeOriginal = false`?|
 
 Note that in the above example we're passing `false` to `$storeOriginal` and relying
 on the default `$storeThumbnails = true` to only create thumbnail images, discarding
@@ -151,7 +159,27 @@ class Module extends AbstractModule
 Note that you must register the ingester and renderer in the module config for Omeka
 S to detect them.
 
-Next, let's create the "Tweet" ingester class at `/modules/MyModule/src/Media/Ingester/Tweet.php`:
+Next, since our ingester needs the `Omeka\HttpClient` service, let's create the
+"Tweet" ingester factory at `/modules/MyModule/src/Service/Ingester/TweetFactory.php`:
+
+```php
+<?php
+namespace MyModule\Service\Media\Ingester;
+
+use MyModule\Media\Ingester\Tweet;
+use Zend\ServiceManager\Factory\FactoryInterface;
+use Interop\Container\ContainerInterface;
+
+class TweetFactory implements FactoryInterface
+{
+    public function __invoke(ContainerInterface $services, $requestedName, array $options = null)
+    {
+        return new Tweet($services->get('Omeka\HttpClient'));
+    }
+}
+```
+
+Then, let's create the "Tweet" ingester class at `/modules/MyModule/src/Media/Ingester/Tweet.php`:
 
 ```php
 <?php
@@ -162,10 +190,16 @@ use Omeka\Entity\Media;
 use Omeka\Media\Ingester\IngesterInterface;
 use Omeka\Stdlib\ErrorStore;
 use Zend\Form\Element\Text;
+use Zend\Http\Client;
 use Zend\View\Renderer\PhpRenderer;
 
 class Tweet implements IngesterInterface
 {
+    protected $client;
+    public function __construct(Client $client)
+    {
+        $this->client = $client;
+    }
     public function getLabel()
     {
         return 'Tweet'; // @translate
@@ -190,32 +224,32 @@ class Tweet implements IngesterInterface
     {
         $data = $request->getContent();
         if (!isset($data['o:source'])) {
-            $errorStore->addError('o:source', 'No Tweet URL specified');
+            $errorStore->addError('o:source', 'No tweet URL specified');
             return;
         }
         $isMatch = preg_match('/^https:\/\/twitter\.com\/[\w]+\/status\/[\d]+$/', $data['o:source']);
         if (!$isMatch) {
-            $errorStore->addError('o:source', 'Invalid Tweet URL specified');
+            $errorStore->addError('o:source', sprintf(
+                'Invalid tweet URL: %s',
+                $data['o:source']
+            ));
             return;
         }
         $url = sprintf('https://publish.twitter.com/oembed?url=%s', urlencode($data['o:source']));
-        $json = @file_get_contents($url);
-        if (false === $json) {
-            $errorStore->addError('o:source', 'Cannot get Tweet embed');
-            return;
+        $response = $this->client->setUri($url)->send();
+        if (!$response->isOk()) {
+            $errorStore->addError('o:source', sprintf(
+                'Error reading tweet: %s (%s)',
+                $response->getReasonPhrase(),
+                $response->getStatusCode()
+            ));
+            return false;
         }
         $media->setSource($data['o:source']);
-        $media->setData(json_decode($json));
+        $media->setData(json_decode($response->getBody(), true));
     }
 }
-
 ```
-
-Note that in `Tweet::ingest()` we'd likely want to use the `Omeka\HttpClient` service
-instead of `file_get_contents()`. This is because the client has better URL parsing
-and error handling and because it uses configuration from your specific Omeka S
-installation. To inject the `Omeka\HttpClient` service into your ingester, like
-all services, you'd follow Zend's service factory pattern.
 
 Finally, let's create the "Tweet" renderer class at `/modules/MyModule/src/Media/Renderer/Tweet.php`:
 

@@ -1,4 +1,6 @@
-# Javascript Events
+---
+title: Javascript Events
+---
 
 In the admin interface, the following events use jQuery's trigger function.
 

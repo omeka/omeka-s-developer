@@ -1,4 +1,6 @@
-# Forms
+---
+title: Forms
+---
 
 Omeka S often extends `Zend\Form\Form` in the namespace `Omeka\Form`, and in some cases includes events to allow modules to add more fields to the form.
 

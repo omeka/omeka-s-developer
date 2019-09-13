@@ -1,4 +1,6 @@
-# Event Reference
+---
+title: Event Reference
+---
 
 Below is a list of events that Omeka triggers during critical moments of operation. Modules may attach listeners to these events and extend Omeka's functionality. For example, in `Module::attachListeners()` you can run custom code after an item is created:
 

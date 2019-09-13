@@ -1,4 +1,6 @@
-# Working with Sass and CSS
+---
+title: Working with Sass and CSS
+---
 
 
 Omeka S's CSS is generated using Gulp and other Node packages. The necessary packages are installed with npm. From the top-level Omeka S directory:

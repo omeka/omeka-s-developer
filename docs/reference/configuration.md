@@ -1,4 +1,6 @@
-# Configuration Settings
+---
+title: Configuration Settings
+---
 
 See [Configuration Key Concepts](../key_concepts/config.md) for a general
 configuration overview and how to use `/config/local.config.php` and your

@@ -1,4 +1,6 @@
-# REST API
+---
+title: REST API
+---
 
 Omeka S provides an API for external clients to query and modify Omeka S installations.
 

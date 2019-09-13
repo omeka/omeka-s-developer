@@ -1,4 +1,6 @@
-# Core Documentation
+---
+title: Core Documentation
+---
 
 Here you will find a guide to the generated core documentation for Omeka S's core classes. Each link refers to a representation of the docblock documentation for top namespaces within Omeka S, found in `application/src`.
 

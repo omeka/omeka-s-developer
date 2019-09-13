@@ -1,4 +1,6 @@
-# Data Types
+---
+title: Data Types
+---
 
 Data types are classes that extend the ways users can describe resources. They define
 the entire round trip of a resource value: how it's entered and validated, saved

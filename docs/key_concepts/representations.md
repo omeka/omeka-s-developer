@@ -1,4 +1,6 @@
-# Using Representations
+---
+title: Using Representations
+---
 
 Data from the Omeka S API (which covers just about all data you'll deal with that's stored
 in Omeka S) is accessed internally through "representation" objects. These are what you'll

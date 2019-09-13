@@ -1,4 +1,6 @@
-# Routes and Navigation
+---
+title: Routes and Navigation
+---
 
 ## Routes
 

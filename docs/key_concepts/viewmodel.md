@@ -1,4 +1,6 @@
-# ViewModel
+---
+title: ViewModel
+---
 
 The ViewModel is used to send data to views for display. It is typically created in a controller's action, and returned from there:
 

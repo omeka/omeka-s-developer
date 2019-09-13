@@ -1,4 +1,6 @@
-# Internationalization
+---
+title: Internationalization
+---
 
 Roy Rosezweig Center for History and New Media is commited to making Omeka S available in as many people as possible.
 

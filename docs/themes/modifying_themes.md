@@ -94,7 +94,7 @@ The function `prependFile()` will place the stylesheet at the top of the queue o
 
 `$this->headScript()->appendFile($this->assetUrl('js/thedaily.js'));`
 
-The function `appendFile()` will place the javascript file at the top of the queue of loaded javascript files.
+The function `appendFile()` will place the javascript file at the bottom of the queue of loaded javascript files.
 
 ### Using Webfonts
 

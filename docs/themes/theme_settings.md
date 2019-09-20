@@ -9,7 +9,8 @@ You create the form fields for your theme settings in `config/theme.ini`. Start 
 ```
 [info]
 name = "Theme Name"
-,,,
+
+#...
 
 [config]
 ```
@@ -24,7 +25,7 @@ elements.my_theme_setting.options.label = "My Theme Setting"
 
 Next you need to define your theme setting's form element type.
 
-The available form element types from Zend framework are found in `vendor\zendframework\zend-form\src\Element`. In the config file, reference the element type with the path `Zend\Form\Element\[Type]`. The following example defines the theme setting as a checkbox.
+The available form element types from Zend Framework are found in [their documentation](https://docs.zendframework.com/zend-form/element/intro/). In the config file, reference the element type with the path `Zend\Form\Element\[Type]`. The following example defines the theme setting as a checkbox.
 
 ```
 elements.my_theme_setting.type = "Zend\Form\Element\Checkbox"

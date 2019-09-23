@@ -44,7 +44,7 @@ The `@Entity` declaration in the top level comment block tells Doctrine that thi
 
 Thus, the `module` table has three columns: `id` of type string, `isActive` of type boolean, and `version`.
 
-The Doctrine `orm:schema-tool:update --dump-sql` tool can be used to see the SQL query used to create a table in this way. Omeka S, of course, has integrated this process into the installation process. See [Modules](modules.md) for how modules should implement this process.
+The Doctrine `orm:schema-tool:update --dump-sql` tool can be used to see the SQL query used to create a table in this way. Omeka S, of course, has integrated this process into the installation process. See [Modules](../modules/index.md) for how modules should implement this process.
 
 ## Updating the Data Model
 

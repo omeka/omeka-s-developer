@@ -1,5 +1,5 @@
 ---
-title: Modules
+title: Introduction to modules
 ---
 
 You can extend the functionality of Omeka S by writing an add-on component called a *module.* Zend Framework 2 provides a substantial [framework for writing modules](http://framework.zend.com/manual/2.3/en/modules/zend.module-manager.intro.html), but Omeka S provides extra structure that makes the modules installable, upgradeable, and integratable.
@@ -16,7 +16,7 @@ MyModule/
         module.config.php
     src/
         <library-directories-and-files>
-    assets/
+    asset/
         <asset-directories-and files>/
     view/
         <module-namespace>/
@@ -34,15 +34,19 @@ When using a shared directory in the `view` directory (such as `common` above) b
 
 ## config/module.ini
 
-Every module must have an INI file, a file containing basic information about the module. The file must be named `module.ini`, be saved in your module's `config/` directory and start with `[info]` on first line.
+Every module must have an INI file, a file containing basic information about the module. The file must be named `module.ini` and be saved in your module's `config/` directory. This file must start with `[info]` on the first line.
 
-* name (required): The human-readable name of the module
-* version (required): The version of the current code state
-* author (optional): The author of the module
-* configurable (optional): Whether the module is configurable, true or false
-* description (optional): A description of the module
-* module_link (optional): An absolute URL to a page about the module
-* author_link (optional): An absolute URL to a page about the author
+### Required information
+* `name`: The human-readable name of the module
+* `version`: The current version of the module
+
+### Optional information
+* `author`: The author of the module
+* `configurable`: Whether the module is configurable, true or false
+* `description`: A description of the module
+* `module_link`: An absolute URL to a page about the module
+* `author_link`: An absolute URL to a page about the author
+* `omeka_version_constraint`: A [Composer version constraint](https://getcomposer.org/doc/articles/versions.md) for what versions of the Omeka S core this module works with
 
 ```ini
 [info]
@@ -53,6 +57,7 @@ configurable = true
 description  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 module_link  = "http://my-organization.com/my-module"
 author_link  = "http://my-organization.com"
+omeka_version_constraint = "^1.0.0"
 ```
 
 ## config/module.config.php
@@ -120,10 +125,9 @@ class Module extends AbstractModule
     }
 }
 ```
-
 ### Installing the Data Model
 
-If your module needs to create database tables for Entities, follow this process after you have defined your Entity classes. See [Doctrine and Entities](doctrine_and_entities.md) for an introduction.
+If your module needs to create database tables for Entities, follow this process after you have defined your Entity classes. See [Doctrine and Entities](../key_concepts/doctrine_and_entities.md) for an introduction.
 
 Run
 
@@ -194,7 +198,7 @@ As you continue to make updates and add to the `upgrade` method, users will be a
 
 ### Attaching to Omeka Events
 
-Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. Use the `attachListeners` method in your module class, like below:
+Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. A list of events and where they're fired is found [here](../reference/events.md). Use the `attachListeners` method in your module class, like below:
 
 ```php
 use Omeka\Module\AbstractModule;
@@ -222,9 +226,11 @@ class Module extends AbstractModule
     }
 }
 ```
+### Packaging a Module
 
+* At minimum, a module MUST contain a `Module.php` file and a `config/module.ini` file, following the requirements described above.
+* It SHOULD be made available as a .zip file
 
+#### Adding to omeka.org
 
-## See Also
-
-[Omeka Events](omeka_events.md)
+See [Register an addon](../register_an_addon.md).

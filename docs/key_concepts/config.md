@@ -19,7 +19,7 @@ requirements.
 Modules add their own configuration settings via their `config/module.config.php`
 files. Note that these configuration settings are merged into local
 configuration, and can extend, and possibly modify, the core configuration. See
-[Modules](modules.md) for more information.
+[Modules](../modules/index.md) for more information.
 
 ## Invokables and Factories
 
@@ -33,4 +33,4 @@ to learn how to configure your services.
 
 - [Configuration Settings](../reference/configuration.md)
 - [Services and Factories](services_and_factories.md)
-- [Modules](modules.md)
+- [Modules](../modules/index.md)

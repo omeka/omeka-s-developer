@@ -82,7 +82,8 @@ Search results are paginated in pages of 25 results by default.
 Links to additional pages are given in the `Link` header. The link with `rel="next"` is the next page in the sequence.
 When appropriate, links with a `rel` value of `prev`, `first`, and `last` are also provided.
 
-Pagination parameters are passed like any other criteria
+Pagination parameters are passed like any other criteria.
+
 * `page`: Page number of the result set to return
 * `per_page`: Number of results per page
 
@@ -102,6 +103,7 @@ Your request data can specify the `property` key. It should be associated to a l
 Each critrion is an associative array with at least `property` and `type` keys (respectively the RDF property ID and the type of operator). 
 
 Possible values for `'type'` are:
+
 * `eq`: is exactly
 * `neq`: is not exactly
 * `in`: contains

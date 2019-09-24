@@ -8,15 +8,28 @@ If your module needs to create database tables for Doctrine Entities, follow thi
 process after you have defined your Entity classes. See [Doctrine and Entities](../key_concepts/doctrine_and_entities.md)
 for an introduction.
 
-Run the following command in your terminal:
+First you'll need to configure your module so Doctrine knows where your Entity and
+proxy classes are. In `config/module.config.php`, add the following:
+
+```php
+    'entity_manager' => [
+        'mapping_classes_paths' => [
+            dirname(__DIR__) . '/src/Entity',
+        ],
+        'proxy_paths' => [
+            dirname(__DIR__) . '/data/doctrine-proxies',
+        ],
+    ],
+```
+
+Then, run the following command in your terminal:
 
     $ php application/data/scripts/update-db-data-module.php <ModuleName>
 
-The command will create Doctrine "proxy" class files for your entities and place
-them in your module at `data/doctrine-proxies`. The command will also output the
-SQL statements needed to install your data model. Copy the statements, then, in
-your `Module.php` file's `install()` function, use the connection service to execute
-them:
+This will create Doctrine "proxy" class files for your entities and place them in
+your module at `data/doctrine-proxies`. It will also output the SQL statements needed
+to install your data model. Copy the statements, then, in your `Module.php` file's
+`install()` function, use the database connection service to execute them:
 
 ```php
     public function install(ServiceLocatorInterface $services)

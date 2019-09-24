@@ -100,7 +100,7 @@ Pagination parameters are passed like any other criteria.
 ###### RDF property criteria
 Your request data can specify the `property` key. It should be associated to a list (array) of criteria on RDF properties.
 
-Each critrion is an associative array with at least `property` and `type` keys (respectively the RDF property ID and the type of operator). 
+Each criterion is an associative array with at least `property` and `type` keys (respectively the RDF property ID and the type of operator). 
 
 Possible values for `'type'` are:
 

@@ -164,6 +164,16 @@ If using SMTP, use this example configuration, added to the end of `local.config
 
 - `oembed`: A whitelist of allowable URL patterns for ingesting oEmbed media
 
+## Password
+
+- `password`: A list of configurable password restrictions
+    - `min_length`: The minimum length
+    - `min_lowercase`: The minimum number of lowercase letters
+    - `min_uppercase`: The minimum number of uppercase letters
+    - `min_number`: The minimum number of numbers
+    - `min_symbol`: The minimum number of symbols
+    - `symbol_list`: The list of symbols allowed by `min_symbol`
+
 ## Permissions
 
 Configuration for the access control list (ACL).

@@ -236,21 +236,21 @@ Triggered when creating the section navigation for edit pages. To add a section 
 This event is intended to be used to filter the `partials` parameter: listeners can add, remove, or reorder the partials in the array
 to change what is displayed on the form. Any added partial will be passed one parameter when it is rendered: `query`.
 
-### view.manage-sites.before
+### view.manage_resources.before
 
-Triggered before the list of sites on the admin dashboard.
+Triggered before the "Manage resources" panel on the admin Dashboard
 
-### view.manage-sites.after
+### view.manage_resources.after
 
-Triggered before the list of sites on the admin dashboard.
+Triggered after the "Manage resources" panel on the admin Dashboard
 
-### view.manage-resources.before
+### view.manage_sites.before
 
-Triggered before the list of resources on the admin dashboard.
+Triggered before the "Manage sites" panel on the admin Dashboard
 
-### view.manage-resources.after
+### view.manage_sites.after
 
-Triggered before the list of resources on the admin dashboard.
+Triggered after the "Manage sites" panel on the admin Dashboard
 
 ### view.details
 
@@ -265,6 +265,13 @@ Triggered inside the details display on the admin side.
 * **sortOrderQuery** Query string parameter for current active sort direction
 
 Event for filtering options in the sorting `select` element on browse pages. Triggered in the sortSelector view helper. Added in Omeka S 1.3.0.
+
+### view.search.filters
+
+* **filters**: An array of filtered values, keyed by the filter label
+* **query**: The search query
+
+Triggered after creating the human-readable search params for search results.
 
 ## View Helper Events
 

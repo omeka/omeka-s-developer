@@ -1,5 +1,5 @@
 ---
-title: Doctrine and Entities
+title: Data Model
 ---
 
 Omeka S uses [Doctrine](http://www.doctrine-project.org/) as its Object Relational Mapper. Here is a summary of how Omeka S uses it. Refer to their documentation for details.

@@ -1,5 +1,5 @@
 ---
-title: Block Layouts
+title: Page Blocks
 ---
 
 Pages in Omeka S are made up of blocks. All content on a page, from attached

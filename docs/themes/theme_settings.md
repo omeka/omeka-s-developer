@@ -1,5 +1,5 @@
 ---
-title: Writing Theme Settings
+title: Theme Settings
 ---
 
 You can provide users with theme settings, configurable parts of your theme that help users customize the theme to their projects. Examples of theme settings include configurable element colors, image asset uploads, footer content.

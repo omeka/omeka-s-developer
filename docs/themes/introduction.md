@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to Themes
 ---
 
 Omeka S supports themes, a way to customize the presentation of Omeka S sites. Omeka S comes with a default theme, and officially supports the [Center Row](http://github.com/omeka-s-themes/centerrow), [Cozy](http://github.com/omeka-s-themes/cozy), and [The Daily](http://github.com/omeka-s-themes/thedaily) themes. The following is a guide for modifying existing themes as well as starting a theme from scratch.

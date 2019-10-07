@@ -1,5 +1,5 @@
 ---
-title: Working with Sass and CSS
+title: Sass and CSS
 ---
 
 

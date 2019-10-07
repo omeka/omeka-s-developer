@@ -1,8 +1,9 @@
 # Omeka S Developer Documentation
 
-Documentation for Omeka S developers
+Documentation for Omeka S developers.
 
-Like Omeka S itself, a work in progress.
+This repository is the source code for the documentation; the live docs are located
+at https://omeka.org/s/docs/developer.
 
 ## Contributing
 The documentation is built with [MKDocs](http://www.mkdocs.org/) from the markdown files here. Install mkdocs, then run `mkdocs build` in the directory you clone the files into. A build will be created in the `sites` directory of your clone.

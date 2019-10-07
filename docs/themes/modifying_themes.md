@@ -1,5 +1,5 @@
 ---
-title: Template Overriding
+title: Theme Modifications
 ---
 
 ## Overriding default templates

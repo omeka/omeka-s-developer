@@ -184,14 +184,7 @@ updates from Transifex.
 For further commands used for working with modules rather than the core, see the
 [documentation on internationalization in modules](../modules/internationalization.md).
 
-## See also
-
-* [Config File](config.md)
-* [Forms](forms.md)
-* [Routes and Navigation](routes_and_navigation.md)
-* [Translate Helper]()
-
-# Internationalizing your module
+## Internationalizing your module
 
 The Omeka S core contains tools for internationalizing the strings in your modules to create
 `template.pot` files suitable for adding to Transifex or any other translating service, and

@@ -1,5 +1,5 @@
 ---
-title: Javascript Events
+title: Client Events
 ---
 
 Omeka S makes extensive use of jQuery, particularly on admin pages. Many user interactions require additional actions to respond to the changes on the page. For this, Omeka S uses the `trigger()` function so other parts of javascript code can follow up.

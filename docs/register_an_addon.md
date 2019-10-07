@@ -1,5 +1,5 @@
 ---
-title: Register an Addon
+title: Registering an Addon
 ---
 
 After you [register your GitHub repository](http://omeka.org/register/) as an Omeka addon we'll publish new versions of your addon if you follow these steps.

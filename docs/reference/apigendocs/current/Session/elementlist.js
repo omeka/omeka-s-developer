@@ -1,2 +1,0 @@
-var ApiGen = ApiGen || {};
-ApiGen.elements = [{"file":"namespace-Omeka.Session.SaveHandler.html","label":"Omeka\\Session\\SaveHandler"},{"file":"namespace-Zend.Session.SaveHandler.html","label":"Zend\\Session\\SaveHandler"},{"file":"namespace-none.html","label":"none"},{"file":"class-Omeka.Session.SaveHandler.Db.html","label":"Omeka\\Session\\SaveHandler\\Db"},{"file":"interface-SessionHandlerInterface.html","label":"SessionHandlerInterface"},{"file":"interface-Zend.Session.SaveHandler.SaveHandlerInterface.html","label":"Zend\\Session\\SaveHandler\\SaveHandlerInterface"}];

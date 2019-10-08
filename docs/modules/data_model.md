@@ -1,5 +1,5 @@
 ---
-title: Module Data Model
+title: Data Model
 ---
 
 ## Installing the Data Model

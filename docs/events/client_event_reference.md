@@ -1,5 +1,5 @@
 ---
-title: Client Events Reference
+title: Client Event Reference
 ---
 
 In the admin interface, the following events use jQuery's trigger function.

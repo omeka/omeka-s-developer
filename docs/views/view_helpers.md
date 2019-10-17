@@ -45,7 +45,7 @@ class MyModuleViewHelper extends AbstractHelper
 
 ```
 
-There are no restrictions on the signature for `__invoke`, so any necessary data from the view can be added as needed, as in the first example of `Url` above. Its __invoke method thus looks like:
+There are no restrictions on the signature for `__invoke`, so any necessary data from the view can be added as needed, as in the first example of `Url` above. Its `__invoke` method thus looks like:
 
 ```php
 
@@ -71,7 +71,7 @@ The `invokables` key signals that the View Helper class can be directly instanti
 
 ### Invokables vs Factories
 
-Sometimes, a helper will need access to additional services, or data that is accessible only via a service. In this case, the View Helper must be created via a factory, rather than an invokable, as defined in the `config.php` file. (See also [Services and Factories](services_and_factories.md)).
+Sometimes, a helper will need access to additional services, or data that is accessible only via a service. In this case, the View Helper must be created via a factory, rather than an invokable, as defined in the `config.php` file. (See also [Services and Factories](../configuration/services_and_factories.md)).
 
 To create a factory for your View Helper, put the factory in the following directory:
 

@@ -44,9 +44,9 @@ The `@Entity` declaration in the top level comment block tells Doctrine that thi
 
 Thus, the `module` table has three columns: `id` of type string, `isActive` of type boolean, and `version`.
 
-The Doctrine `orm:schema-tool:update --dump-sql` tool can be used to see the SQL query used to create a table in this way. Omeka S, of course, has integrated this process into the installation process. See [Modules](../modules/doctrine_and_entities.md) for how modules should implement this process.
+The Doctrine `orm:schema-tool:update --dump-sql` tool can be used to see the SQL query used to create a table in this way. Omeka S, of course, has integrated this process into the installation process. See [the module Data Model page](../modules/data_model.md) for how modules should implement this process.
 
-## Updating the Data Model (Core)
+## Updating the Core Data Model
 
 In the course of developing Omeka you'll probably find reason to modify the data model. Whether you add or remove an entity, or add, remove, or modify a column, you'll need to reflect these changes in the database.
 

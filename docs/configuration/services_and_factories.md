@@ -107,7 +107,7 @@ In `module.config.php`, you will need to assert that the class in question is pr
 
 ## See also
 
-[Configuration files](config.md)
+[Configuration files](index.md)
 
 
 

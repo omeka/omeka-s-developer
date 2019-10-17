@@ -8,7 +8,7 @@ configuration and used by Omeka S services to operate the application. See the
 following files to reference default settings and their format (do not modify
 these files):
 
-- `application/config/module.config.php`: read-only default settings (see [Configuration Settings](../reference/configuration.md))
+- `application/config/module.config.php`: read-only default settings (see [Configuration Settings](config_reference.md))
 - `application/config/navigation.config.php`: read-only navigation settings (see [zend-navigation docs](https://docs.zendframework.com/zend-navigation/pages/#mvc-pages))
 - `application/config/routes.config.php`: read-only routing settings (see [zend-mvc docs](http://zendframework.github.io/zend-mvc/routing/))
 

@@ -2,7 +2,7 @@
 title: Client Event Reference
 ---
 
-In the admin interface, the following events use jQuery's trigger function.
+In the admin interface, the following [events](client_events.md) use jQuery's trigger function.
 
 ## Generic Events
 

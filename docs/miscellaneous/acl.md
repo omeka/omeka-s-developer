@@ -20,7 +20,7 @@ There are six discrete user roles, each in a large part having greater access th
 There are three ways to run a permission check. 
 
 ### ACL Service
-Where the ACL service is available, there are three methods: `userIsAllowed()`, `isAdmin()`, and `isAllowed()`. See [Services and Factories](services_and_factories.md) for more information.
+Where the ACL service is available, there are three methods: `userIsAllowed()`, `isAdmin()`, and `isAllowed()`. See [Services and Factories](../configuration/services_and_factories.md) for more information.
 
 `userIsAllowed($resource, $privilege)` checks whether the current user has access to a resource and privilege.
 

@@ -25,9 +25,9 @@ class IndexController extends AbstractActionController
 
 ## From an Event
 
-### Adding <head> content to a View
+### Adding `<head>` content to a View
 
-Views are made available via a number of `Event`s. This allows adding to the <head> element of a page in many ways.
+Views are made available via a number of `Event`s. This allows adding to the `<head>` element of a page in many ways.
 
 For any `view.*` event, the view is the target. Thus, to get the view, a module needs to include code like this:
 
@@ -64,4 +64,4 @@ All of the above applies to working with a module's `getConfigForm` function, bu
 
 ## See Also
 
-* [Omeka Events](omeka_events.md)
+* [Server Events](../events/server_events.md)

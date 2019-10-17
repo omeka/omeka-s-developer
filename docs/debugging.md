@@ -66,7 +66,7 @@ Log messages are not written to `application.log` from inside a Job. Instead, th
 
 ## Logging elsewhere
 
-If you need to do some debugging work elsewhere, such as within an Entity, you need to inject the Logger via a factory for the object. See [Services and Factories](services_and_factories.md) for details.
+If you need to do some debugging work elsewhere, such as within an Entity, you need to inject the Logger via a factory for the object. See [Services and Factories](configuration/services_and_factories.md) for details.
 
 
 Within the `__invoke()` method of your factory, add

@@ -135,7 +135,7 @@ This method fires when rendering the page form, just once
 for each layout. The typical use for this method is to load assets onto the
 page, in particular Javascript files that are used by the layout's form.
 
-Omeka S provides a [Javascript event](../reference/javascript_events.md)
+Omeka S provides a [client-side event](../events/client_events.md)
 to help run code when a form for a new block is added to the page form,
 `o:block-added`.
 
@@ -189,7 +189,7 @@ public function getFulltextText(PhpRenderer $view, SitePageBlockRepresentation $
 
 ### Configuration
 
-A block layout must be registered in the [configuration](config.md) to be
+A block layout must be registered in the [configuration](../configuration/index.md) to be
 available for use. The configuration is a standard service manager config
 section, under the key `block_layouts`. Most blocks don't have any
 dependencies on other services, so can simply be registered as invokables:

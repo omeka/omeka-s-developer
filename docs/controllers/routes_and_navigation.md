@@ -182,5 +182,5 @@ The pattern for adding to a Site's navigation is similar, but adds to the `admin
 
 ## See also
 
-[Controllers](controllers.md)
-[Configuration](config.md)
+[Controllers](index.md)
+[Configuration](../configuration/index.md)

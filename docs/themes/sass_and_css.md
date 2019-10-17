@@ -37,7 +37,7 @@ gulp css:watch
 
 ## See Also
 
-[Javascript Events](../reference/javascript_events.md)
+[Client-side Events](../events/client_events.md)
 
 
 

@@ -2,7 +2,7 @@
 title: Configuration Reference
 ---
 
-See [Configuration Key Concepts](../key_concepts/config.md) for a general
+See [Configuring Omeka S](index.md) for a general
 configuration overview and how to use `/config/local.config.php` and your
 module's `config/module.config.php` to customize your installation's
 configuration settings.
@@ -11,7 +11,7 @@ The following configuration settings are available (more may be added by modules
 
 ## Api Adapters
 
-- `api_adapters`: A list of API adapters for Omeka S resources (see [Omeka S API docs](../key_concepts/api.md))
+- `api_adapters`: A list of API adapters for Omeka S resources (see [Omeka S API docs](../api/index.md))
 
 ## Assets
 

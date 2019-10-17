@@ -27,6 +27,6 @@ One of the best ways to start working with themes is to experiment with existing
 Themes officially supported by the Omeka team ([the Omeka S default theme](http://github.com/omeka-s-themes/default), [Center Row](http://github.com/omeka-s-themes/centerrow), [Cozy](http://github.com/omeka-s-themes/cozy), and [The Daily](http://github.com/omeka-s-themes/thedaily)), use SASS to generate their CSS. For users who want to start using SASS, here are recommended tutorials for installation. 
 
 * [Sass Basics](http://sass-lang.com/guide)
-* [Working with SASS and CSS](../key_concepts/working_with_Sass_and_CSS.md)
+* [Working with SASS and CSS](sass_and_css.md)
 
 Those who simply want to edit the CSS without getting into preprocessors can ignore the 'asset/sass' folder completely and focus on .css files. **Note:** if you edit a .css file but later decide to use Sass, you should back up and make note of your changes before compiling for the first time. Changes made in .scss files overwrite any changes made to .css files.

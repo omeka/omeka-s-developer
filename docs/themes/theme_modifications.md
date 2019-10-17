@@ -74,7 +74,7 @@ Every theme has its own version of layout.phtml, which provides the structure fo
 
 Themes load their CSS and Javascript files using Zend's view helper functions ([`headLink()`](https://docs.zendframework.com/zend-view/helpers/head-link/) and [`headScript()`](https://docs.zendframework.com/zend-view/helpers/head-script/), which help control the order in which these files load alongside files from Omeka S's pages and  modules. These functions should appear before the `<head>` of layout.phtml.
 
-Here are examples for including these files in the <head> of a theme.
+Here are examples for including these files in the `<head>` of a theme.
 
 For CSS:
 
@@ -108,7 +108,7 @@ This line sources the font family “Lato” hosted by Google Fonts. To start us
 
 ## Working with Omeka S Content
 
-Omeka S's sites are primarily concerned with the presentation of Omeka S resources: items, item sets, and media. Themes control how these resources' associated metadata and files are displayed via methods defined in the resources' representations. The following section highlights some common tasks using these methods, and a more in-depth guide can be found in [Using Representations](https://omeka.org/s/docs/developer/key_concepts/representations/#using-representations).
+Omeka S's sites are primarily concerned with the presentation of Omeka S resources: items, item sets, and media. Themes control how these resources' associated metadata and files are displayed via methods defined in the resources' representations. The following section highlights some common tasks using these methods, and a more in-depth guide can be found in [Representations](../views/representations.md).
 
 #### Displaying Resource Images
 
@@ -126,4 +126,4 @@ The default thumbnail, "medium", is one of the file derivatives Omeka S generate
 
 The widths of these file derivatives are defined within `application/config/module.config.php`. If an image within your theme appears at a different size than expected, it is most likely due to the theme's CSS.
 
-[Explore more media-specific methods here.](https://omeka.org/s/docs/developer/key_concepts/representations/#media-specific-methods)
+[Explore more media-specific methods here.](../views/representations.md#media-specific-methods)

@@ -2,7 +2,7 @@
 title: Server Events
 ---
 
-Omeka S Events (`Omeka\Event`) extend from `Zend\EventManager\Event`. They are triggered in a variety of controllers, views and API actions to allow follow-up actions to be done within Omeka S itself or within modules. See [Events Reference](../reference/events.md) for a full list.
+Server events (`Omeka\Event`) extend from `Zend\EventManager\Event`. They are triggered from Omeka S's PHP code in a variety of controllers, views and API actions to allow follow-up actions to be done within Omeka S itself or within modules. See [the reference page](server_event_reference.md) for a full list.
 
 ## Attaching a listener to an event
 

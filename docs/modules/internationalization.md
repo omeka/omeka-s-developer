@@ -1,13 +1,13 @@
 ---
-title: Internationalizing your module
+title: Internationalization for Modules
 ---
 
 The Omeka S core contains tools for internationalizing the strings in your modules to create
 `template.pot` files suitable for adding to Transifex or any other translating service, and
 for handling translated `.po` files.
 
-For general information about the Omeka S translation system, see the
-[main Internationalization page](../key_concepts/internationalization.md).
+This page covers topics specific to internationalization in modules. For general information
+about the Omeka S translation system, see the [main Internationalization page](../miscellaneous/internationalization.md).
 
 ## Module preparation
 
@@ -16,7 +16,7 @@ throughout your code, and also create and configure a directory that will hold t
 translation files.
 
 For handling the strings, the same guidelines as given in the
-[main documentation on making strings translatable](../key_concepts/internationalization.md#making-strings-translatable) apply to modules as well.
+[main documentation on making strings translatable](../miscellaneous/internationalization.md#making-strings-translatable) apply to modules as well.
 
 For the directory, create a `/language` directory at the root of your module, and reference
 it in your module's config/module.config.php file:

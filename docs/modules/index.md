@@ -1,5 +1,5 @@
 ---
-title: Introduction to modules
+title: Introduction to Modules
 ---
 
 You can extend the functionality of Omeka S by writing an add-on component called a *module.* Zend Framework 2 provides a substantial [framework for writing modules](https://docs.zendframework.com/zend-modulemanager/intro/), but Omeka S provides extra structure that makes the modules installable, upgradeable, and integratable.
@@ -128,7 +128,9 @@ class Module extends AbstractModule
 
 ### Attaching to Omeka Events
 
-Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times. A list of events and where they're fired is found [here](../reference/events.md). Use the `attachListeners` method in your module class, like below:
+Extending functionality is largely a matter of attaching listeners to events that Omeka fires at critical times.
+Modules can attach to Omeka S's [server-side events](../events/server_events.md) in the `Module.php` file. Use the
+`attachListeners` method in your module class, like below:
 
 ```php
 use Omeka\Module\AbstractModule;

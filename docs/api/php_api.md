@@ -75,20 +75,3 @@ For example, to get an item in a view template:
 ```php
 <?php $itemRepresentation = $this->api()->read('items', 123); ?>
 ```
-
-## API request options
-
-For most resources, you can pass options that affect the execution of a request in
-the `$options` argument:
-
-| Option | Type | Description | Default |
-| --- | --- | --- | --- |
-| initialize | bool | Set whether to initialize the request during execute() (e.g. trigger API-pre events). | `true` |
-| finalize | bool | Set whether to finalize the request during execute() (e.g. trigger API-post events and transform response content according to the "responseContent" option). | `true` |
-| returnScalar | string | Set which field/column to return as an array of scalars during a SEARCH request. The request will not finalize when this option is set. | `false` |
-| isPartial | bool | Set whether this is a partial UPDATE request (aka PATCH). | `false` |
-| collectionAction | string | Set which action to take on certain collections during a partial UPDATE request:<ul><li>`"replace"`: the passed data replaces the collection</li><li>`"append"`: append passed data to collections</li><li>`"remove"`: remove passed data from collections</li></ul> | `"replace"` |
-| continueOnError | bool | Set whether a BATCH_CREATE operation should continue processing on error. | `false` |
-| flushEntityManager | bool | Set whether to flush the entity manager during CREATE, UPDATE, and DELETE. | `true` |
-| responseContent | string | Set the type of content the API response should contain. Default is "representation". The types are:<ul><li>`"representation"`: an API resource representation</li><li>`"reference"`: an API resource reference</li><li>`"resource"`: an API resource</li></ul> | `"representation"` |
-

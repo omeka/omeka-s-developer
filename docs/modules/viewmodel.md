@@ -2,7 +2,8 @@
 title: ViewModel
 ---
 
-The ViewModel is used to send data to views for display. It is typically created in a controller's action, and returned from there:
+The ViewModel is used to send data to views for display. It is typically created
+in a controller's action, and returned from there:
 
 ```php
 
@@ -27,9 +28,11 @@ class IndexController extends AbstractActionController
 
 ### Adding `<head>` content to a View
 
-Views are made available via a number of `Event`s. This allows adding to the `<head>` element of a page in many ways.
+Views are made available via a number of `Event`s. This allows adding to the `<head>`
+element of a page in many ways.
 
-For any `view.*` event, the view is the target. Thus, to get the view, a module needs to include code like this:
+For any `view.*` event, the view is the target. Thus, to get the view, a module
+needs to include code like this:
 
 ```php
 
@@ -49,9 +52,10 @@ For any `view.*` event, the view is the target. Thus, to get the view, a module 
     }
 ```
 
-The first parameter for `$view->assetUrl()` is a path within the module's `/asset` directory, and the second parameter is the namespace for the module.
+The first parameter for `$view->assetUrl()` is a path within the module's `/asset`
+directory, and the second parameter is the namespace for the module.
 
-Javascript files are added similarly, using 
+Javascript files are added similarly, using
 
 ```php
     $view->headScript()->appendFile($view->assetUrl('js/mymodule.js', 'MyModule'));
@@ -59,8 +63,9 @@ Javascript files are added similarly, using
 
 ## From a Module::getConfigForm() function
 
-All of the above applies to working with a module's `getConfigForm` function, but the object passed in is a `Zend\View\Renderer\PhpRenderer` object. The same methods can be used.
-
+All of the above applies to working with a module's `getConfigForm` function, but
+the object passed in is a `Zend\View\Renderer\PhpRenderer` object. The same methods
+can be used.
 
 ## See Also
 

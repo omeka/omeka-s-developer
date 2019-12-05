@@ -4,7 +4,9 @@ title: Routes and Navigation
 
 ## Routes
 
-Routes define the connections between URL paths and the controllers and actions that handle them. Thus, for a module to display a page at, e.g. `/yourmodule/controller/action`, you need to define that route in `module.config.php`:
+Routes define the connections between URL paths and the controllers and actions
+that handle them. Thus, for a module to display a page at, e.g. `/yourmodule/controller/action`,
+you need to define that route in `module.config.php`:
 
 ```php
 
@@ -25,11 +27,17 @@ Routes define the connections between URL paths and the controllers and actions 
         ),
 ```
 
-There are many options for defining the route. See the [Zend Framework documentation](https://docs.zendframework.com/zend-router/routing/) for details.
+There are many options for defining the route. See the [Zend Framework documentation](https://docs.zendframework.com/zend-router/routing/)
+for details.
 
 ## Navigation
 
-Adding navigation for your module depends on the route being defined, then adding the route to the navigation system. For a link on the left sidebar on admin pages, it looks like this, taken from the Omeka2Importer module. First, the route is added as a child of the main admin router. There will be two valid routes for the module, it defines two child routes of its own under the `omeka2importer` route, `past-imports` and `map-elements`.
+Adding navigation for your module depends on the route being defined, then adding
+the route to the navigation system. For a link on the left sidebar on admin pages,
+it looks like this, taken from the Omeka2Importer module. First, the route is added
+as a child of the main admin router. There will be two valid routes for the module,
+it defines two child routes of its own under the `omeka2importer` route, `past-imports`
+and `map-elements`.
 
 ```php
     'router' => array(
@@ -78,7 +86,9 @@ Adding navigation for your module depends on the route being defined, then addin
     ),
 ```
 
-Then, the navigation key adds to the Admin navigation, defined by `AdminModule`. As will all settings in `module.config.php`, Omeka merges the array values for each key.
+Then, the navigation key adds to the Admin navigation, defined by `AdminModule`.
+As will all settings in `module.config.php`, Omeka merges the array values for each
+key.
 
 ```php
     'navigation' => array(
@@ -115,8 +125,9 @@ Then, the navigation key adds to the Admin navigation, defined by `AdminModule`.
 
 The links to pages correspond to the routes defined in the router.
 
-
-The pattern for adding to a Site's navigation is similar, but adds to the `admin/slug` route and the `site` navigation, as shown in this example taken from the MetadataBrowse module:
+The pattern for adding to a Site's navigation is similar, but adds to the `admin/slug`
+route and the `site` navigation, as shown in this example taken from the MetadataBrowse
+module:
 
 ```php
 
@@ -177,8 +188,6 @@ The pattern for adding to a Site's navigation is similar, but adds to the `admin
     ],
 
 ```
-
-
 
 ## See also
 

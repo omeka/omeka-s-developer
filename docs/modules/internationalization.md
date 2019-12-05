@@ -1,5 +1,5 @@
 ---
-title: Internationalization for Modules
+title: Internationalization
 ---
 
 The Omeka S core contains tools for internationalizing the strings in your modules to create

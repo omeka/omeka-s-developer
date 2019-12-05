@@ -5,7 +5,9 @@ title: View Helpers
 View helpers are used to consolidate code for creating or modifying HTML, simplifying
 your views and minimizing redundancy. For example, tasks such as escaping HTML,
 formatting dates, and creating commonly-used interface components are handled by
-way of view helpers. For a more complete introduction, read [Zend Framework's documentation](https://docs.zendframework.com/zend-view/helpers/intro/).
+way of view helpers.
+
+For a more complete introduction, read [Zend Framework's documentation](https://docs.zendframework.com/zend-view/helpers/intro/).
 This page focuses on using Omeka S's view helpers, listed below. Note that Omeka
 S also uses many of Zend Framework's native view helpers -- consult their documentation
 for more information.
@@ -221,43 +223,66 @@ The `__invoke` method then depends upon the partial in `common` to produce the H
 The second parameter also passes along a `$userRole` variable to the partial for
 it to use. Depending on the needs of the module, that might or might not be needed.
 
+## Built-in View Helpers
 
-## Omeka S View Helpers
+Omeka S comes with quite a few view helpers:
 
-* [Api](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Api.php) Helper for direct access to API read and search operations.
-* [AssetUrl](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/AssetUrl.php)
-* [BlockAttachmentsForm](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockAttachmentsForm.php)
-* [BlockLayout](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockLayout.php)
-* [BlockShowTitleSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockShowTitleSelect.php) Render an attachment title display select element.
-* [BlockThumbnailTypeSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/BlockThumbnailTypeSelect.php)
-* [CkEditor](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/CkEditor.php)
-* [DataType](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/DataType.php)
-* [DeleteConfirm](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/DeleteConfirm.php)
-* [HtmlElement](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/HtmlElement.php)
-* [Hyperlink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Hyperlink.php) Render an HTML hyperlink.
-* [I18n](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/I18n.php)
-* [ItemSetSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelect.php) A select menu containing all item sets.
-* [ItemSetSelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ItemSetSelector.php) Return the item set selector form control.
-* [JsTranslate](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/JsTranslate.php) Provide translations for JavaScript strings.
-* [Media](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Media.php)
-* [Messages](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Messages.php) Helper to proxy the messenger controller plugin.
-* [NavigationLink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/NavigationLink.php)
-* [PageTitle](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PageTitle.php) Render a title heading for a page.
-* [Pagination](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Pagination.php)
-* [Params](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Params.php) Helper to get params from the request.
-* [PropertySelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelector.php) 
-* [PropertySelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/PropertySelect.php) A select menu containing all properties.
-* [QueryToHiddenInputs](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/QueryToHiddenInputs.php) Build a hidden form input for every query in the URL query string.
-* [ResourceClassSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceClassSelect.php) A select menu containing all resource classes.
-* [ResourceSelect](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ResourceSelect.php) A select menu containing all of some resource.
-* [SearchFilters](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SearchFilters.php)
-* [SectionNav](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SectionNav.php) Helper that renders section navigation.
-* [Setting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/Setting.php) Helper to get settings from the settings service.
-* [SitePagePagination](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SitePagePagination.php)
-* [SortLink](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SortLink.php)
-* [SortSelector](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/SortSelector.php)
-* [ThemeSettingAssetUrl](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSettingAssetUrl.php) Return a path to a theme setting asset.
-* [ThemeSetting](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/ThemeSetting.php) Helper to get theme settings.
-* [Trigger](https://github.com/omeka/omeka-s/blob/develop/application/src/View/HeUlper/Trigger.php)
-* [UploadLimit](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/UploadLimit.php)
-* [UserIsAllowed](https://github.com/omeka/omeka-s/blob/develop/application/src/View/Helper/UserIsAllowed.php) Authorize the current user.
+- **api**: iew helper for direct access to API read and search operations.
+- **assetUrl**: View helper for returning a path to an asset.
+- **blockAttachmentsForm**: View helper for rendering a form for adding/editing block attachments.
+- **blockLayout**: View helper for rendering block layouts.
+- **blockShowTitleSelect**: View helper for rendering an attachment title display select element.
+- **blockThumbnailTypeSelect**: View helper for rendering a thumbnail type select element.
+- **cancelButton**: View helper for rendering a cancel button.
+- **ckEditor**: View helper for loading scripts necessary to use CKEditor on a page.
+- **dataType**: View helper for rendering data types.
+- **deleteConfirm**: View helper for rendering the delete confirm partial.
+- **filterSelector**: View helper for rendering a browse filtering form.
+- **formAsset**: get the asset form element
+- **formCkeditor**: get the Ckeditor form element
+- **formCkeditorInline**: get the Ckeditor inline form element
+- **formColorPicker**: get the color picker form element
+- **formRecaptcha**: get the Recaptcha form elemnt
+- **formRestoreTextarea**: get the restore textarea form element
+- **htmlElement**: View helper for rendering a HTML element.
+- **hyperlink**: View helper for rendering a HTML hyperlink.
+- **i18n**: View helper for rendering localized data.
+- **itemSetSelect**: View helper for rendering a select menu containing all item sets.
+- **itemSetSelector**: View helper for rendering the item set selector form control.
+- **jsTranslate**: View helper for rendering translations for JavaScript strings.
+- **lang**: View helper for getting a BCP 47-compliant value for the lang attribute.
+- **logger**: View helper for getting the Zend logger.
+- **media**: View helper for rendering media.
+- **messages**: View helper for proxing the messenger controller plugin.
+- **navigationLink**: View helper for rendering a navigation links.
+- **pageTitle**: View helper for rendering a title heading for a page.
+- **pagination**: View helper for rendering pagination.
+- **params**: View helper for getting params from the request.
+- **passwordRequirements**: View helper for rendering the password requirements.
+- **propertySelect**:  View helper for rendering a select menu containing all properties.
+- **propertySelector**: View helper for rendering the property selector.
+- **queryToHiddenInputs**: View helper for building a hidden form input for every query in the URL query string
+- **resourceClassSelect**: View helper for rendering a select menu containing all resource classes.
+- **resourceSelect**: View helper for rendering a select menu containing all of some resource.
+- **resourceTemplateSelect**: View helper for rendering a select menu containing all resource templates.
+- **roleSelect**: View helper for rendering a select menu containing all roles.
+- **searchFilters**: View helper for rendering search filters.
+- **searchUserFilters**: View helper for rendering search user filters.
+- **sectionNav**: View helper for rendering section navigation.
+- **setting**: View helper for getting settings.
+- **sitePagePagination**: View helper for rendering site page pagination.
+- **siteSelect**: View helper for rendering a select menu containing all sites.
+- **siteSetting**: View helper for getting site settings.
+- **sortLink**: View helper for rendering a sortable link.
+- **sortSelector**: View helper for rendering a sorting form.
+- **status**: View helper for getting MVC status.
+- **themeSetting**: View helper for getting theme settings.
+- **themeSettingAssetUrl**:  View helper for getting a path to a theme setting asset.
+- **thumbnail**: View helper for rendering a thumbnail image.
+- **trigger**: View helper for triggering a view event.
+- **uploadLimit**: View helper for rendering the upload size limit.
+- **userBar**: View helper for rendering the user bar.
+- **userIsAllowed**: View helper for authorizing the current user.
+- **userSelect**: View helper for rendering a select menu containing all users.
+- **userSelector**: View helper for rendering the user selector.
+- **userSetting**: View helper for getting user settings.

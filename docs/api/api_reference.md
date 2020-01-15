@@ -17,7 +17,7 @@ These are the search parameters that are common to almost all API resources:
 | sort_by | Sort the result set by this field | string | 
 | sort_order | Sort the result set in this order, ascending ("asc") or descending ("desc") | string |
 | page | The page number of the result set to return | integer |
-| per_page |  The number of results per page | integer |
+| per_page |  The number of results per page (default is 25) | integer |
 | limit | The number of results to return | integer |
 | offset | The number offset of results to return | integer |
 

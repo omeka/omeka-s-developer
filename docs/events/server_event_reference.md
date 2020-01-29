@@ -123,11 +123,33 @@ Triggered after getting a Value representation's text (for display on a webpage)
 
 ### rep.resource.display_values
 
-* **values**: The resource values
+* **values**: Array of the resource's values
 
 All classes that extend `Omeka\Api\Representation\AbstractResourceEntityRepresentation` trigger this event.
 
 Triggered in method `displayValues` to modify the values passed to the partial.
+
+### rep.resource.values
+
+* **values**: Array of the resource's values
+
+All classes that extend `Omeka\Api\Representation\AbstractResourceEntityRepresentation` trigger this event.
+
+Triggered in method `values` to modify the returned array of values. Changes made using this event will
+also affect the `displayValues` method.
+
+Added in version 2.1.0.
+
+### rep.resource.title
+
+* **title**: The title string for the resource
+
+All classes that extend `Omeka\Api\Representation\AbstractResourceEntityRepresentation` trigger this event.
+
+Triggered with method `title` to modify the returned title. Changes made using this event will also affect
+the `displayTitle` method.
+
+Added in version 2.1.0.
 
 ## View Events
 

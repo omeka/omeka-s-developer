@@ -3,7 +3,6 @@ title: API Reference
 ---
 
 ## API search parameters
----
 
 You can filter a search and control its output by passing search parameters in the
 `$data` argument (PHP API) or in the URL query string (REST API).
@@ -116,7 +115,6 @@ RDF resources also feature a fine-tuned value search using this query format:
 | site_permission_site_id | Get users that have site permissions | integer |
 
 ## API request options
----
 
 For most resources, you can pass options that affect the execution of a request
 in the `$options` argument. These options are only available when using the PHP

@@ -87,7 +87,7 @@ was requested. For `read`, this is a single value, while `search` will have cont
 that is an array.
 
 By default, the values returned by `getContent()` will be
-[representation](../views/representations.md) objects, suitable for use in views
+[representation](representations.md) objects, suitable for use in views
 and controllers.
 
 Another method is useful for `search` specifically: `getTotalResults()` returns

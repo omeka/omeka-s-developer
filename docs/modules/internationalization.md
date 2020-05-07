@@ -25,11 +25,13 @@ it in your module's config/module.config.php file:
 return [
 // ...
     'translator' => [
-        'translation_file_patterns' = [
-            'type' => 'gettext',
-            'base_dir' => dirname(__DIR__) . '/language',
-            'pattern' => '%s.mo',
-            'text_domain' => null,
+        'translation_file_patterns' => [
+            [
+                'type' => 'gettext',
+                'base_dir' => dirname(__DIR__) . '/language',
+                'pattern' => '%s.mo',
+                'text_domain' => null,
+            ],
         ],
     ],
 // ...

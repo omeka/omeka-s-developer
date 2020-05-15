@@ -163,6 +163,21 @@ $values = $item->value('dcterms:subject', ['all' => true, 'lang' => 'es']);
 foreach ($values as $value) { echo $value->asHtml(); }
 ```
 
+For "resource" type values (links to other Omeka S resources), `asHtml()` will produce a link
+to the resource. If you're looking to do more than simply make the default link, the method
+`valueResource()` will return the resource the value is linking to. Then you can use that
+result like any other item, set, or media representation. `valueResource()` returns null for
+other kinds of values or if the linked resource can't be found.
+
+```php
+// Print the creator of a resource linked via the Dublin Core Relation property
+$relatedResource = $item->value('dcterms:relation')->valueResource();
+if ($relatedResource) {
+    echo $relatedResource->value('dcterms:creator');
+}
+```
+
+
 #### All Properties
 
 Often on "show" pages for resources, you want to display _all_ the values, no matter

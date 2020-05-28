@@ -72,7 +72,7 @@ Every theme has its own version of layout.phtml, which provides the structure fo
 -   the call for the page content (`<?php echo $this->content; ?>`),
 -   calls to fonts, css, and javascript files.
 
-Themes load their CSS and Javascript files using Zend's view helper functions ([`headLink()`](https://docs.zendframework.com/zend-view/helpers/head-link/) and [`headScript()`](https://docs.zendframework.com/zend-view/helpers/head-script/), which help control the order in which these files load alongside files from Omeka S's pages and  modules. These functions should appear before the `<head>` of layout.phtml.
+Themes load their CSS and Javascript files using Zend's view helper functions ([`headLink()`](https://docs.zendframework.com/zend-view/helpers/head-link/) and [`headScript()`](https://docs.zendframework.com/zend-view/helpers/head-script/)), which help control the order in which these files load alongside files from Omeka S's pages and  modules. These functions should appear before the `<head>` of layout.phtml.
 
 Here are examples for including these files in the `<head>` of a theme.
 

@@ -55,7 +55,7 @@ RDF resources also feature a fine-tuned value search using this query format:
 
 | Parameter | Description | Type |
 | --- | --- | --- |
-| item_set_id | Get items assigned to this item set | integer |
+| item_set_id | Get items assigned to this item set. Pass an array of IDs (PHP-style) to return items in any one of the given sets. | integer (or array of integers) |
 | site_id | Get items in this site's item pool | integer |
 | site_attachments_only | When using site_id, whether items must be attached to a site page block | bool |
 

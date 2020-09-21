@@ -108,7 +108,7 @@ This line sources the font family “Lato” hosted by Google Fonts. To start us
 
 ## Working with Omeka S Content
 
-Omeka S's sites are primarily concerned with the presentation of Omeka S resources: items, item sets, and media. Themes control how these resources' associated metadata and files are displayed via methods defined in the resources' representations. The following section highlights some common tasks using these methods, and a more in-depth guide can be found in [Representations](../views/representations.md).
+Omeka S's sites are primarily concerned with the presentation of Omeka S resources: items, item sets, and media. Themes control how these resources' associated metadata and files are displayed via methods defined in the resources' representations. The following section highlights some common tasks using these methods, and a more in-depth guide can be found in [Representations](../api/representations.md).
 
 #### Displaying Resource Images
 
@@ -126,4 +126,4 @@ The default thumbnail, "medium", is one of the file derivatives Omeka S generate
 
 The widths of these file derivatives are defined within `application/config/module.config.php`. If an image within your theme appears at a different size than expected, it is most likely due to the theme's CSS.
 
-[Explore more media-specific methods here.](../views/representations.md#media-specific-methods)
+[Explore more media-specific methods here.](../api/representations.md#media-specific-methods)

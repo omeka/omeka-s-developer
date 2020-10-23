@@ -44,6 +44,9 @@ string. Links to additional pages are given in the `Link` header. The link with
 `rel="next"` is the next page in the sequence. When appropriate, links with a `rel`
 value of `prev`, `first`, and `last` are also provided.
 
+As of Omeka S 3.0.0, search responses include an `Omeka-S-Total-Results` header
+that indicates the total number of results across all pages.
+
 ### Read
 
 ```http

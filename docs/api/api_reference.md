@@ -13,6 +13,7 @@ These are the search parameters that are common to almost all API resources:
 
 | Parameter | Description | Type | Default |
 | --- | --- | --- | --- |
+| id | Limit matches to the given ID or IDs. Multiple IDs can be specified using the PHP array syntax (`id[]`). (added in 3.0.0) | integer or integer[] | none |
 | sort_by | Sort the result set by this field | string | created |
 | sort_order | Sort the result set in this order, ascending ("asc") or descending ("desc") | string | desc |
 | page | The page number of the result set to return | integer | 1 |
@@ -29,7 +30,6 @@ item_sets):
 | --- | --- | --- |
 | fulltext_search | Get RDF resources where there's a match in the fulltext index | string |
 | search | Get RDF resources where there's an exact match in a value | string |
-| id | Get the RDF resource that has this unique identifier | integer |
 | owner_id | Get RDF resources that belong to this owner | integer |
 | resource_class_label | Get RDF resources with a class that has this unique label | string |
 | resource_class_id | Get RDF resources with a class that has this unique identifier | integer |
@@ -66,6 +66,8 @@ RDF resources also feature a fine-tuned value search using this query format:
 | item_id | Get media assigned to this item | integer |
 | media_type | Get media of this media type | string |
 | site_id | Get media in this site's item pool AND are attached to a block | integer |
+| ingester | Get media using this ingester (added in 3.0.0) | string |
+| renderer | Get media using this renderer (added in 3.0.0) | string |
 
 ### Parameters for item_sets
 
@@ -92,6 +94,7 @@ RDF resources also feature a fine-tuned value search using this query format:
 | vocabulary_prefix | Get classes that belong to a vocabulary that has this unique namespace prefix (e.g. "dcmitype") | string |
 | local_name | Get classes with this local name (e.g. "Image") | string |
 | term | Get a class with this unique term (e.g. "dcmitype:Image") | string |
+| used | Only get classes used by at least one resource (added in 3.0.0) | boolean |
 
 ### Parameters for properties
 
@@ -103,6 +106,8 @@ RDF resources also feature a fine-tuned value search using this query format:
 | vocabulary_prefix | Get properties that belong to a vocabulary that has this unique namespace prefix (e.g. "dcterms") | string |
 | local_name | Get properties with this local name (e.g. "title") | string |
 | term | Get a property with this unique term (e.g. "dcterms:title") | string |
+| used | Only get classes used by at least one resource (added in 3.0.0) | boolean |
+
 
 ### Parameters for users
 

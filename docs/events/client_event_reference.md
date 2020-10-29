@@ -68,12 +68,19 @@ These events apply to the add/edit form for resources (items, item sets, media).
 
 ### `o:prepare-value`
 
-* **type**: The value's data type
-* **value**: The jQuery object for the `.value` container
-* **valueObj**: An object containing value data, if any
-* **namePrefix**: An indexed prefix that should be used to prefix form element names
+* `type`: The value's data type
+* `value`: The jQuery object for the `.value` container
+* `valueObj`: An object containing value data, if any
+* `namePrefix`: An indexed prefix that should be used to prefix form element names
 
 Triggered in resource-form.js after a value input is created or replaced. Use to populate the value node for a custom data type.
+
+### `o.property-added`
+
+(added in 3.0.0)
+
+Triggered in resource-form.js after a new property is added to the form. The
+"field" container for the property is the event's target.
 
 ## Resource Select Sidebar Events
 

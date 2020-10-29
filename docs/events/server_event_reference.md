@@ -193,27 +193,43 @@ Triggered after edit page markup.
 
 ### view.add.form.before
 
-* **form**: The form being created.
+* **form**: The Form object for the current form.
 
 Triggered before add page form markup, within the form.
 
 ### view.add.form.after
 
-* **form**: The form being created.
+* **form**: The Form object for the current form.
 
 Triggered after add page form markup, within the form.
 
+### view.add.form.advanced
+
+* **form**: The Form object for the current form.
+
+(added in 3.0.0)
+
+Triggered at the end of the "Advanced" tab in resource forms.
+
 ### view.edit.form.before
 
-* **form**: The form being created.
+* **form**: The Form object for the current form.
 
 Triggered before edit page form markup, within the form.
 
 ### view.edit.form.after
 
-* **form**: The form being created.
+* **form**: The Form object for the current form.
 
 Triggered after edit page form markup, within the form.
+
+## view.edit.form.advanced
+
+* **form**: The Form object for the current form.
+
+(added in 3.0.0)
+
+Triggered at the end of the "Advanced" tab in resource forms.
 
 ### view.show.section_nav
 

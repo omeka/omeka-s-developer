@@ -320,6 +320,8 @@ Triggered in the invocation of the jsTranslate view helper.
 
 * **form**: The site settings form.
 
+(Removed in 3.0.0, use `form.add_elements` and `form.add_input_filters` instead)
+
 Triggered in the site admin settings action. Use the event's `getTarget()` to get the controller object.
 
 ### form.add_elements

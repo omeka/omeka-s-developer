@@ -33,3 +33,32 @@ the ResourceTemplatePropertyRepresentation class now has new methods
 `dataTypes` and `dataTypeLabels` to handle multiple types. The prior "singular"
 versions of those methods are still available, but are deprecated: they will
 simply return the first data type if multiple are set.
+
+### Event changes
+
+The server-side event `site_settings.form` is removed. The normal
+`form.add_elements` and `form.add_input_filters` events work with the site
+settings form and were already the preferred option.
+
+A new set of server-side events is added to make it easier for modules to
+add elements directly to the new "Advanced" tab for resource forms.
+`view.$action.form.advanced` (where `$action` is `add` or `edit` is available
+on the item, item set, and media forms.
+
+A new client-side event for resource forms triggers whenever a new property
+is added to the form. `o:property-added` will fire when properties are added
+on initial load, by the selection of a template, or when a user explicitly
+selects a property to add.
+
+### New Gulp tasks
+
+To make it easier to align with the project's code standards, a new Gulp task
+is added. `test:module:cs` checks against the code standards for a module,
+joining the existing `test:cs` that was used to check the core. Like other
+`:module` tasks, you can run this task from within the module's folder or
+explicitly pass a module name with `--module-name`.
+
+For both the core and modules, new `fix:cs` and `fix:module:cs` tasks are
+also added. Instead of just checking against the code standards, these tasks
+make the necessary changes to the codebase to bring it into alignment with
+the standards.

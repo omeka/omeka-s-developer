@@ -1,6 +1,4 @@
----
-title: Configuring Omeka S
----
+# Configuring Omeka S
 
 You can configure Omeka S by editing `config/local.config.php`. Settings from
 the application and module configuration files are merged into local

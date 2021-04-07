@@ -1,6 +1,4 @@
----
-title: Theme Modifications
----
+# Theme Modifications
 
 ## Overriding default templates
 

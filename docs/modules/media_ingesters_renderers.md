@@ -1,6 +1,4 @@
----
-title: Media Ingesters and Renderers
----
+# Media Ingesters and Renderers
 
 Media ingesters and renderers are classes that expand the kinds of media users can
 add, update, and display. Together, they define the entire round trip of a media:

@@ -1,6 +1,4 @@
----
-title: Controller Plugins
----
+# Controller Plugins
 
 ## Built-in Controller Plugins
 

@@ -1,6 +1,4 @@
----
-title: Server Event Reference
----
+# Server Event Reference
 
 ## API Adapter Events
 

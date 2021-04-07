@@ -1,6 +1,4 @@
----
-title: PHP API
----
+# PHP API
 
 From within Omeka's PHP environment there are three ways to make API requests: directly,
 using the API manager service, and indirectly, using the API controller plugin or

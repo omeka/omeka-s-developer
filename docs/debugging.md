@@ -1,6 +1,4 @@
----
-title: Debugging Omeka S
----
+# Debugging Omeka S
 
 ## Configuration
 

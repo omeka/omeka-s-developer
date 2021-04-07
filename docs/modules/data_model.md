@@ -1,6 +1,4 @@
----
-title: Data Model
----
+# Data Model
 
 ## Installing the Data Model
 

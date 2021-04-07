@@ -1,6 +1,4 @@
----
-title: Access Control Lists (ACL)
----
+# Access Control Lists (ACL)
 
 Omeka S uses an access control list for privilege management.
 

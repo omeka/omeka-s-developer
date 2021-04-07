@@ -1,6 +1,4 @@
----
-title: Client Event Reference
----
+# Client Event Reference
 
 In the admin interface, the following [events](client_events.md) use jQuery's trigger function.
 

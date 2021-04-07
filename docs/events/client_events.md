@@ -1,6 +1,4 @@
----
-title: Client Events
----
+# Client Events
 
 Client events are fired from within Omeka S's JavaScript code. Omeka S makes extensive use of jQuery, particularly on admin pages. Many user interactions require additional actions to respond to the changes on the page. For this, Omeka S uses the `trigger()` function so other parts of javascript code can follow up.
 

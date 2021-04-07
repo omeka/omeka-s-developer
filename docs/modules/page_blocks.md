@@ -1,6 +1,4 @@
----
-title: Page Blocks
----
+# Page Blocks
 
 Pages in Omeka S are made up of blocks. All content on a page, from attached
 items and media that embed content, to simple plain text, to more complex and

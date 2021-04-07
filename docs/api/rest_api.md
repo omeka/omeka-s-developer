@@ -1,6 +1,4 @@
----
-title: REST API
----
+# REST API
 
 The REST API is a service layer built on top of the PHP API, so most (but not all)
 operations available in PHP are also available using REST.

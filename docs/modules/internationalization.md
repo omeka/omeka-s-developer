@@ -1,6 +1,4 @@
----
-title: Internationalization
----
+# Internationalization
 
 The Omeka S core contains tools for internationalizing the strings in your modules to create
 `template.pot` files suitable for adding to Transifex or any other translating service, and

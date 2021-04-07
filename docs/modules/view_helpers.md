@@ -1,6 +1,4 @@
----
-title: View Helpers
----
+# View Helpers
 
 View helpers are used to consolidate code for creating or modifying HTML, simplifying
 your views and minimizing redundancy. For example, tasks such as escaping HTML,

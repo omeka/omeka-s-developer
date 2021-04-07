@@ -1,6 +1,4 @@
----
-title: REST API Reference
----
+# REST API Reference
 
 ## Resource Values
 

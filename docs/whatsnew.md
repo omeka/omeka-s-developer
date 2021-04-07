@@ -1,6 +1,4 @@
----
-title: What's New in Omeka S
----
+# What's New in Omeka S
 
 ## Changes in Version 3.0.0
 

@@ -1,6 +1,4 @@
----
-title: Services and Factories
----
+# Services and Factories
 
 ## Services
 

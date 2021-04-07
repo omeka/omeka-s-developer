@@ -1,6 +1,5 @@
----
-title: Contributing to Omeka S
----
+# Contributing to Omeka S
+
 ## Code Style
 
 Omeka development aims to adhere to the [PSR-2 style guide](http://www.php-fig.org/psr/psr-2), and uses the [git-flow](http://nvie.com/posts/a-successful-git-branching-model) branching model.

@@ -1,6 +1,4 @@
----
-title: Introduction to the API
----
+# Introduction to the API
 
 Omeka S provides an application programming interface (API) that enables [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 operations on its resources. API resources are objects with a type, associated data,

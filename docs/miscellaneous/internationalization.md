@@ -1,6 +1,4 @@
----
-title: Internationalization
----
+# Internationalization
 
 Omeka S includes support for presenting interfaces to users in different languages.
 The source strings for Omeka and its modules are written in English, and we rely on

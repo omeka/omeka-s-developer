@@ -1,6 +1,4 @@
----
-title: Style Guide
----
+# Style Guide
 
 This style guide is for use in writing themes for Omeka S. It borrows heavily from the _[Github style guide](http://primercss.io/)_. This style guide is a work in progress, so excuse our dust.
 

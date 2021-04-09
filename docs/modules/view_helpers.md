@@ -225,62 +225,306 @@ it to use. Depending on the needs of the module, that might or might not be need
 
 Omeka S comes with quite a few view helpers:
 
-- **api**: iew helper for direct access to API read and search operations.
-- **assetUrl**: View helper for returning a path to an asset.
-- **blockAttachmentsForm**: View helper for rendering a form for adding/editing block attachments.
-- **blockLayout**: View helper for rendering block layouts.
-- **blockShowTitleSelect**: View helper for rendering an attachment title display select element.
-- **blockThumbnailTypeSelect**: View helper for rendering a thumbnail type select element.
-- **cancelButton**: View helper for rendering a cancel button.
-- **ckEditor**: View helper for loading scripts necessary to use CKEditor on a page.
-- **dataType**: View helper for rendering data types.
-- **deleteConfirm**: View helper for rendering the delete confirm partial.
-- **filterSelector**: View helper for rendering a browse filtering form.
+### api
+
+Direct access to API read and search operations.
+
+The `api()` helper takes no arguments, but allows you to call several chained
+methods which do:
+
+- `$this->api()->read()`: Get a single resource by ID
+- `$this->api()->search()`: Get an array of resources matching search parameters
+- `$this->api()->searchOne()`: Get a single resource matching search parameters
+
+See [the PHP API docs](../api/php_api.md) for more information about using the
+API.
+
+### assetUrl
+
+Return a path to a static asset (CSS/JS/etc.).
+
+The helper takes 4 arguments, but only the first is required:
+
+- `$file`: (string) The filename of the asset to load (the part of the path
+after the "asset" folder of the core or module).
+- `$module`: (string) The module to load the asset from. If omitted or null,
+loads from the current theme. The special module name `Omeka` refers to the
+core.
+- `$override`: (bool, default false) Whether to allow the theme to override or
+replace this asset. If true is passed here and the theme contains an asset of
+the same name, it will be used instead of the module or core's copy. This only
+makes sense to pass if `$module` is passed.
+- `$versioned`: (bool, default true) By default Omeka S will append a query
+string `?v=` with the version number of the theme, module or core for
+cache-busting purposes. To disable this, pass false here.
+
+### blockAttachmentsForm
+
+Render a form for adding/editing block attachments.
+
+This is intended for use only in implementing the admin form of site page
+blocks. See [the page blocks documentation](page_blocks.md) for more
+information.
+
+Takes 3 arguments, the first is required:
+
+- `$block`: (SitePageBlockRepresentation) The current block (can be null in the
+case of blocks that haven't been added yet).
+- `$itemOnly`: (bool, default false) Whether attachments are only items,
+skipping the options for choosing media and captions.
+- `$itemQuery`: (array, default empty) Search query to filter the items that
+can be selected.
+
+### blockLayout
+
+Helper for rendering block layouts.
+
+This is mostly used internally for the site page public and admin pages.
+
+Functionality is present on chained method calls:
+
+- `getLayouts()`: Get an array of all registered layout names
+- `getLaboutLabel($layout)`: Get the label for a given layout
+- `prepareForm()`: Run all layouts' `prepareForm` methods
+- `forms($sitePage)`: Render all forms for blocks on a page
+- `form()`: Render a block form. Either pass just a SitePageBlockRepresentation
+to render a form for an existing block, or ($layout, $site, $page) to render
+a form for a new block. Override the partial used to render the form by passing
+a partial name as the 4th argument.
+- `prepareRender($layout)`: Run a layout's `prepareRender` method
+- `render($block)`: Render a block.
+
+### blockShowTitleSelect
+
+Render an attachment title display select element.
+
+See [the page blocks documentation](page_blocks.md) for more
+information.
+
+Takes one argument:
+
+- `$block`: (SitePageBlockRepresentation) The current block (can be null in the
+case of blocks that haven't been added yet).
+
+### blockThumbnailTypeSelect
+
+Render a thumbnail type select element.
+
+See [the page blocks documentation](page_blocks.md) for more
+information.
+
+Takes one argument:
+
+- `$block`: (SitePageBlockRepresentation) The current block (can be null in the
+case of blocks that haven't been added yet).
+
+### cancelButton
+
+Render a cancel button.
+
+```php
+echo $this->cancelButton();
+```
+
+### ckEditor
+
+Load scripts necessary to use CKEditor on a page.
+
+```php
+$this->ckEditor();
+```
+
+### dataType
+
+Helper for rendering data types.
+
+### deleteConfirm
+
+Render the delete confirm partial.
+
+### filterSelector
+
+Render a browse filtering form.
+
+### htmlElement
+
+Render a HTML element.
+
+### hyperlink
+
+Render a HTML hyperlink.
+
+### i18n
+
+Render localized data.
+
+### itemSetSelect
+
+Render a select menu containing all item sets.
+
+### itemSetSelector
+
+Render the item set selector form control.
+
+### jsTranslate
+
+Render translations for JavaScript strings.
+
+### lang
+
+Get a BCP 47-compliant value for the lang attribute.
+
+### logger
+
+Get the logger.
+
+### media
+
+Render media.
+
+### messages
+
+Render "flash" messages stored on the user session.
+
+### navigationLink
+
+Helper for rendering links for the site admin navigation form.
+
+### pageTitle
+
+Render a title heading for a page.
+
+### pagination
+
+Render pagination.
+
+### params
+
+Get params from the request.
+
+### passwordRequirements
+
+Render information about password requirements.
+
+### propertySelect
+
+Render a select menu containing all properties.
+
+### propertySelector
+
+Render the property selector.
+
+### queryToHiddenInputs
+
+Render a hidden form input for every query in the URL query string
+
+### resourceClassSelect
+
+Render a select menu containing all resource classes.
+
+### resourceSelect
+
+Render a select menu containing all of some resource.
+
+### resourceTemplateSelect
+
+Render a select menu containing all resource templates.
+
+### roleSelect
+
+Render a select menu containing all roles.
+
+### searchFilters
+
+Render a list of active search filters.
+
+### searchUserFilters
+
+Render a list of active search filters for users browse.
+
+### sectionNav
+
+Render section navigation.
+
+### setting
+
+Get global settings.
+
+### sitePagePagination
+
+Render site page pagination.
+
+### siteSelect
+
+Render a select menu containing all sites.
+
+### siteSelector
+
+Render the site selector.
+
+### siteSetting
+
+Get site settings.
+
+### sortLink
+
+Render a sortable link.
+
+### sortSelector
+
+Render a sorting form.
+
+### status
+
+Get MVC status.
+
+### themeSetting
+
+Get theme settings.
+
+### themeSettingAssetUrl
+
+Get a URL to a theme setting asset.
+
+### thumbnail
+
+Render a thumbnail image.
+
+### trigger
+
+Trigger a view event.
+
+### uploadLimit
+
+Render the upload size limit.
+
+### userBar
+
+Render the public-side user bar.
+
+### userIsAllowed
+
+Check if the current user has a permission.
+
+### userSelect
+
+Render a select menu containing all users.
+
+### userSelector
+
+Rendering the user selector.
+
+### userSetting
+
+Get user settings.
+
+## Form Element Helpers
+
+These helpers are used in conjunction with form elements.
+
 - **formAsset**: get the asset form element
 - **formCkeditor**: get the Ckeditor form element
 - **formCkeditorInline**: get the Ckeditor inline form element
 - **formColorPicker**: get the color picker form element
 - **formRecaptcha**: get the Recaptcha form elemnt
 - **formRestoreTextarea**: get the restore textarea form element
-- **htmlElement**: View helper for rendering a HTML element.
-- **hyperlink**: View helper for rendering a HTML hyperlink.
-- **i18n**: View helper for rendering localized data.
-- **itemSetSelect**: View helper for rendering a select menu containing all item sets.
-- **itemSetSelector**: View helper for rendering the item set selector form control.
-- **jsTranslate**: View helper for rendering translations for JavaScript strings.
-- **lang**: View helper for getting a BCP 47-compliant value for the lang attribute.
-- **logger**: View helper for getting the Zend logger.
-- **media**: View helper for rendering media.
-- **messages**: View helper for proxing the messenger controller plugin.
-- **navigationLink**: View helper for rendering a navigation links.
-- **pageTitle**: View helper for rendering a title heading for a page.
-- **pagination**: View helper for rendering pagination.
-- **params**: View helper for getting params from the request.
-- **passwordRequirements**: View helper for rendering the password requirements.
-- **propertySelect**:  View helper for rendering a select menu containing all properties.
-- **propertySelector**: View helper for rendering the property selector.
-- **queryToHiddenInputs**: View helper for building a hidden form input for every query in the URL query string
-- **resourceClassSelect**: View helper for rendering a select menu containing all resource classes.
-- **resourceSelect**: View helper for rendering a select menu containing all of some resource.
-- **resourceTemplateSelect**: View helper for rendering a select menu containing all resource templates.
-- **roleSelect**: View helper for rendering a select menu containing all roles.
-- **searchFilters**: View helper for rendering search filters.
-- **searchUserFilters**: View helper for rendering search user filters.
-- **sectionNav**: View helper for rendering section navigation.
-- **setting**: View helper for getting settings.
-- **sitePagePagination**: View helper for rendering site page pagination.
-- **siteSelect**: View helper for rendering a select menu containing all sites.
-- **siteSetting**: View helper for getting site settings.
-- **sortLink**: View helper for rendering a sortable link.
-- **sortSelector**: View helper for rendering a sorting form.
-- **status**: View helper for getting MVC status.
-- **themeSetting**: View helper for getting theme settings.
-- **themeSettingAssetUrl**:  View helper for getting a path to a theme setting asset.
-- **thumbnail**: View helper for rendering a thumbnail image.
-- **trigger**: View helper for triggering a view event.
-- **uploadLimit**: View helper for rendering the upload size limit.
-- **userBar**: View helper for rendering the user bar.
-- **userIsAllowed**: View helper for authorizing the current user.
-- **userSelect**: View helper for rendering a select menu containing all users.
-- **userSelector**: View helper for rendering the user selector.
-- **userSetting**: View helper for getting user settings.

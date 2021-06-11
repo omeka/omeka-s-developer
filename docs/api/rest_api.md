@@ -63,7 +63,7 @@ Create a resource. A JSON payload is required.
 
 #### Upload files
 
-For create operations that invlove uploading files, multipart requests (Content-Type
+For create operations that involve uploading files, multipart requests (Content-Type
 `multipart/form-data`) are supported. In a multipart request, the normal JSON request
 body should be specified as a "field" with the name `data`. The `asset` API resource
 expects the associated file to be named `file`. To upload media (as part of a `media`

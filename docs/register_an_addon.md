@@ -38,7 +38,7 @@ subsequently set the release to be a prerelease or draft, we will remove the
 release from our registry.
 
 Note that we pull in your GitHub repository's README and publish it alongside
-your addon versions. Make sure the README is ready for publication.
+your addon versions. Make sure the README is ready for publication and that the filename uses all caps (e.g., README.md).
 
 Before registring your releases we check that certain things are true:
 

@@ -75,3 +75,25 @@ $logger = $serviceLocator->get('Omeka\Logger');
 
 and add it as a property for your class.
 
+## Logging to stderr
+
+When you want to temporarily log something where you don't have easy access to
+the service locator, as a last resort you can use
+['plain' Laminas logging](https://docs.laminas.dev/laminas-log/intro/) to
+log to stderr. This is only suitable for temporary debug logging, not to be
+committed to version control:
+
+```php
+use Laminas\Log\Logger;
+use Laminas\Log\Writer;
+
+...
+
+	$logger = new Logger;
+	$writer = new Writer\Stream('php://stderr');
+	$logger->addWriter($writer);
+
+	$logger->warn($result);
+```
+
+The logging written to stderr can typically be found in your webserver's error log.

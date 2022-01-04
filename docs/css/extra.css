@@ -65,3 +65,7 @@ a:visited {
 #iconfonts td:first-child {
     text-align: center;
 }
+
+.o-icon-bars:before {
+    content: "\f0c9";
+}

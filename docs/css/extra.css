@@ -60,3 +60,12 @@ a:visited {
 .rst-content td {
     vertical-align: middle;
 }
+
+#iconfonts th:first-child,
+#iconfonts td:first-child {
+    text-align: center;
+}
+
+.o-icon-bars:before {
+    content: "\f0c9";
+}

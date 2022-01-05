@@ -6,7 +6,7 @@ theme:
 repo_url: 'http://github.com/omeka/omeka-s-developer'
 extra_css:
     - css/extra.css
+    - css/iconfonts.css
 markdown_extensions:
     - toc:
         permalink: 
-

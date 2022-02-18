@@ -73,7 +73,7 @@ Triggered during the API `create`, `update`, `batch_create`, and `batch_update` 
 
 ## Doctrine Lifecycle Events
 
-All classes that implement `Omeka\Entity\EntityInterface` trigger these events. Use the event's `getTarget()` to get the entity object. These delegate selected [Doctrine lifecycle events](http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/events.html#lifecycle-events) to Omeka events.
+All classes that implement `Omeka\Entity\EntityInterface` trigger these events. Use the event's `getTarget()` to get the entity object. These delegate selected [Doctrine lifecycle events](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html#reference-events-lifecycle-events) to Omeka events.
 
 ### entity.remove.pre
 

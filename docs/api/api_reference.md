@@ -34,20 +34,20 @@ item_sets):
 | resource_template_id | Get RDF resources with a template that has this unique identifier | integer |
 | is_public | Get RDF resources that are public OR private | boolean |
 
-RDF resources also feature a fine-tuned value search using this query format:
+RDF resources also feature a fine-grained value search using the parameter key `property` and this query format:
 
-- `property[{index}][joiner]`: "and" OR "or" joiner with previous query
-- `property[{index}][property]`: property ID
+- `property[{index}][joiner]`: Boolean joiner with previous query (valid options are `and`, `or`; default is `and`)
+- `property[{index}][property]`: property ID or term name (e.g., `dcterms:title`)
+    - You can also provide `0` as the property ID here to search across all values regardless of property
 - `property[{index}][text]`: search text
 - `property[{index}][type]`: search type
     - eq: is exactly
-    - neq: is not exactly
     - in: contains
-    - nin: does not contain
-    - ex: has any value
-    - nex: has no value
-    - res: is this RDF resource (by ID)
-    - nres: is not this RDF resource (by ID)
+    - sw: starts with
+    - ew: ends with
+    - res: links to the Omeka S resource with the given ID
+    - ex: has any value (this search type does not require passing `text`)
+    - All the types can be negated by prefixing them with the letter `n`. So, `neq` will return resources that do _not_ have a value that exactly matches the search text.
 
 ### Parameters for items
 

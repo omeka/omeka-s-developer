@@ -16,7 +16,7 @@ Payloads for requests should also be JSON-LD, but Omeka S sometimes requires cli
 to follow a particular structure, even if the same data could be represented by
 alternate valid JSON-LD structures. The Content-Type of a request with a payload
 must be `application/json` (or `multipart/form-data` if sending a multipart request).
-Format specifers (after `+`, i.e., `application/json+ld`, are also allowed).
+Format specifers (before `+`, i.e., `application/ld+json`, are also allowed).
 
 ## Authentication
 

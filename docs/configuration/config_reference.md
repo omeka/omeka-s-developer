@@ -87,7 +87,15 @@ Configuration for the HTTP client.
     - `sslcapath`: the server path to the SSL certificate directory
     - `sslcafile`: the server path to the SSL certificate file
 
-See [zend-http docs](https://docs.zendframework.com/zend-http/client/adapters/) for configuration options.
+In case your Omeka S instance requires a proxy server for outgoing HTTP traffic, you should set `'adapter' => \Laminas\Http\Client\Adapter\Proxy::class,` and use these additional configuration parameters:
+- `http_client`:
+    - `proxy_host`: the hostname or FQDN of the proxy server
+    - `proxy_port`: the proxy server's TCP port
+    - `proxy_user`: user name for proxy server, if required
+    - `proxy_pass`: password for proxy server, if required
+
+
+See [Laminas http docs](https://docs.laminas.dev/laminas-http/client/adapters/) for configuration options.
 
 ## Installer
 

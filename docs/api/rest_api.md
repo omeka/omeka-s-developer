@@ -94,12 +94,16 @@ you can perform a "partial" update.
 PATCH /api/:api_resource/:id
 ```
 
-Update a resource, preserving data in non-specified keys. The `id` URL parameter
-is required. A JSON payload is required. Note that specifying _any_ values for RDF
-properties (the "values" for items, item sets, and media) will be treated as an
-"update" to the values generally (meaning that specifying any value for any RDF
-property will mean the removal of all other values that aren't passed). In other
-words, the values are treated as if they're one big "key" for the purposes of patching.
+Update a resource. The `id` URL parameter and a JSON payload are required.
+
+When the JSON payload contains Omeka properties (from the `o:` namespace),
+only the properties contained in the payload are replaced, and all other
+properties are preserved.
+
+By contrast, when the JSON payload contains _any_ RDF properties (these are
+the "values" for items, item sets, and media - for example from the `dcterms:`
+namespace), the complete set of RDF properties in the document will be replaced
+by the set in the payload.
 
 ### Delete
 

@@ -243,7 +243,7 @@ API.
 
 Return a path to a static asset (CSS/JS/etc.).
 
-The helper takes 4 arguments, but only the first is required:
+The helper takes 5 arguments, but only the first is required:
 
 - `$file`: (string) The filename of the asset to load (the part of the path
 after the "asset" folder of the core or module).
@@ -257,6 +257,8 @@ makes sense to pass if `$module` is passed.
 - `$versioned`: (bool, default true) By default Omeka S will append a query
 string `?v=` with the version number of the theme, module or core for
 cache-busting purposes. To disable this, pass false here.
+- `$absolute` (bool, default false) Pass true here to generate an absolute
+instead of relative URL. (Added in 4.0.0)
 
 ### blockAttachmentsForm
 
@@ -318,6 +320,34 @@ Takes one argument:
 - `$block`: (SitePageBlockRepresentation) The current block (can be null in the
 case of blocks that haven't been added yet).
 
+### browse
+
+(Added in 4.0.0)
+
+This helper collects methods useful for rendering browse pages, in particular
+for using the admin browse page configuration added in Omeka S 4.0.0.
+
+Functionality is available through chained method calls:
+
+- `renderSortSelector($resourceTypeOrSortConfig)`: Render the sorting selection
+form for a browse page. You can pass a string naming the resource type for the
+current browse page (e.g., `'items'`), or an array of sorting options, as
+`value => label` pairs where both are strings.
+
+    This is the only method of this helper typically used on public pages.
+
+    In 4.0+, it's generally recomended to use this method instead of the
+    [sortSelector](#sortselector) helper.
+
+- `renderHeaderRow($resourceType)`: Render the header of a browse page table
+  according to the user's configured preferences.
+- `renderContentRow($resourceType)`: Render a body row of a browse page table
+  according to the user's configured preferences.
+
+The other methods on the helper are used internally and to handle the interface
+for users to configure their browse preferences, and won't commonly be used by
+themes or modules.
+
 ### cancelButton
 
 Render a cancel button.
@@ -332,6 +362,16 @@ Load scripts necessary to use CKEditor on a page.
 
 ```php
 $this->ckEditor();
+```
+
+### currentSite
+
+(Added in 4.0.0)
+
+Get the SiteRepresentation object for the current site.
+
+```php
+$site = $this->currentSite();
 ```
 
 ### dataType
@@ -358,6 +398,18 @@ Render a HTML hyperlink.
 
 Render localized data.
 
+### iiifViewer
+
+(Added in 4.0.0)
+
+Render the Omeka S IIIF viewer in an `<iframe>`.
+
+Takes 2 arguments:
+
+- `$query` (array) The GET query to pass to the IIIF viewer page
+- `$options`, (array, default empty) Options for the iframe. Currently accepts
+  `width` and `height` keys.
+
 ### itemSetSelect
 
 Render a select menu containing all item sets.
@@ -373,6 +425,34 @@ Render translations for JavaScript strings.
 ### lang
 
 Get a BCP 47-compliant value for the lang attribute.
+
+### lightGalleryOutput
+
+(Added in 4.0.0)
+
+Render a lightGallery viewer for presenting media.
+
+The helper takes a single argument, a nested array of data used to render the
+viewer.
+
+For an item, this should usually be used in conjunction with the
+[sortMedia](#sortmedia) helper, which will provide the proper array to pass to
+this helper.
+
+
+```php
+$itemMedia = $item->media();
+$sortedMedia = $this->sortMedia($itemMedia);
+if (isset($sortedMedia['lightMedia'])):
+    echo $this->lightGalleryOutput($sortedMedia['lightMedia']);
+endif;
+```
+
+To render a single media, it can be passed as `[['media' => $media]]`:
+
+```php
+echo $this->lightGalleryOutput([['media' => $media]]);
+```
 
 ### logger
 
@@ -422,6 +502,45 @@ Render a hidden form input for every query in the URL query string
 
 Render a select menu containing all resource classes.
 
+### resourcePageBlocks
+
+(Added in 4.0.0)
+
+This helper is used to work with the configurable resource page blocks feature
+for themes added in Omeka S 4.0.0.
+
+This is intended for use on the show pages for items, item sets, and media in
+themes that support the resource page blocks feature.
+
+The helper takes two arguments:
+
+- `$resource`: (a Representation object for a resource) the resource that is
+  being displayed. This must be an item, item set, or media currently.
+- `$regionName`: (string, default `'main'`) The region of the page being
+  rendered.
+
+This helper's functionality is available through chained method calls:
+
+- `getBlocks()`: get the configured content for the page region
+- `hasBlocks()`: return whether the page region has any blocks configured in it
+
+A typical theme would render the main region as a simple call to `getBlocks`:
+
+```php
+echo $this->resourcePageBlocks($item)->getBlocks();
+```
+
+A region with wrapper markup that should only render if the region has content
+would use `hasBlocks` as well:
+
+```php-template
+<?php if ($this->resourcePageBlocks($item, 'sidebar')->hasBlocks()): ?>
+<div class="sidebar">
+    <?php echo $this->resourcePageBlocks($item, 'sidebar')->getBlocks(); ?>
+</div>
+<?php endif; ?>
+```
+
 ### resourceSelect
 
 Render a select menu containing all of some resource.
@@ -470,6 +589,23 @@ Get site settings.
 
 Render a sortable link.
 
+### sortMedia
+
+(Added in 4.0.0)
+
+Sort media between those usable in the lightGallery viewer and those not.
+
+Takes a single argument, an array of media.
+
+Returns an array with two top-level keys:
+
+- `'lightMedia'` is an array of media supported by lightGallery, suitable to be
+  passed to the [lightGalleryOutput](#lightgalleryoutput) helper.
+- `'otherMedia'` is an array of media not supported by lightGallery. The intent
+  is for themes to loop through this array and render the unsupported media in
+  an alternative way, by listing them or rendering them directly, without the
+  viewer.
+
 ### sortSelector
 
 Render a sorting form.
@@ -481,6 +617,12 @@ Get MVC status.
 ### themeSetting
 
 Get theme settings.
+
+### themeSettingAsset
+
+(Added in 3.1.0)
+
+Get the representation object for a theme setting asset.
 
 ### themeSettingAssetUrl
 
@@ -526,5 +668,6 @@ These helpers are used in conjunction with form elements.
 - **formCkeditor**: get the Ckeditor form element
 - **formCkeditorInline**: get the Ckeditor inline form element
 - **formColorPicker**: get the color picker form element
-- **formRecaptcha**: get the Recaptcha form elemnt
+- **formRecaptcha**: get the Recaptcha form element
+- **formQuery**: get the form element for composing search queries (Added in 3.1.0)
 - **formRestoreTextarea**: get the restore textarea form element

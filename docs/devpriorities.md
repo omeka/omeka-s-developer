@@ -6,7 +6,7 @@ During 2023, the Omeka Team have identified the following key priorities to guid
 - Increased data portability through a range of outputs
 - Improved site authoring options
 - Increased options for media handling and display
-- Improved administrative tools including changlogs and analytics
+- Improved administrative tools including change logs and analytics
 - Ongoing attention to accessibility
 - Creation of additional themes
 - Improved developer and end user documentation, including screencasts

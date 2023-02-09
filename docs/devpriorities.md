@@ -5,7 +5,7 @@ During 2023, the Omeka Team have identified the following key priorities to guid
 - Interoperability and integration with other systems in the GLAM and digital scholarship ecosystem
 - Increased data portability through a range of outputs
 - Improved site authoring options
-- Increased options for media handling
+- Increased options for media handling and display
 - Improved administrative tools including changlogs and analytics
 - Ongoing attention to accessibility
 - Creation of additional themes

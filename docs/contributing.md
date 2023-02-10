@@ -10,7 +10,9 @@ Omeka S contains a `.php_cs` file that you can use with [PHP-CS-Fixer](https://g
 
 ## Tips for pull requests
 
-We aim to adhere to the Zend Framework Coding Standards, but do not always meet that mark. It is therefore tempting to make style corrections during the process of submitting pull requests. We appreciate them, but those should be distinct from feature changes.
+Generally, we are more likely to accept small, focused pull requests that address a single concern. Your code should be [self-documenting](https://en.wikipedia.org/wiki/Self-documenting_code). You should include comments where your code isn't self-evident. Your commit messages should be intelligible. You should accompany your pull request with a detailed account on what you're trying to achieve, what approach you're taking, and any other messages that you think would be helpful to us, the reviewers. If we accept your changes we must also maintain them, so it's important that your pull request is high quality and compelling.
+
+We aim to adhere to the [Laminas Coding Style Guide](https://docs.laminas.dev/laminas-coding-standard/v2/coding-style-guide/), but do not always meet that mark. It is therefore tempting to make style corrections during the process of submitting pull requests. We appreciate them, but those should be distinct from feature changes.
 
 Please resist the (understandable) urge to commit style changes within the same commits that change features or functionality. That will help us differentiate the functionality changes in your submissions from the stylistic changes, and make it more likely that your pull requests will be quickly evaluated and accepted.
 

@@ -10,7 +10,9 @@ Start with your theme.ini file. There, you need to define both your configurable
 
 You can create regions for items, item sets, and media. You start by identifying configurable resource views as parameters for resource_page_regions, then naming each region. This is an example of creating a region called “main” for the item show view.
 
-`resource_page_regions.items.main = "Main"`
+```text
+resource_page_regions.items.main = "Main"
+```
 
 You always start with `resource_page_regions`. The next part says that the region will appear on item show pages. The last parameter is what you name your region, and the assigned value is the nice name for the region that will appear in the admin interface.
 
@@ -29,7 +31,9 @@ Media List|mediaList|✅| |
 
 Resource pages typically include their metadata values, making that block a good candidate for default inclusion. This example defines the values block as a default block for item pages’ main region.
 
-`resource_page_blocks.items.main[] = “values”`
+```text
+resource_page_blocks.items.main[] = "values"
+```
 
 You take most of the same content from the last example, `resource_blocks.items.main` and add to its array of blocks by setting a block’s short name. The table shows that the short name for values is simply `values`. You do this for every block you want to make default for the region. 
 
@@ -43,7 +47,7 @@ Clicking through will lead you to an interface that shows the following view.
 
 If you want to allow an item show view to automatically display item sets, linked resources, and media lists, it would look like the following example.
 
-```
+```text
 resource_page_blocks.items.main[] = "itemSets"
 resource_page_blocks.items.main[] = "linkedResources"
 resource_page_blocks.items.main[] = "mediaList"
@@ -51,10 +55,10 @@ resource_page_blocks.items.main[] = "mediaList"
 
 If you want a block to be available for every resource type, you must define it for each resource view. For example, you likely want to make resource values configurable for each type. You would need three separate lines telling the theme that each resource type should automatically display value blocks.
 
-```
-resouce_page_blocks.items.main[] = “values”
-resouce_page_blocks.item_sets.main[] = “values”
-resouce_page_blocks.menu.main[] = “values”
+```text
+resouce_page_blocks.items.main[] = "values"
+resouce_page_blocks.item_sets.main[] = "values"
+resouce_page_blocks.menu.main[] = "values"
 ```
 
 ### Default Content On Show Pages
@@ -77,13 +81,15 @@ Show pages for item sets and media only displayed the resource values by default
 
 If your theme relies on default views from Omeka S, your theme will automatically have a single main region where configured page blocks appear. The default views include a line similar to the following to display the blocks. This example is from the show page for items, so it passes `$item`.
 
-`<?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>`
+```php-template
+<?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
+```
 
 ### Custom Views with Multiple Region Support
 
 To support multiple regions that can display blocks, you need to have custom versions of the show pages within your theme. You also need to define multiple regions in your `theme.ini`. In the following example, the theme supports a “main” content region, as well as a “right sidebar” in the show pages for items.
 
-```
+```text
 resource_page_regions.items.main = "Main"
 resource_page_regions.items.right = "Right Sidebar"
 ```
@@ -94,9 +100,9 @@ These two regions should appear in the resource page block configuration interfa
 
 To output these configured regions, the theme must define where in show.phtml these blocks will appear. The blocks for each region are called by passing the region’s short name from `theme.ini` into `resourcePageBlocks()`. The two regions might look like the following within a show.phtml:
 
-```
-<div class=”main-content”>
-    <?php echo $this->resourcePageBlocks($item, ‘main')->getBlocks(); ?>
+```php-template
+<div class="main-content">
+    <?php echo $this->resourcePageBlocks($item, 'main')->getBlocks(); ?>
 </div>
 
 <?php if ($this->resourcePageBlocks($item, 'right')->hasBlocks()): ?>
@@ -114,43 +120,43 @@ Let’s look at an example of updating a theme’s custom show page. This case w
 
 This is what the content looks in Papers’ custom show page for items. It explicitly sets in order: the item title, media embed option, resource values, item sets, media list option, and linked resources. These content types display in a single column layout.
 
-```
+```php-template
 …
 
 <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
 <h3><?php echo $translate('Item'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($embedMedia && $itemMedia): ?>
-	<div class="media-embeds">
-	<?php foreach ($itemMedia as $media):
-    	echo $media->render();
-	endforeach;
-	?>
-	</div>
+    <div class="media-embeds">
+    <?php foreach ($itemMedia as $media):
+        echo $media->render();
+    endforeach;
+    ?>
+    </div>
 <?php endif; ?>
 <div class="properties">
 <?php echo $item->displayValues(); ?>
 <?php $itemSets = $item->itemSets(); ?>
 <?php if (count($itemSets) > 0): ?>
 <div class="property">
-	<?php if (count($itemSets) > 0): ?>
-	<h4><?php echo $translate('Item sets'); ?></h4>
-	<div class="values">
-    	<?php foreach ($itemSets as $itemSet): ?>
-    	<div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
-    	<?php endforeach; ?>
-	</div>
-	<?php endif; ?>
+    <?php if (count($itemSets) > 0): ?>
+    <h4><?php echo $translate('Item sets'); ?></h4>
+    <div class="values">
+        <?php foreach ($itemSets as $itemSet): ?>
+        <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
 </div>
 <?php endif; ?>
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="media-list property">
-	<h4><?php echo $translate('Media'); ?></h4>
-	<div class="values">
-	<?php foreach ($itemMedia as $media): ?>
-    	<?php echo $media->linkPretty(); ?>
-	<?php endforeach; ?>
-	</div>
+    <h4><?php echo $translate('Media'); ?></h4>
+    <div class="values">
+    <?php foreach ($itemMedia as $media): ?>
+        <?php echo $media->linkPretty(); ?>
+    <?php endforeach; ?>
+    </div>
 </div>
 <?php endif; ?>
 </div>
@@ -162,8 +168,8 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 ?>
 <?php if ($subjectValues): ?>
 <div id="item-linked">
-	<h3><?php echo $translate('Linked resources'); ?></h3>
-	<?php echo $subjectValues; ?>
+    <h3><?php echo $translate('Linked resources'); ?></h3>
+    <?php echo $subjectValues; ?>
 </div>
 <?php endif; ?>
 
@@ -174,7 +180,7 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 
 The latest version of Papers using configurable resource page blocks condenses much of this. Its `theme.ini` uses the following block to set up single configurable regions across items, item sets, and media.
 
-```
+```text
 resource_page_regions.items.main = "Main"
 resource_page_regions.item_sets.main = "Main"
 resource_page_regions.media.main = "Main"
@@ -182,7 +188,7 @@ resource_page_regions.media.main = "Main"
 
 It then sets default content blocks for each of these regions. On item show pages, media embeds, values, item sets, site pages, a media list, and linked resources are configured by default. Only values are default blocks for item sets and media.
 
-```
+```text
 resource_page_blocks.items.main[] = "mediaEmbeds"
 resource_page_blocks.items.main[] = "values"
 resource_page_blocks.items.main[] = "itemSets"
@@ -195,7 +201,7 @@ resource_page_blocks.media.main[] = "values"
 
 Then the `show.phtml` file’s content area looks like this.
 
-```
+```php-template
 <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
 <h3><?php echo $translate('Item'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>

@@ -43,9 +43,12 @@ Several object properties are common to all data types:
 - `type`: (**required**, string) Declares the data type of the value. 
   Built-in types are `literal`, `uri`, `resource`, `resource:item`,
   `resource:itemset`, `resource:media`, and others can be added by modules.
-- `property_id`: (**required**, number) Internal Omeka S ID for the property
+- `property_id`: (**required**, number or string) Internal Omeka S ID for the property
   this value is associated with. Property IDs can be reused from API output or
-  discovered via the `api/properties` endpoint.
+  discovered via the `api/properties` endpoint. Since Omeka S 4.0.0, passing the string
+  `auto` here will use the property matching the term used in the containing array's key
+  (i.e, in the example above, it will look up and use the correct property ID for
+  `dcterms:title`)
 - `is_public`: (boolean) Whether this value is marked as private (only visible
   to the resource's creator and to users with high-level permissions). Values
   will be marked public if this property is not provided on input.

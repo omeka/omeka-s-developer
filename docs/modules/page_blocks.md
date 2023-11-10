@@ -51,7 +51,7 @@ with an `// @translate` comment.
 `form()` returns the HTML markup for the admin-side form for a block.
 
 Omeka S provides several helpers for common form tasks for attachments
-so each new layout doesn't have to reimplement things fron scratch:
+so each new layout doesn't have to reimplement things from scratch:
 
 - `blockAttachmentsForm` is used to let users select media or items to
   attach. to the block. Layouts that display media content will almost

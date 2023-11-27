@@ -1,4 +1,19 @@
-# 2023 Development Priorities
+# 2024 Development Priorities
+
+During 2024, the Omeka Team have identified the following key priorities to guide their work:
+
+- Continued improvements to site page building
+- Improved site authoring, resource creation, file and media handling, and oversight capabilities
+- New themes
+- Transcription service integration
+- Accessibility review and improvements
+- Improved sustainability features
+- Feature focus for archivists and oral historians
+- Research requirements for collections management implementation
+- Ongoing core and addon maintenance and improvements in response to user feedback
+- Improved developer and designer documentation
+
+## 2023 Development Priorities
 
 During 2023, the Omeka Team have identified the following key priorities to guide their work:
 

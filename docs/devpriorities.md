@@ -11,7 +11,7 @@ During 2024, the Omeka Team have identified the following key priorities to guid
 - Feature focus for archivists and oral historians
 - Research requirements for collections management implementation
 - Ongoing core and addon maintenance and improvements in response to user feedback
-- Improved developer and designer documentation
+- Continuted improvements to developer and designer documentation
 
 ## 2023 Development Priorities
 

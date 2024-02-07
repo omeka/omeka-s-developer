@@ -10,3 +10,4 @@ extra_css:
 markdown_extensions:
     - toc:
         permalink: 
+    - admonition: {}

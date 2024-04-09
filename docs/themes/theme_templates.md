@@ -7,10 +7,10 @@ There are two parts required for Omeka S to recognize a theme's template: the th
 In the `theme.ini`, the format for registering a block template looks like this:
 
 ```
-block_templates.[blockName].[template-filename]
+block_templates.[blockName].[template-filename] = "[Template display name]"
 ```
 
-This is a list of the available core blocks and how they should be written in the ini file:
+This is a list of the available core blocks and how they should be referenced in the ini file. In the above example, these would be used for `[blockName]`.
 
 * Asset - `asset`
 * Browse preview - `browsePreview`
@@ -24,14 +24,18 @@ This is a list of the available core blocks and how they should be written in th
 * Page title - `pageTitle`
 * Table of contents - `tableOfContents`
 
+The `[template-filename]` is the name of the template in `view/common/block_templates` without the `.phtml` file extension. The `[Template display name]` is what appears in the page builder interface where the user selects the block template.
+
 !!! Example
-    For a block template that presents the media embed block as a gallery, you could create a file at `view/common/block_templates/gallery.phtml`. In the `theme.ini`, you would register it by including `block_templates.media.gallery`.
+    For a block template that presents the media embed block as a gallery, you could create a file at `view/common/block_templates/gallery.phtml`. In the `theme.ini`, you would register it by including `block_templates.media.gallery = "Gallery"`.
 
 In the `theme.ini`, the format for registering a page template looks like this:
 
 ```
-page_templates.[template-filename]
+page_templates.[template-filename] = "[Template display name]"
 ```
 
+Similar to block templates, `[template-filename]` is the name of the template in `view/common/page_templates` without the `.phtml` file extension, while `[Template display name]` is what appears in the page builder interface where the user selects the page template.
+
 !!! Example
-    For a page template that provides custom markup for a javascript timeline, you could create a file at `view/common/page_templates/js-timeline.phtml`. In the `theme.ini`, you would register it by including `page_templates.js-timeline`.
+    For a page template that provides custom markup for a javascript timeline, you could create a file at `view/common/page_templates/js-timeline.phtml`. In the `theme.ini`, you would register it by including `page_templates.js-timeline = "Javascript timeline"`.

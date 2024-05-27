@@ -278,6 +278,13 @@ Triggered after the "Manage sites" panel on the admin Dashboard
 
 Triggered inside the details display on the admin side.
 
+### view.show.value
+
+* **value** A value representation
+
+Triggered for each value when displaying all values of a resource, in partial
+template resource-values.phtml. It allows to append html content to a value.
+
 ### view.sort-selector
 
 * **sortBy**: Array of sorting options, each a sub-array with keys "label" and "value" (filterable)

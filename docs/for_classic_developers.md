@@ -4,9 +4,9 @@ Omeka S follows the same spirit and principles of Omeka Classic of using open so
 
 ## Underlying Technologies
 
-### Zend Framework
+### From Zend Framework 1 to Laminas Framework
 
-Omeka Classic was built on Zend Framework 1, which has now reach end of life. Omeka S is built on Zend Framework 3, which is a completely different architecture. Some essential points that Omeka S now takes advantage of are
+Omeka Classic was built on Zend Framework 1, which has now reach end of life. Omeka S is built on Zend Framework 3, which is a completely different architecture, and which was renamed Laminas Framework. Some essential points that Omeka S now takes advantage of are
 
 * a heavy reliance on services
 * extensive use of factories

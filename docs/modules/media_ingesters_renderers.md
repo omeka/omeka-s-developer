@@ -77,7 +77,7 @@ generate thumbnail images. For these purposes, Omeka S provides two services:
 - `Omeka\File\Downloader`: Download a file from a remote URI
 - `Omeka\File\Uploader`: Upload a file from a local client
 
-To inject these services into your ingester you'd follow Zend's service factory
+To inject these services into your ingester you'd follow Laminas's service factory
 pattern.
 
 For example, after injecting the `Omeka\File\Downloader` service into your ingester,
@@ -167,7 +167,7 @@ Next, since our ingester needs the `Omeka\HttpClient` service, let's create the
 namespace MyModule\Service\Media\Ingester;
 
 use MyModule\Media\Ingester\Tweet;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class TweetFactory implements FactoryInterface
@@ -189,9 +189,9 @@ use Omeka\Api\Request;
 use Omeka\Entity\Media;
 use Omeka\Media\Ingester\IngesterInterface;
 use Omeka\Stdlib\ErrorStore;
-use Zend\Form\Element\Text;
-use Zend\Http\Client;
-use Zend\View\Renderer\PhpRenderer;
+use Laminas\Form\Element\Text;
+use Laminas\Http\Client;
+use Laminas\View\Renderer\PhpRenderer;
 
 class Tweet implements IngesterInterface
 {
@@ -263,7 +263,7 @@ namespace MyModule\Media\Renderer;
 
 use Omeka\Api\Representation\MediaRepresentation;
 use Omeka\Media\Renderer\RendererInterface;
-use Zend\View\Renderer\PhpRenderer;
+use Laminas\View\Renderer\PhpRenderer;
 
 class Tweet implements RendererInterface
 {

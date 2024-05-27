@@ -25,7 +25,7 @@ you need to define that route in `module.config.php`:
         ),
 ```
 
-There are many options for defining the route. See the [Zend Framework documentation](https://docs.zendframework.com/zend-router/routing/)
+There are many options for defining the route. See the [Laminas Framework documentation](https://docs.laminas.dev/laminas-router/routing/)
 for details.
 
 ## Navigation

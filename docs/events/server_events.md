@@ -1,6 +1,6 @@
 # Server Events
 
-Server events (`Omeka\Event`) extend from `Zend\EventManager\Event`. They are triggered from Omeka S's PHP code in a variety of controllers, views and API actions to allow follow-up actions to be done within Omeka S itself or within modules. See [the reference page](server_event_reference.md) for a full list.
+Server events (`Omeka\Event`) extend from `Laminas\EventManager\Event`. They are triggered from Omeka S's PHP code in a variety of controllers, views and API actions to allow follow-up actions to be done within Omeka S itself or within modules. See [the reference page](server_event_reference.md) for a full list.
 
 ## Attaching a listener to an event
 
@@ -29,4 +29,4 @@ The `attach` method used here takes three arguments:
 
 ## Further details
 
-We use Zend Framework's EventManager component, so many questions can be answered by reading [the documentation](http://framework.zend.com/manual/current/en/modules/zend.event-manager.event-manager.html).
+We use Laminas Framework's EventManager component, so many questions can be answered by reading [the documentation](https://docs.laminas.dev/laminas-eventmanager/intro/).

@@ -221,7 +221,7 @@ Triggered before edit page form markup, within the form.
 
 Triggered after edit page form markup, within the form.
 
-## view.edit.form.advanced
+### view.edit.form.advanced
 
 * **form**: The Form object for the current form.
 

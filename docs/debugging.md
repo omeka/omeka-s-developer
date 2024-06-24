@@ -37,7 +37,7 @@ To use internal assests, such as a local copy of jQuery, add this to `local.conf
 
 Omeka S provides a `logger()` plugin withing Controllers. This provides access to the Omeka S logging system. You can write messages to the log with, e.g., `$this->logger()->info("Status: good");`
 
-The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Zend\Log\LoggerInterface`, which makes it easy to give messages at different log levels:
+The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Laminas\Log\LoggerInterface`, which makes it easy to give messages at different log levels:
 
 * emerg()
 * alert()

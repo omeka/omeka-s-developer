@@ -5,14 +5,14 @@ your views and minimizing redundancy. For example, tasks such as escaping HTML,
 formatting dates, and creating commonly-used interface components are handled by
 way of view helpers.
 
-For a more complete introduction, read [Zend Framework's documentation](https://docs.zendframework.com/zend-view/helpers/intro/).
+For a more complete introduction, read [Laminas Framework's documentation](https://docs.laminas.dev/laminas-view/v2/helpers/intro/).
 This page focuses on using Omeka S's view helpers, listed below. Note that Omeka
-S also uses many of Zend Framework's native view helpers -- consult their documentation
-for more information.
+S also uses many of Laminas Framework's native view helpers -- consult their
+documentation for more information.
 
 ## Using A View Helper
 
-Helpers are typically called from view scripts. A common example using one of Zend
+Helpers are typically called from view scripts. A common example using one of Laminas
 Framework's view helpers is the `Url`, helper, which generates a URL for a route
 and action:
 
@@ -37,21 +37,23 @@ MyModule/
         MyHelper.php
 ```
 
-View Helpers inherit from `Zend\View\Helper\AbstractHelper` and implement `Zend\View\Helper\HelperInterface`.
+View Helpers inherit from `Laminas\View\Helper\AbstractHelper` and implement `Laminas\View\Helper\HelperInterface`.
 
 Thus, the basic structure is
 
 ```php
 namespace MyModule\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class MyModuleViewHelper extends AbstractHelper
 {
     public function __invoke()
     {
         $view = $this->getView(); // supplied by AbstractHelper
+        ...
         //return HTML;
+    }
 }
 
 ```
@@ -120,7 +122,7 @@ The file structure for the factory will be akin to:
 namespace MyModule\Service\ViewHelper;
 
 use MyModule\View\Helper\ViewHelper;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class MyModuleViewHelperFactory implements FactoryInterface
@@ -142,7 +144,7 @@ As such, the View Helper's `__construct` method must deal with the data
 ```php
 namespace MyModule\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class ViewHelper extends AbstractHelper
 {
@@ -193,7 +195,7 @@ A View Helper might then create its HTML like so:
 <?php
 namespace MyModule\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class MyModuleViewHelper extends AbstractHelper
 {

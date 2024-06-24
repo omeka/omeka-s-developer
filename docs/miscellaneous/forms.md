@@ -1,6 +1,6 @@
 # Forms
 
-Omeka S often extends `Zend\Form\Form` in the namespace `Omeka\Form`, and in some cases includes events to allow modules to add more fields to the form.
+Omeka S often extends `Laminas\Form\Form` in the namespace `Omeka\Form`, and in some cases includes events to allow modules to add more fields to the form.
 
 Adding a fieldset is the general pattern for modules to follow. In your `Module.php` class add the following to add a text area. 
 

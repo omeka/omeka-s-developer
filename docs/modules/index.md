@@ -1,7 +1,7 @@
 # Introduction to Modules
 
 You can extend the functionality of Omeka S by writing an add-on component called
-a *module*. Zend Framework provides a substantial [framework for writing modules](https://docs.zendframework.com/zend-modulemanager/intro/),
+a *module*. Laminas Framework provides a substantial [framework for writing modules](https://docs.laminas.dev/laminas-modulemanager/intro/),
 but Omeka S provides extra structure that makes the modules installable, upgradeable,
 and integratable.
 
@@ -84,8 +84,8 @@ to better organize your code.
 
 ```php
 use Omeka\Module\AbstractModule;
-use Zend\View\Model\ViewModel;
-use Zend\Mvc\Controller\AbstractController;
+use Laminas\View\Model\ViewModel;
+use Laminas\Mvc\Controller\AbstractController;
 
 class Module extends AbstractModule
 {
@@ -136,8 +136,8 @@ in your module class, like below:
 
 ```php
 use Omeka\Module\AbstractModule;
-use Zend\View\Model\ViewModel;
-use Zend\Mvc\Controller\AbstractController;
+use Laminas\View\Model\ViewModel;
+use Laminas\Mvc\Controller\AbstractController;
 
 class Module extends AbstractModule
 {
@@ -176,8 +176,8 @@ like below:
 
 ```php
 use Omeka\Module\AbstractModule;
-use Zend\EventManager\Event;
-use Zend\EventManager\SharedEventManagerInterface;
+use Laminas\EventManager\Event;
+use Laminas\EventManager\SharedEventManagerInterface;
 
 class Module extends AbstractModule
 {
@@ -203,10 +203,10 @@ class Module extends AbstractModule
 
 ## MVC
 
-Omeka S uses Zend Framework's [MVC layer](https://docs.zendframework.com/zend-mvc/)
+Omeka S uses Laminas Framework's [MVC layer](https://docs.laminas.dev/laminas-mvc/)
 to coordinate between its data, program logic, and presentation components. For
-an introduction and detailed reference to the MVC layer, please read Zend Framework's
-[documentation](https://docs.zendframework.com/zend-mvc/intro/). The [Quick Start](https://docs.zendframework.com/zend-mvc/quick-start/)
+an introduction and detailed reference to the MVC layer, please read Laminas Framework's
+[documentation](https://docs.laminas.dev/laminas-mvc/intro/). The [Quick Start](https://docs.laminas.dev/laminas-mvc/quick-start/)
 guide is particularly helpful because it demonstrates how to do the following:
 
 - Set up your view manager and controller configurations

@@ -33,11 +33,11 @@ Configuration for executing PHP-CLI.
 
 ## Controllers
 
-- `controllers`: A list of MVC controllers (see [zend-mvc docs](https://docs.zendframework.com/zend-mvc/quick-start/#create-a-controller))
+- `controllers`: A list of MVC controllers (see [laminas-mvc docs](https://docs.laminas.dev/laminas-mvc/quick-start/#create-a-controller))
 
 ## Controller Plugins
 
-- `controller_plugins`: A list of MVC controller plugins (see [zend-mvc docs](https://docs.zendframework.com/zend-mvc/plugins/))
+- `controller_plugins`: A list of MVC controller plugins (see [laminas-mvc docs](https://docs.laminas.dev/laminas-mvc/plugins/))
 
 ## Data Types
 
@@ -76,7 +76,7 @@ to one of the following:
 
 ## Form Elements
 
-- `form_elements`: A list of form elements (see [zend-form docs](https://docs.zendframework.com/zend-form/advanced/#creating-custom-elements))
+- `form_elements`: A list of form elements (see [laminas-form docs](https://docs.laminas.dev/laminas-form/v3/advanced/#creating-custom-elements))
 
 ## HTTP Client
 
@@ -111,7 +111,7 @@ Configuration for Omeka S installation.
 
 ## Listeners
 
-- `listeners`: A list of MVC listeners to load during runtime (see [zend-mvc docs](https://docs.zendframework.com/zend-mvc/mvc-event/))
+- `listeners`: A list of MVC listeners to load during runtime (see [laminas-mvc docs](https://docs.laminas.dev/laminas-mvc/mvc-event/))
 
 ## Logger
 
@@ -119,7 +119,7 @@ Logging settings for application-level messages.
 
 - `logger`
     - `log`: Log errors? (`false` (default) or `true`)
-    - `priority`: The priority level at which to start logging (default `\Zend\Log\Logger::NOTICE`; see [zend-log docs](https://docs.zendframework.com/zend-log/intro/#using-built-in-priorities))
+    - `priority`: The priority level at which to start logging (default `\Laminas\Log\Logger::NOTICE`; see [laminas-log docs](https://docs.laminas.dev/laminas-log/intro/#using-built-in-priorities))
     - `path`: The server path to the log file
 
 ## Mail
@@ -127,12 +127,12 @@ Logging settings for application-level messages.
 Configuration for mail transport and message options.
 
 - `mail`
-    - `transport`: mail transport configuration (see [zend-mail docs](https://docs.zendframework.com/zend-mail/transport/intro/))
-    - `default_message_options`: message options (see [zend-mail docs](https://docs.zendframework.com/zend-mail/message/intro/#configuration-options) for options)
+    - `transport`: mail transport configuration (see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/transport/intro/))
+    - `default_message_options`: message options (see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/message/intro/#configuration-options) for options)
 
 The default transport is Sendmail, which is set up in `application/config/module.config.php`).
 If using SMTP, use this example configuration, added to the end of `local.config.php`
-(see [zend-mail docs](https://docs.zendframework.com/zend-mail/transport/smtp-options/)):
+(see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/transport/smtp-options/)):
 
 ```
 'mail' => [
@@ -189,15 +189,15 @@ Configuration for the access control list (ACL).
 
 ## Service Manager
 
-- `service_manager`: A list of services (see [zend-servicemanager docs](https://docs.zendframework.com/zend-servicemanager/configuring-the-service-manager/))
+- `service_manager`: A list of services (see [laminas-servicemanager docs](https://docs.laminas.dev/laminas-servicemanager/v4/configuring-the-service-manager/))
 
 ## Session
 
 Configuration for saving state between requests.
 
 - `session`:
-    - `config`: Session configuration options (see [zend-session docs](https://docs.zendframework.com/zend-session/config/))
-    - `save_handler`: Session save handler (leave `null` to use default database handler; see [zend-session docs](https://docs.zendframework.com/zend-session/save-handler/)))
+    - `config`: Session configuration options (see [laminas-session docs](https://docs.laminas.dev/laminas-session/config/))
+    - `save_handler`: Session save handler (leave `null` to use default database handler; see [laminas-session docs](https://docs.laminas.dev/laminas-session/save-handler/)))
 
 ## Temporary Directory
 
@@ -233,9 +233,9 @@ Translator settings.
 
 ## View Helpers
 
-- `view_helpers`: A list of view helpers (see [zend-view docs](https://docs.zendframework.com/zend-view/helpers/advanced-usage/))
+- `view_helpers`: A list of view helpers (see [laminas-view docs](https://docs.laminas.dev/laminas-view/v2/helpers/advanced-usage/))
 
 ## View Manager
 
-- `view_manager`: View manager settings (see [zend-view docs](https://docs.zendframework.com/zend-view/quick-start/#configuration))
+- `view_manager`: View manager settings (see [laminas-view docs](https://docs.laminas.dev/laminas-view/v2/quick-start/#configuration))
 

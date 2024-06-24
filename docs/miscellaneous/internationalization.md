@@ -50,7 +50,7 @@ when we build the translation template that makes strings available to the trans
 
 ### Indirect translation: within forms and other classes
 
-Code that uses the `Zend\Form` classes will automatically translate strings that get
+Code that uses the `Laminas\Form` classes will automatically translate strings that get
 presented to the user like labels, legends, and descriptions.
 
 Several other areas where user-facing strings are defined are also automatically translated,
@@ -88,7 +88,7 @@ return [
 ];
 ```
 
-And here's one from a form class that extends `Zend\Form\Form`:
+And here's one from a form class that extends `Laminas\Form\Form`:
 
 ```php
 public function init()

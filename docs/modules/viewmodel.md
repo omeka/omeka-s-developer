@@ -7,8 +7,8 @@ in a controller's action, and returned from there:
 
 namespace MyModule\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use Laminas\Mvc\Controller\AbstractActionController;
+use Laminas\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
@@ -62,7 +62,7 @@ Javascript files are added similarly, using
 ## From a Module::getConfigForm() function
 
 All of the above applies to working with a module's `getConfigForm` function, but
-the object passed in is a `Zend\View\Renderer\PhpRenderer` object. The same methods
+the object passed in is a `Laminas\View\Renderer\PhpRenderer` object. The same methods
 can be used.
 
 ## See Also

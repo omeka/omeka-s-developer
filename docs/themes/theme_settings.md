@@ -23,10 +23,10 @@ elements.my_theme_setting.options.label = "My Theme Setting"
 
 Next you need to define your theme setting's form element type.
 
-The available form element types from Zend Framework are found in [their documentation](https://docs.laminas.dev/laminas-form/v3/element/intro/). In the config file, reference the element type with the path `Zend\Form\Element\[Type]`. The following example defines the theme setting as a checkbox.
+The available form element types from Laminas Framework are found in [their documentation](https://docs.laminas.dev/laminas-form/v3/element/intro/). In the config file, reference the element type with the path `Laminas\Form\Element\[Type]`. The following example defines the theme setting as a checkbox.
 
 ```
-elements.my_theme_setting.type = "Zend\Form\Element\Checkbox"
+elements.my_theme_setting.type = "Laminas\Form\Element\Checkbox"
 ```
 
 Available form elements created for Omeka sit in `application\src\Form\Element`. In the config file, reference the element type with the path `Omeka\Form\Element\[Type]`. The following example defines the theme setting as a select element containing resource templates accessible by the user.
@@ -38,7 +38,7 @@ elements.my_theme_setting.type = "Omeka\Form\Element\ResourceTemplateSelect"
 This example demonstrates how to define value options for an element, in this case a radio input.
 
 ```
-elements.my_theme_setting.type = "Zend\Form\Radio"
+elements.my_theme_setting.type = "Laminas\Form\Radio"
 elements.my_theme_setting.options.value_options.first = "First Option"
 elements.my_theme_setting.options.value_options.second = "Second Option"
 elements.my_theme_setting.options.value_options.third = "Third Option"
@@ -56,7 +56,7 @@ This is an example of a complete theme setting using a radio input.
 elements.my_theme_setting.name = "my_theme_setting"
 elements.my_theme_setting.attributes.id = "my_theme_setting"
 elements.my_theme_setting.options.label = "My Theme Setting"
-elements.my_theme_setting.type = "Zend\Form\Radio"
+elements.my_theme_setting.type = "Laminas\Form\Radio"
 elements.my_theme_setting.options.value_options.first = "First Option"
 elements.my_theme_setting.options.value_options.second = "Second Option"
 elements.my_theme_setting.options.value_options.third = "Third Option"

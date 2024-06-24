@@ -2,7 +2,7 @@
 
 ## Services
 
-Following Zend Framework 3, services, taken together, comprise most the the core functionality of Omeka S. For example, to execute a database query, you need first to get the `Omeka\Connection` service:
+Following Laminas Framework, services, taken together, comprise most the the core functionality of Omeka S. For example, to execute a database query, you need first to get the `Omeka\Connection` service:
 
 ```php
 $connection = $serviceLocator->get('Omeka\Connection');
@@ -29,7 +29,7 @@ Take, for example, the Omeka2Importer plugin. Its first job is to retrieve data 
 namespace Omeka2Importer\Service\Controller;
 
 use Omeka2Importer\Controller\IndexController;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class IndexControllerFactory implements FactoryInterface
@@ -44,14 +44,14 @@ class IndexControllerFactory implements FactoryInterface
 ```
 The constructor for `Omeka2Importer\Controller\IndexController\IndexController` then assigns the client to its corresponding property, and uses it as needed.
 
-Another common Factory task is to inject needed services into Forms. For example, if you need the `Zend\Event\EventManager` to trigger an event or access to Site setting, you will need to create the Form via a Factory that injects it:
+Another common Factory task is to inject needed services into Forms. For example, if you need the `Laminas\Event\EventManager` to trigger an event or access to Site setting, you will need to create the Form via a Factory that injects it:
 
 ```php
 
 namespace Omeka\Service\Form;
 
 use Omeka\Form\SiteSettingsForm;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class SiteSettingsFormFactory implements FactoryInterface
@@ -106,6 +106,3 @@ In `module.config.php`, you will need to assert that the class in question is pr
 ## See also
 
 [Configuration files](index.md)
-
-
-

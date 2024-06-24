@@ -283,7 +283,9 @@ Triggered inside the details display on the admin side.
 * **value** A value representation
 
 Triggered for each value when displaying all values of a resource, in partial
-template resource-values.phtml. It allows to append html content to a value.
+template resource-values.phtml. Can be used to append HTML content to a value.
+
+Added in version 3.2.0.
 
 ### view.sort-selector
 

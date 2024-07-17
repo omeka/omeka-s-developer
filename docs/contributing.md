@@ -8,6 +8,10 @@ Contributions should aim for that standard.
 
 Omeka S contains a `.php_cs` file that you can use with [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to clean up code both in core and modules. When using it with modules, you will want to add `.php_cs.cache` to your `.gitignore` file. When submitting contributions, we encourage you to fix style issues in a single distinct commit in your pull request.
 
+## Accessibility
+
+The Omeka Team strives to adhere to the principles and guidelines for accessibility that are articulate in [Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/). Contributions to the core and addons should also uphold those standards.  
+
 ## Tips for pull requests
 
 Generally, we are more likely to accept small, focused pull requests that address a single concern. Your code should be [self-documenting](https://en.wikipedia.org/wiki/Self-documenting_code). You should include comments where your code isn't self-evident. Your commit messages should be intelligible. You should accompany your pull request with a detailed account on what you're trying to achieve, what approach you're taking, and any other messages that you think would be helpful to us, the reviewers. If we accept your changes we must also maintain them, so it's important that your pull request is high quality and compelling.

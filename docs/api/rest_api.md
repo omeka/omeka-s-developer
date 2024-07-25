@@ -9,8 +9,22 @@ The API is located at `/api` under the root of the Omeka S installation.
 
 ## Format
 
-HTTP responses will be formatted in [JSON-LD](http://json-ld.org/), a method of
-transporting Linked Data using JSON.
+### Responses
+
+HTTP responses will be formatted by default in [JSON-LD](http://json-ld.org/), a
+method of transporting Linked Data using JSON.
+
+Since Omeka S version 4.1.0, API clients can request that responses be delivered in
+other formats by passing a `format` query string parameter. The core supported
+formats are:
+
+- JSON-LD (`jsonld`, the default)
+- RDF/XML (`rdfxml`)
+- N3 (`n3`)
+- Turtle (`turtle`)
+- N-Triples (`ntriples`)
+
+### Requests
 
 Payloads for requests should also be JSON-LD, but Omeka S sometimes requires clients
 to follow a particular structure, even if the same data could be represented by

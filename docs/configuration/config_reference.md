@@ -128,7 +128,7 @@ Configuration for mail transport and message options.
 
 - `mail`
     - `transport`: mail transport configuration (see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/transport/intro/))
-    - `default_message_options`: message options (see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/message/intro/#configuration-options) for options)
+    - `default_message_options`: message options (one common option is `from` to set the From address; see setters listed in [laminas-mail docs](https://docs.laminas.dev/laminas-mail/message/intro/#available-methods) for all possible options)
 
 The default transport is Sendmail, which is set up in `application/config/module.config.php`).
 If using SMTP, use this example configuration, added to the end of `local.config.php`

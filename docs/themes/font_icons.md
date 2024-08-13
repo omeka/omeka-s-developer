@@ -287,9 +287,9 @@ Omeka S uses the Font Awesome 5.15.4 icon set for the iconography in the admin i
 
 ## Using other Font Awesome icons
 
-Omeka S loads all the icons offered in Font Awesome's [free solid weight](https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free). If you would like to use an icon not listed in the above table, prefix your icon's selector with `.o-icon-` and find your icon's unicode on Font Awesome's website. 
+Omeka S loads all the icons offered in Font Awesome's [free solid weight](https://fontawesome.com/v5/search?o=r&m=free&s=solid). If you would like to use an icon not listed in the above table, prefix your icon's selector with `.o-icon-` and find your icon's unicode on Font Awesome's website. 
 
-For example, if you wanted to use the icon for `.fa-bars` ( <span class="o-icon-bars" role="icon" aria-label=".fa-bars icon"></span> ), look up [the icon's Font Awesome entry](https://fontawesome.com/v5.15/icons/bars?style=solid), and use its unicode (`\f0c9`) for the content of your icon's `:before` pseudo element.
+For example, if you wanted to use the icon for `.fa-bars` ( <span class="o-icon-bars" role="icon" aria-label=".fa-bars icon"></span> ), look up [the icon's Font Awesome entry](https://fontawesome.com/v5/icons/bars?style=solid&s=solid), and use its unicode (`\f0c9`) for the content of your icon's `:before` pseudo element.
 
 ```
 .o-icon-bars:before {

@@ -62,3 +62,7 @@ nav:
         - themes/theme_settings.md
         - themes/theme_templates.md
         - themes/theme_use_resource_page_blocks.md
+    - Modules (Omeka Team):
+        - module_docs/Collecting.md
+        - module_docs/CopyResources.md
+        - module_docs/CustomVocab.md

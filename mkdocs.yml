@@ -3,6 +3,7 @@ theme:
     name: 'readthedocs'
     include_homepage_in_sidebar: false
     navigation_depth: 3
+    collapse_navigation: true
 repo_url: 'http://github.com/omeka/omeka-s-developer'
 extra_css:
     - css/extra.css
@@ -11,3 +12,53 @@ markdown_extensions:
     - toc:
         permalink: 
     - admonition: {}
+nav:
+    - index.md
+    - contributing.md
+    - debugging.md
+    - devpriorities.md
+    - for_classic_developers.md
+    - register_an_addon.md
+    - whatsnew.md
+    - API:
+        - api/index.md
+        - api/api_reference.md
+        - api/php_api.md
+        - api/representations.md
+        - api/rest_api_reference.md
+        - api/rest_api.md
+    - Configuration:
+        - configuration/index.md
+        - configuration/config_reference.md
+        - configuration/services_and_factories.md
+    - Events:
+        - events/client_event_reference.md
+        - events/client_events.md
+        - events/server_event_reference.md
+        - events/server_events.md
+    - Miscellaneous:
+        - miscellaneous/acl.md
+        - miscellaneous/doctrine_orm.md
+        - miscellaneous/forms.md
+        - miscellaneous/internationalization.md
+    - Module Development:
+        - modules/index.md
+        - modules/controller_plugins.md
+        - modules/data_model.md
+        - modules/data_types.md
+        - modules/internationalization.md
+        - modules/media_ingesters_renderers.md
+        - modules/page_blocks.md
+        - modules/routes_and_navigation.md
+        - modules/view_helpers.md
+        - modules/viewmodel.md
+    - Theme Development:
+        - themes/index.md
+        - themes/font_icons.md
+        - themes/sass_and_css.md
+        - themes/style_guide.md
+        - themes/theme_functions.md
+        - themes/theme_modifications.md
+        - themes/theme_settings.md
+        - themes/theme_templates.md
+        - themes/theme_use_resource_page_blocks.md

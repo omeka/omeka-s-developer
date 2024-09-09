@@ -1,9 +1,11 @@
 site_name: Omeka S Developer Documentation
 theme:
-    name: 'readthedocs'
+    name: 'material'
     include_homepage_in_sidebar: false
     navigation_depth: 3
-    collapse_navigation: true
+    logo: assets/omeka-logo.png
+    font:
+        text: Lato
 repo_url: 'http://github.com/omeka/omeka-s-developer'
 extra_css:
     - css/extra.css

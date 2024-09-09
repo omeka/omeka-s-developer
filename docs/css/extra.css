@@ -1,3 +1,7 @@
+:root {
+    --md-primary-fg-color: #404e61;
+}
+
 a {
     color: #A91919;
 }
@@ -68,4 +72,15 @@ a:visited {
 
 .o-icon-bars:before {
     content: "\f0c9";
+}
+
+header a:link,
+header a:visited {
+    color: #fff;
+}
+
+.headerlink {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
 }

@@ -4,8 +4,7 @@
 
 Modules can extend this module to add their own custom facets. To demonstrate this let's create a facet type named "My facet" that adds a way to filter by class. Filtering by class is already implemented in the "By class" facet type, but it serves as a good example of how to stitch the various parts together. First, register the facet type in your module's configuration.
 
-```php
-
+```php-inline
 'faceted_browse_facet_types' => [
     'factories' => [
         'my_facet' => \MyModule\Service\FacetType\MyFacetFactory::class,

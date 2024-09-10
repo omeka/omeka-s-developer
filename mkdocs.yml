@@ -76,3 +76,4 @@ nav:
         - module_docs/RedactValues.md
         - module_docs/Scripto.md
         - module_docs/UriDereferencer.md
+        - module_docs/ZoteroImport.md

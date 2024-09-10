@@ -26,7 +26,7 @@ and `navigation_links` configuration will need to **revert** the copied layouts 
 links to their original state. Thankfully, the `CopyResources` service object has
 convenience methods for this. For example:
 
-```php
+```php-inline
 $sharedEventManager->attach(
     '*',
     'copy_resources.sites.post',
@@ -45,7 +45,7 @@ Modules that add API resources that are assigned to sites will need to copy the
 resources and assign them to the new site. Again, the `CopyResources` service object
 has convenience methods for this. For example:
 
-```php
+```php-inline
 $sharedEventManager->attach(
     '*',
     'copy_resources.sites.post',
@@ -72,7 +72,7 @@ Modules may need to modify block layout data and navigation link data to update
 for the site copy. Again, the `CopyResources` service object has convenience methods
 for this. For example:
 
-```php
+```php-inline
 $sharedEventManager->attach(
     '*',
     'copy_resources.sites.post',

@@ -14,7 +14,7 @@ Modules can extend this module to add their own custom visualizations. Note that
 
 To demonstrate this let's create a new dataset type named "My dataset" that adds a way to count items with certain classes. This dataset is already implemented in the "Count of items with classes" dataset type, but it serves as a good example of how to stitch the various parts together. First, register the type in your module's configuration.
 
-```php
+```php-inline
 'datavis_dataset_types' => [
     'invokables' => [
         'my_dataset_type' => \MyModule\Datavis\DatasetType\MyDatasetType::class,
@@ -135,7 +135,7 @@ class MyDataset extends AbstractDatasetType
 
 For the second part of your visualization, let's create a new diagram type named "My diagram" that adds a way to render a dataset using a bar chart. This diagram is already implemented in the "Bar chart" disgram type, but it serves as a good example of how to stitch the various parts together. First, register the type in your module's configuration.
 
-```php
+```php-inline
 'datavis_diagram_types' => [
     'invokables' => [
         'my_diagram_type' => \MyModule\Datavis\DiagramType\MyDiagramType::class,

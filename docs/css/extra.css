@@ -1,18 +1,7 @@
 :root {
     --md-primary-fg-color: #404e61;
-}
-
-a {
-    color: #A91919;
-}
-
-a:hover,
-a:active {
-    color: #d60a0a;
-}
-
-a:visited {
-    color: #984646;
+    --md-typeset-a-color: #A91919;
+    --md-accent-fg-color: #e34545;
 }
 
 .wy-side-nav-search {

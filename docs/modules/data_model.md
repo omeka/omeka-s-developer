@@ -8,7 +8,7 @@ process after you have defined your Entity classes.
 First you'll need to configure your module so Doctrine knows where your Entity and
 proxy classes are. In `config/module.config.php`, add the following:
 
-```php
+```php-inline
     'entity_manager' => [
         'mapping_classes_paths' => [
             dirname(__DIR__) . '/src/Entity',
@@ -28,7 +28,7 @@ your module at `data/doctrine-proxies`. It will also output the SQL statements n
 to install your data model. Copy the statements, then, in your `Module.php` file's
 `install()` function, use the database connection service to execute them:
 
-```php
+```php-inline
     public function install(ServiceLocatorInterface $services)
     {
         $connection = $services->get('Omeka\Connection');
@@ -75,7 +75,7 @@ Since the versions for modules follow Semantic Versioning, you should use the [C
 class from Composer's "Semver" package to compare version numbers. Omeka S already
 includes this as a dependency, so you simply need to `use` it.
 
-```php
+```php-inline
 use Composer\Semver\Comparator;
 
 // ...

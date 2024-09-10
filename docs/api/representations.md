@@ -30,7 +30,7 @@ All three take the same second argument, a boolean flag for whether the returned
 absolute or server-relative. Server-relative URLs are the default and you must pass `true` as
 this second argument to return an absolute URL instead.
 
-```php
+```php-inline
 $item->url(); // URL to an item's default "show" page
 
 $item->adminUrl('edit'); // URL to an item's "edit" page on the admin, even if called on the public site
@@ -58,7 +58,7 @@ the link, but you are responsible for filtering or escaping any data coming from
 including data stored in the database. Using other methods as the input to this function that
 themselves produce "safe" output is usually a good idea.
 
-```php
+```php-inline
 echo $item->link('View Item'); // Print a link to $item
 
 echo $item->link('Edit Item', 'edit'); // Print a link to the edit form for $item
@@ -153,7 +153,7 @@ if the `'all'` option was used). To display them on a page, the simplest option 
 method, which will take care of escaping text properly, as well as displaying more complex values
 like links or data types added by modules.
 
-```php
+```php-inline
 echo $item->value('dcterms:subject'); // Print the first Dublin Core Subject for $item
 
 // Print all the Subject values marked as being in Spanish
@@ -167,7 +167,7 @@ to the resource. If you're looking to do more than simply make the default link,
 result like any other item, set, or media representation. `valueResource()` returns null for
 other kinds of values or if the linked resource can't be found.
 
-```php
+```php-inline
 // Print the creator of a resource linked via the Dublin Core Relation property
 $relatedResource = $item->value('dcterms:relation')->valueResource();
 if ($relatedResource) {

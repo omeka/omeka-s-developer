@@ -82,7 +82,7 @@ Note that your module's configuration must be returned from your module's `getCo
 method. Even so, we recommend that you include a `config/module.config.php` file
 to better organize your code.
 
-```php
+```php-inline
 use Omeka\Module\AbstractModule;
 use Laminas\View\Model\ViewModel;
 use Laminas\Mvc\Controller\AbstractController;
@@ -107,7 +107,7 @@ This config file is where you take care of many required tasks, such as register
 controllers, entities, routes, and navigation. It is a keyed array that should be
 returned. Here is an excerpt from the MetadataBrowse module as an example:
 
-```php
+```php-inline
 
 return [
     'view_manager' => [
@@ -134,7 +134,7 @@ To enable your module's user configuration, remember to set `configurable = true
 in config/module.ini and use the `getConfigForm()` and `handleConfigForm()` methods
 in your module class, like below:
 
-```php
+```php-inline
 use Omeka\Module\AbstractModule;
 use Laminas\View\Model\ViewModel;
 use Laminas\Mvc\Controller\AbstractController;
@@ -174,7 +174,7 @@ Omeka triggers at critical times. Modules can attach to Omeka S's [server-side e
 in the `Module.php` file. Use the `attachListeners` method in your module class,
 like below:
 
-```php
+```php-inline
 use Omeka\Module\AbstractModule;
 use Laminas\EventManager\Event;
 use Laminas\EventManager\SharedEventManagerInterface;

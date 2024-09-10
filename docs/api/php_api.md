@@ -35,7 +35,7 @@ requested data and other relevant information. You can get the resultant
 representation by calling `getContent()` on the response. For example, to get an
 item with an ID of 123:
 
-```php
+```php-inline
 // Where $services is Omeka's service locator object.
 $api = $services->get('Omeka\ApiManager');
 $response = $api->read('items', 123);
@@ -54,7 +54,7 @@ for convenience:
 For example, to get an item representation via a route parameter in a typical show
 action:
 
-```php
+```php-inline
 public function showAction()
 {
     $itemRepresentation = $this->api()->read('items', $this->params('id'))->getContent();

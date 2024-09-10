@@ -81,7 +81,7 @@ method, passing the name of the key to retrieve.
 For example, the very simple form for the built-in HTML block layout saves
 just one piece of data: the markup input by the user, under the key `html`:
 
-```php
+```php-inline
 public function form(PhpRenderer $view, SiteRepresentation $site,
     SitePageRepresentation $page = null, SitePageBlockRepresentation $block = null
 ) {
@@ -178,7 +178,7 @@ that includes a block that uses the layout.
 User-provided text is the usual type of data that should be returned from
 this method; for example, the HTML block returns the text input by the user:
 
-```php
+```php-inline
 public function getFulltextText(PhpRenderer $view, SitePageBlockRepresentation $block)
 {
     return strip_tags($this->render($view, $block));

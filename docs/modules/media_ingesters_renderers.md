@@ -84,7 +84,7 @@ For example, after injecting the `Omeka\File\Downloader` service into your inges
 you could fetch a thumbnail image for your media in `IngesterInterface::ingest()`
 by passing it a URL:
 
-```php
+```php-inline
 $url = sprintf('http://example.com/%s.jpg', $imagePath);
 $tempFile = $this->downloader->download($url);
 if ($tempFile) {

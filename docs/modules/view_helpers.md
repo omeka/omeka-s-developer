@@ -16,7 +16,7 @@ Helpers are typically called from view scripts. A common example using one of La
 Framework's view helpers is the `Url`, helper, which generates a URL for a route
 and action:
 
-```php
+```php-inline
 $this->url(null, ['action' => 'log'], true);
 ```
 
@@ -41,7 +41,7 @@ View Helpers inherit from `Laminas\View\Helper\AbstractHelper` and implement `La
 
 Thus, the basic structure is
 
-```php
+```php-inline
 namespace MyModule\View\Helper;
 
 use Laminas\View\Helper\AbstractHelper;
@@ -62,9 +62,8 @@ There are no restrictions on the signature for `__invoke`, so any necessary data
 from the view can be added as needed, as in the first example of `Url` above. Its
 `__invoke` method thus looks like:
 
-```php
-
-
+```php-inline
+public function __invoke($name = null, $params = [], $options = [], $reuseMatchedParams = false)
 ```
 
 
@@ -74,7 +73,7 @@ For Omeka S to be aware of your View Helper, you must add it to your module's `c
 array. That file will contain a great deal more than this information, but this
 is what will be relevant to the helper:
 
-```php
+```php-inline
 return [
     'view_helpers' => [
         'invokables' => [
@@ -96,7 +95,7 @@ rather than an invokable, as defined in the `config.php` file. (See also [Servic
 
 To create a factory for your View Helper, put the factory in the following directory:
 
-```php
+```
 MyModule/
   src/
     Service/
@@ -106,7 +105,7 @@ MyModule/
 
 Instead of declaring an `invokable` in `module.config.php`'s array, declare a factory:
 
-```php
+```php-inline
 return [
     'view_helpers' => [
         'factories'  => [
@@ -118,7 +117,7 @@ return [
 
 The file structure for the factory will be akin to:
 
-```php
+```php-inline
 namespace MyModule\Service\ViewHelper;
 
 use MyModule\View\Helper\ViewHelper;
@@ -141,7 +140,7 @@ ViewHelper, and so the factory is used to inject them into the ViewHelper.
 
 As such, the View Helper's `__construct` method must deal with the data
 
-```php
+```php-inline
 namespace MyModule\View\Helper;
 
 use Laminas\View\Helper\AbstractHelper;
@@ -191,7 +190,6 @@ A shorter, more readable name is in order for the readability of a real module.
 A View Helper might then create its HTML like so:
 
 ```php
-
 <?php
 namespace MyModule\View\Helper;
 
@@ -442,7 +440,7 @@ For an item, this should usually be used in conjunction with the
 this helper.
 
 
-```php
+```php-inline
 $itemMedia = $item->media();
 $sortedMedia = $this->sortMedia($itemMedia);
 if (isset($sortedMedia['lightMedia'])):
@@ -452,7 +450,7 @@ endif;
 
 To render a single media, it can be passed as `[['media' => $media]]`:
 
-```php
+```php-inline
 echo $this->lightGalleryOutput([['media' => $media]]);
 ```
 
@@ -528,14 +526,14 @@ This helper's functionality is available through chained method calls:
 
 A typical theme would render the main region as a simple call to `getBlocks`:
 
-```php
+```php-inline
 echo $this->resourcePageBlocks($item)->getBlocks();
 ```
 
 A region with wrapper markup that should only render if the region has content
 would use `hasBlocks` as well:
 
-```php-template
+```html+php
 <?php if ($this->resourcePageBlocks($item, 'sidebar')->hasBlocks()): ?>
 <div class="sidebar">
     <?php echo $this->resourcePageBlocks($item, 'sidebar')->getBlocks(); ?>

@@ -16,7 +16,7 @@ SetEnv APPLICATION_ENV "development"
 
 In `config/local.config.php`, add
 
-```php
+```php-inline
     'logger' => [
         'log' => true,
     ],
@@ -25,7 +25,7 @@ Log messages are written to `logs/application.log`
 
 To use internal assests, such as a local copy of jQuery, add this to `local.config.php`
 
-```php
+```php-inline
     'assets' => [
         'use_externals' => false,
     ],
@@ -52,7 +52,7 @@ The `Omeka\Mvc\Controller\Plugin\Logger` object uses methods from `Laminas\Log\L
 
 Jobs that run in the background do not have access to the `logger()` plugin. Instead, you can get the logger from the ServiceManager anywhere inside the Job class:
 
-```php
+```php-inline
 $logger = $this->getServiceLocator()->get('Omeka\Logger');
 ```
 
@@ -69,7 +69,7 @@ If you need to do some debugging work elsewhere, such as within an Entity, you n
 
 Within the `__invoke()` method of your factory, add
 
-```php
+```php-inline
 $logger = $serviceLocator->get('Omeka\Logger');
 ```
 

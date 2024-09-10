@@ -19,7 +19,7 @@ For handling the strings, the same guidelines as given in the
 For the directory, create a `/language` directory at the root of your module, and reference
 it in your module's config/module.config.php file:
 
-```php
+```php-inline
 return [
 // ...
     'translator' => [
@@ -59,11 +59,10 @@ create a `debug.po` file with pseudo-translations (other options are available).
 After creating the `debug.po` file and compiling its `debug.mo` counterpart, in Omeka S's
 `/config/local.config.php` file set the translator locale value to `debug`:
 
-```php
+```php-inline
     'translator' => [
         'locale' => 'debug',
     ],
-
 ```
 
 Then browse all your module's pages and update any untranslated strings, and repeat the process.

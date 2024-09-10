@@ -3,8 +3,7 @@
 The ViewModel is used to send data to views for display. It is typically created
 in a controller's action, and returned from there:
 
-```php
-
+```php-inline
 namespace MyModule\Controller;
 
 use Laminas\Mvc\Controller\AbstractActionController;
@@ -32,8 +31,7 @@ element of a page in many ways.
 For any `view.*` event, the view is the target. Thus, to get the view, a module
 needs to include code like this:
 
-```php
-
+```php-inline
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)
     {
         $sharedEventManager->attach(
@@ -55,8 +53,8 @@ directory, and the second parameter is the namespace for the module.
 
 Javascript files are added similarly, using
 
-```php
-    $view->headScript()->appendFile($view->assetUrl('js/mymodule.js', 'MyModule'));
+```php-inline
+$view->headScript()->appendFile($view->assetUrl('js/mymodule.js', 'MyModule'));
 ```
 
 ## From a Module::getConfigForm() function

@@ -134,7 +134,7 @@ The default transport is Sendmail, which is set up in `application/config/module
 If using SMTP, use this example configuration, added to the end of `local.config.php`
 (see [laminas-mail docs](https://docs.laminas.dev/laminas-mail/transport/smtp-options/)):
 
-```
+```php-inline
 'mail' => [
     'transport' => [
         'type' => 'smtp',

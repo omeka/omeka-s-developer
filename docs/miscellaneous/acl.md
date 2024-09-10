@@ -26,7 +26,7 @@ Where the ACL service is available, there are three methods: `userIsAllowed()`, 
 
 `isAdminRole($role)` checks whether a user role is among the ones with admin privileges (i.e., `site_admin` or `global_admin`).
 
-```php
+```php-inline
 // Get the ACL service:
 $acl = $this->getServiceLocator()->get('Omeka\Acl');
 if ($acl->userIsAllowed($resource, $privilege)) {
@@ -49,7 +49,7 @@ if ($acl->isAdminRole($role) {
 
 When you have a resource representation, use `userIsAllowed()` to check for privileges on it.
 
-```php
+```php-inline
 // Get a resource representation via the API manager:
 $api = $this->getServiceLocator()->get('Omeka\ApiManager');
 $item = $api->read('items', 1)->getContent();
@@ -62,7 +62,7 @@ if ($item->userIsAllowed($privilege)) {
 
 From within a view or a controller, the `userIsAllowed()` helper is available:
 
-```php
+```php-inline
 // In a view script:
 if ($this->userIsAllowed($resource, $privilege)) {
     // current user is allowed

@@ -40,7 +40,7 @@ Instead of writing strings directly in the markup, use the `translate()` helper.
 
 As a simple real example, see this line from the installer view:
 
-```php
+```html+php
 <h1><?php echo $this->translate('Install Omeka S'); ?></h1>
 ```
 
@@ -70,7 +70,7 @@ split the original line into multiple lines.
 Here's an example of using the `// @translate` comment in the site navigation section of
 a module's `module.config.php` file:
 
-```php
+```php-inline
 return [
     'navigation' => [
         'site' => [
@@ -90,7 +90,7 @@ return [
 
 And here's one from a form class that extends `Laminas\Form\Form`:
 
-```php
+```php-inline
 public function init()
 {
     $this->add([
@@ -122,7 +122,7 @@ inserted into. To do this, Omeka S uses the PHP function [sprintf](https://www.p
 The basic placeholder for sprintf is `%s`. It's simplest to show an example of how this
 gets used to make a dynamic string translatable. The following untranslated code:
 
-```php
+```html+php
 There are <?php echo $this->escapeHtml($results); ?> results.
 ```
 

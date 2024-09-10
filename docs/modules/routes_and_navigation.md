@@ -6,23 +6,22 @@ Routes define the connections between URL paths and the controllers and actions
 that handle them. Thus, for a module to display a page at, e.g. `/yourmodule/controller/action`,
 you need to define that route in `module.config.php`:
 
-```php
-
-    'router' => array(
-        'routes' => array(
-                'your-module' => array(
+```php-inline
+    'router' => [
+        'routes' => [
+                'your-module' => [
                     'type' => 'Segment',
-                    'options' => array(
+                    'options' => [
                         'route' => '/yourmodule/controller/action',
-                        'defaults' => array(
+                        'defaults' => [
                             '__NAMESPACE__' => 'Yourmodule\Controller',
                             'controller' => 'Controller',
                             'action' => 'action',
-                        ),
-                    ),
-                ),
-            ),
-        ),
+                        ],
+                    ],
+                ],
+            ],
+        ],
 ```
 
 There are many options for defining the route. See the [Laminas Framework documentation](https://docs.laminas.dev/laminas-router/routing/)
@@ -37,88 +36,87 @@ as a child of the main admin router. There will be two valid routes for the modu
 it defines two child routes of its own under the `omeka2importer` route, `past-imports`
 and `map-elements`.
 
-```php
-    'router' => array(
-        'routes' => array(
-            'admin' => array(
-                'child_routes' => array(
-                    'omeka2importer' => array(
+```php-inline
+    'router' => [
+        'routes' => [
+            'admin' => [
+                'child_routes' => [
+                    'omeka2importer' => [
                         'type' => 'Literal',
-                        'options' => array(
+                        'options' => [
                             'route' => '/omeka2importer',
-                            'defaults' => array(
+                            'defaults' => [
                                 '__NAMESPACE__' => 'Omeka2Importer\Controller',
                                 'controller' => 'Index',
                                 'action' => 'index',
-                            ),
-                        ),
+                            ],
+                        ],
                         'may_terminate' => true,
-                        'child_routes' => array(
-                            'past-imports' => array(
+                        'child_routes' => [
+                            'past-imports' => [
                                 'type' => 'Literal',
-                                'options' => array(
+                                'options' => [
                                     'route' => '/past-imports',
-                                    'defaults' => array(
+                                    'defaults' => [
                                         '__NAMESPACE__' => 'Omeka2Importer\Controller',
                                         'controller' => 'Index',
                                         'action' => 'past-imports',
-                                    ),
-                                ),
-                            ),
-                            'map-elements' => array(
+                                    ],
+                                ],
+                            ],
+                            'map-elements' => [
                                 'type' => 'Literal',
-                                'options' => array(
+                                'options' => [
                                     'route' => '/map-elements',
-                                    'defaults' => array(
+                                    'defaults' => [
                                         '__NAMESPACE__' => 'Omeka2Importer\Controller',
                                         'controller' => 'Index',
                                         'action' => 'map-elements',
-                                    ),
-                                ),
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    ),
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
 ```
 
 Then, the navigation key adds to the Admin navigation, defined by `AdminModule`.
 As will all settings in `module.config.php`, Omeka merges the array values for each
 key.
 
-```php
-    'navigation' => array(
-        'AdminModule' => array(
-            array(
+```php-inline
+    'navigation' => [
+        'AdminModule' => [
+            [
                 'label' => 'Omeka 2 Importer',
                 'route' => 'admin/omeka2importer',
                 'resource' => 'Omeka2Importer\Controller\Index',
-                'pages' => array(
-                    array(
+                'pages' => [
+                    [
                         'label' => 'Import',
                         'route' => 'admin/omeka2importer',
                         'resource' => 'Omeka2Importer\Controller\Index',
-                    ),
-                    array(
+                    ],
+                    [
                         'label' => 'Import',
                         'route' => 'admin/omeka2importer/map-elements',
                         'resource' => 'Omeka2Importer\Controller\Index',
                         'visible' => false,
-                    ),
-                    array(
+                    ],
+                    [
                         'label' => 'Past Imports',
                         'route' => 'admin/omeka2importer/past-imports',
                         'controller' => 'Index',
                         'action' => 'past-imports',
                         'resource' => 'Omeka2Importer\Controller\Index',
-                    ),
-                ),
-            ),
-        ),
-    ),
-
+                    ],
+                ],
+            ],
+        ],
+    ],
 ```
 
 The links to pages correspond to the routes defined in the router.
@@ -127,8 +125,7 @@ The pattern for adding to a Site's navigation is similar, but adds to the `admin
 route and the `site` navigation, as shown in this example taken from the MetadataBrowse
 module:
 
-```php
-
+```php-inline
     'navigation' => [
         'site' => [
             [
@@ -184,7 +181,6 @@ module:
             ],
         ],
     ],
-
 ```
 
 ## See also

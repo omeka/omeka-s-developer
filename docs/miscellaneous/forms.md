@@ -14,7 +14,7 @@ Use the `Event::ADD_ELEMENTS` and `Event::ADD_INPUT_FILTERS` events, respectivel
 
 See [Modules](../modules/index.md) for the broader structure of modules.
 
-```php
+```php-inline
 
     public function addElements(Event $event)
     {
@@ -39,7 +39,7 @@ See [Modules](../modules/index.md) for the broader structure of modules.
 
 Validation is handled via input filters on the elements. Thus, to modify the server-side validation of forms, use the `Event::SITE_SETTINGS_ADD_INPUT_FILTERS` and `Event::GLOBAL_SETTINGS_ADD_INPUT_FILTERS` events.
 
-```php
+```php-inline
 
     public function addFilters($event)
     {

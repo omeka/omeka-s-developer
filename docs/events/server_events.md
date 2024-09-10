@@ -8,7 +8,7 @@ The main module class (Module.php) provides a method for easily attaching listen
 
 Events are triggered based on the name of the event, and the class of the object that triggers it. A typical attachment of a listener in a module looks like:
 
-```php
+```php-inline
 public function attachListeners(SharedEventManagerInterface $sharedEventManager) 
 {
     $sharedEventManager->attach(

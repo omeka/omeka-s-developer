@@ -4,7 +4,7 @@
 
 Following Laminas Framework, services, taken together, comprise most the the core functionality of Omeka S. For example, to execute a database query, you need first to get the `Omeka\Connection` service:
 
-```php
+```php-inline
 $connection = $serviceLocator->get('Omeka\Connection');
 
 $sql = ''; // whatever SQL you need to execute
@@ -13,7 +13,7 @@ $connection->exec($sql);
 
 For many common tasks, Omeka S provides helpers for obtaining the necessary service. Thus, when you need to use the `Omeka\Logger` service, you need not get it via the `$serviceLocator` (indeed, often you cannot -- more on that below). Instead, within a controller you can simply do:
 
-```php
+```php-inline
 $this->logger()->warn('Something bad is happening.');
 ```
 
@@ -24,8 +24,7 @@ Among other things, factories are used to instantiate a class and inject other r
 
 Take, for example, the Omeka2Importer plugin. Its first job is to retrieve data from an existing Omeka Classic site. A client for interacting with Omeka Classic's API had already been developed to handle the tasks of requesting and processing data. That client just needed to be included into the Omeka S module to make it available. That happens by using a Factory to inject the Service into the Controller.
 
-```php
-
+```php-inline
 namespace Omeka2Importer\Service\Controller;
 
 use Omeka2Importer\Controller\IndexController;
@@ -46,8 +45,7 @@ The constructor for `Omeka2Importer\Controller\IndexController\IndexController` 
 
 Another common Factory task is to inject needed services into Forms. For example, if you need the `Laminas\Event\EventManager` to trigger an event or access to Site setting, you will need to create the Form via a Factory that injects it:
 
-```php
-
+```php-inline
 namespace Omeka\Service\Form;
 
 use Omeka\Form\SiteSettingsForm;
@@ -69,7 +67,7 @@ class SiteSettingsFormFactory implements FactoryInterface
 
 The Form itself must have getters and setters:
 
-```php
+```php-inline
     /**
      * @param SiteSettings $siteSettings
      */
@@ -94,7 +92,7 @@ Those services will now be available within the form.
 
 In `module.config.php`, you will need to assert that the class in question is produced by a factory:
 
-```php
+```php-inline
     'controllers' => array(
         'factories' => array(
             'Omeka2Importer\Controller\Index' => 'Omeka2Importer\Service\Controller\IndexControllerFactory',

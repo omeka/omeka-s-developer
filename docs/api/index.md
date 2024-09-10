@@ -5,8 +5,8 @@ operations on its resources. API resources are objects with a type, associated d
 relationships to other resources, and sets of methods that operate on them. There
 are two ways to access Omeka's API:
 
-- Programmatically, from within Omeka's PHP environment (see the [PHP API documentation](php_api))
-- Using Omeka's [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) web service (see the [REST API documentation](rest_api))
+- Programmatically, from within Omeka's PHP environment (see the [PHP API documentation](php_api.md))
+- Using Omeka's [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) web service (see the [REST API documentation](rest_api.md))
 
 ## Operations
 

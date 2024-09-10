@@ -76,3 +76,18 @@ nav:
         - themes/theme_settings.md
         - themes/theme_templates.md
         - themes/theme_use_resource_page_blocks.md
+    - Modules (Omeka Team):
+        - module_docs/Collecting.md
+        - module_docs/CopyResources.md
+        - module_docs/CustomVocab.md
+        - module_docs/Datavis.md
+        - module_docs/ExtractMetadata.md
+        - module_docs/ExtractText.md
+        - module_docs/FacetedBrowse.md
+        - module_docs/IiifPresentation.md
+        - module_docs/Mapping.md
+        - module_docs/Osii.md
+        - module_docs/RedactValues.md
+        - module_docs/Scripto.md
+        - module_docs/UriDereferencer.md
+        - module_docs/ZoteroImport.md

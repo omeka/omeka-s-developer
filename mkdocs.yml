@@ -72,3 +72,7 @@ nav:
         - module_docs/FacetedBrowse.md
         - module_docs/IiifPresentation.md
         - module_docs/Mapping.md
+        - module_docs/Osii.md
+        - module_docs/RedactValues.md
+        - module_docs/Scripto.md
+        - module_docs/UriDereferencer.md

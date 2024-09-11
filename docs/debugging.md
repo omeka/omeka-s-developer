@@ -1,4 +1,4 @@
-# Debugging Omeka S
+# Debugging
 
 ## Configuration
 
@@ -74,4 +74,3 @@ $logger = $serviceLocator->get('Omeka\Logger');
 ```
 
 and add it as a property for your class.
-

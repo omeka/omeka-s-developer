@@ -1,4 +1,9 @@
-# Contributing to Omeka S
+# Contributing
+
+## Security
+
+The Omeka Team takes security very seriously. If you encounter a security issue,
+please contact us at [security@omeka.org](mailto:security@omeka.org).
 
 ## Code Style
 
@@ -10,7 +15,7 @@ Omeka S contains a `.php_cs` file that you can use with [PHP-CS-Fixer](https://g
 
 ## Accessibility
 
-The Omeka Team strives to adhere to the principles and guidelines for accessibility that are articulate in [Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/). Contributions to the core and addons should also uphold those standards.  
+The Omeka Team strives to adhere to the principles and guidelines for accessibility that are articulate in [Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/). Contributions to the core and addons should also uphold those standards.
 
 ## Tips for pull requests
 
@@ -24,4 +29,4 @@ We use the `php-cs-fixer` library in our testing suite. After including function
 
 ## Helping with documentation
 
-Documentation inevitably lags behind the actual code in some places. We welcome questions, corrections, and pull requests to the [documentation](https://github.com/omeka/omeka-s-developer/issues). 
+Documentation inevitably lags behind the actual code in some places. We welcome questions, corrections, and pull requests to the [documentation](https://github.com/omeka/omeka-s-developer/issues).

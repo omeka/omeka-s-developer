@@ -1,3 +1,19 @@
+# 2025 Development Priorities
+
+During 2025, the Omeka Team have identified the following key priorities to guide their work:
+
+- Accessibility and usability improvements
+- Improved site authoring and design flexibility
+- New themes
+- Increased attention to global language and authoring issues
+- Continuted improvements to developer and designer documentation
+- Sustainability and preservation paths
+- Continued development of modules to support the work archives and museum
+- Continued geospatial feature development
+- Transcription service integration
+- Ongoing infrastructure maintenance and updates
+- Supporting community formation and communication
+
 # 2024 Development Priorities
 
 During 2024, the Omeka Team have identified the following key priorities to guide their work:

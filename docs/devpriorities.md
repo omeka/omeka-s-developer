@@ -8,7 +8,7 @@ During 2025, the Omeka Team have identified the following key priorities to guid
 - Increased attention to global language and authoring issues
 - Continuted improvements to developer and designer documentation
 - Sustainability and preservation paths
-- Continued development of modules to support the work archives and museum
+- Continued development of modules to support the work of archives and museums
 - Continued geospatial feature development
 - Transcription service integration
 - Ongoing infrastructure maintenance and updates

@@ -10,5 +10,5 @@ this repository for release. Run `$ npm install` in the the module's /asset dire
 
 - `/api/mappings`
 - `/api/mappings/:id`
-- `/api/mappmapping_featuresings`
+- `/api/mapping_features`
 - `/api/mapping_features/:id`

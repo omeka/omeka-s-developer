@@ -38,4 +38,4 @@ page_templates.[template-filename] = "[Template display name]"
 Similar to block templates, `[template-filename]` is the name of the template in `view/common/page-template` without the `.phtml` file extension, while `[Template display name]` is what appears in the page builder interface where the user selects the page template.
 
 !!! Example
-    For a page template that provides custom markup for a javascript timeline, you could create a file at `view/common/page-templates/js-timeline.phtml`. In the `theme.ini`, you would register it by including `page_templates.js-timeline = "Javascript timeline"`.
+    For a page template that provides custom markup for a javascript timeline, you could create a file at `view/common/page-template/js-timeline.phtml`. In the `theme.ini`, you would register it by including `page_templates.js-timeline = "Javascript timeline"`.

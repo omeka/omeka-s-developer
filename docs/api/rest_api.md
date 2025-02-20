@@ -32,6 +32,9 @@ alternate valid JSON-LD structures. The Content-Type of a request with a payload
 must be `application/json` (or `multipart/form-data` if sending a multipart request).
 Format specifers (before `+`, i.e., `application/ld+json`, are also allowed).
 
+Parameters are passed to the REST API using the query string, with PHP's convention
+for passing arrays using square brackets in the parameter names.
+
 ## Authentication
 
 The API permits anonymous access to public resources (i.e., reading non-private
@@ -123,3 +126,42 @@ DELETE /api/:api_resource/:id
 
 Delete a resource. The `id` URL parameter is required.
 
+## Examples
+
+### List items
+
+URL to get the JSON-LD for all items with a GET request, as a paginated list:
+
+```text
+/api/items
+```
+
+The response is an array of JSON-LD objects, one for each item. One page of the full
+result set will be returned, with additional pages being available using the `page`
+parameter:
+
+```urlencoded
+/api/items?page=2
+```
+
+Parameters can be added to filter and sort the result set. (See the
+[API Reference](api_reference.md) for possibilities). For example, to list all items
+using the resource class with ID 2, ordered by their item ID with the highest IDs first:
+
+```urlencoded
+/api/items?resource_class_id=2&sort_by=id&sort_order=desc
+```
+
+To get the same results but further filtered to only include items that contain the
+string "foo" in the dcterms:title property, using the `property` parameter
+(with newlines inserted between the parameters for clarity):
+
+```urlencoded
+/api/items
+    ?resource_class_id=2
+    &property[0][property]=dcterms:title
+    &property[0][type]=in
+    &property[0][text]=foo
+    &sort_by=id
+    &sort_order=desc
+```

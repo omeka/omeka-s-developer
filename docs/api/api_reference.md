@@ -12,12 +12,20 @@ These are the search parameters that are common to almost all API resources:
 | Parameter | Description | Type | Default |
 | --- | --- | --- | --- |
 | id | Limit matches to the given ID or IDs. Multiple IDs can be specified using the PHP array syntax (`id[]`). (added in 3.0.0) | integer or integer[] | none |
-| sort_by | Sort the result set by this field | string | created |
-| sort_order | Sort the result set in this order, ascending ("asc") or descending ("desc") | string | desc |
-| page | The page number of the result set to return | integer | 1 |
+| sort_by | Sort the result set by this field | string | id (REST API only, none in PHP API) |
+| sort_order | Sort the result set in this order, ascending ("asc") or descending ("desc"). Only takes effect if sort_by is set. | string | asc |
+
+The following parameters are used for pagination and limiting of the results. In the REST API, pagination is enabled by default, but in the PHP API the default
+is for no limiting to be applied. `page` takes precedence over `limit`/`offset` if both are given.
+
+| Parameter | Description | Type | Default |
+| --- | --- | --- | --- |
+| page | The page number of the result set to return | integer | 1 (REST API only, none in PHP API) |
 | per_page |  The number of results per page | integer | uses [global "results per page" setting](https://omeka.org/s/docs/user-manual/admin/settings/#general) |
-| limit | The number of results to return | integer | 0 (all) |
+| limit | The number of results to return | integer | none (all results) |
 | offset | The number offset of results to return | integer | 0 (no offset) |
+
+A `limit` of 0 will perform the query and count the total results but not return any content.
 
 ### Parameters for RDF resources
 

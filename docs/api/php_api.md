@@ -24,11 +24,23 @@ the following API operations:
 - `delete($resource, $id, $data, $options)`: delete a resource by ID
 - `batchDelete($resource, $ids, $data, $options)`: batch delete resources by IDs
 
-The `$resource` argument is the resource name. For read, update, and delete operations,
-the `$id` argument is the resource ID. The `$data` argument is an optional array
-of API request parameters. For create and update operations, the `$fileData` argument
-is an optional array of file data. The `$options` argument is an optional array
-of API request options.
+The operations mostly reuse a small handful of the same parameters:
+
+- `$resource` is the resource name (`items`, `media`, etc.) and is required for any
+  operation as the first parameter
+- `$id` is the ID of the specific resource to retrieve or act on, used for read, update,
+  and delete operations. Usually this is just an integer ID, though where appropriate you
+  can pass an array here specifying that you're looking up the resource with a different
+  piece or pieces of data. For example, sites and pages are often looked up by slug, and
+  so can use `['slug' => 'a-slug']` as the ID parameter.
+- `$data` is an optional array of API request parameters. Some operations like read
+  rarely use this parameter, but for others it's the most important: for search, it holds
+  the [query](api_reference.md#api-search-parameters); for create and update it holds the
+  data being set to the resource.
+- `$fileData` is an optional array of file data, used for create and update operations when
+  a file is being uploaded as part of the operation. When used, `$fileData` typically comes
+  getting the uploaded file data from the Laminas MVC: `$this->getRequest()->getFiles()->toArray();`
+- `$options` is an optional array of [API request options](api_reference.md#api-request-options).
 
 Each operation will return an API [response object](#responses) containing the
 requested data and other relevant information. You can get the resultant

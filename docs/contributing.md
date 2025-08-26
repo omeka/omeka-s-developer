@@ -31,9 +31,5 @@ We use the `php-cs-fixer` library in our testing suite. After including function
 
 Documentation inevitably lags behind the actual code in some places. We welcome questions, corrections, and pull requests to the [documentation](https://github.com/omeka/omeka-s-developer/issues).
 
-## Contributed Addons
-
-To contribute an Addon to one of the directories, follow the instructions on the [Registering an Addon](https://omeka.org/s/docs/developer/register_an_addon/) page. 
-
 ### Submissions
 The Omeka Team (Digital Scholar), in its sole discretion, may refuse to post, remove, or refuse to remove, any Submissions, in whole or in part, alleged to be unacceptable, undesirable, inappropriate, or in violation of the Terms of Service.  

@@ -90,6 +90,12 @@ nav:
         - module_docs/Scripto.md
         - module_docs/UriDereferencer.md
         - module_docs/ZoteroImport.md
+    - Patterns:
+        - patterns/index.md
+        - patterns/action_list.md
+        - patterns/drawer.md
+        - patterns/field.md
+        - patterns/meta_group.md
     - contributing.md
     - debugging.md
     - register_an_addon.md

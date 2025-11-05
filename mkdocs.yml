@@ -79,6 +79,7 @@ nav:
         - module_docs/CopyResources.md
         - module_docs/CustomVocab.md
         - module_docs/Datavis.md
+        - module_docs/Exports.md
         - module_docs/ExtractMetadata.md
         - module_docs/ExtractText.md
         - module_docs/FacetedBrowse.md
@@ -88,6 +89,7 @@ nav:
         - module_docs/Osii.md
         - module_docs/RedactValues.md
         - module_docs/Scripto.md
+        - module_docs/StaticSiteExport.md
         - module_docs/UriDereferencer.md
         - module_docs/ZoteroImport.md
     - contributing.md

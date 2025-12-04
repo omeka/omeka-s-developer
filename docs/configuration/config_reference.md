@@ -7,9 +7,17 @@ configuration settings.
 
 The following configuration settings are available (more may be added by modules):
 
-## Api Adapters
+## API Adapters
 
 - `api_adapters`: A list of API adapters for Omeka S resources (see [Omeka S API docs](../api/index.md))
+
+## API Assets
+
+Configuration for Assets (user-added files like custom logos, thumbnails, etc.)
+
+- `api_assets`
+    - `allowed_media_types`: (Since 4.0.2) An array of media (MIME) types that are allowed to be uploaded as assets.
+    - `allowed_extensions`: (Since 4.0.3) An array of file extensions that are allowed to be uploaded as assets.
 
 ## Assets
 
@@ -23,6 +31,25 @@ Configuration for asset files (JavaScript, CSS, fonts, etc.).
 
 - `block_layouts`: a list of block layouts for Omeka S sites
 
+## Block Templates
+
+- `block_templates`: (Since 4.2) An array of [block templates](../themes/theme_templates.md), used to allow modules to add their own templates.
+
+## Browse Defaults
+
+- `browse_defaults`: (Since 4.0) Default sorting settings for controllers, keyed by interface (admin vs. public), then controller name. For each controller `sort_by` and `sort_order` can be set.
+
+```php-inline
+'browse_defaults' => [
+    'admin' => [
+        'items' => [
+            'sort_by' => 'created',
+            'sort_order' => 'desc',
+        ],
+    ],
+],
+```
+
 ## CLI
 
 Configuration for executing PHP-CLI.
@@ -30,6 +57,13 @@ Configuration for executing PHP-CLI.
 - `cli`
     - `execute_strategy`: The execution strategy allowed by your server ("exec" (default) or "proc_open");
     - `phpcli_path`: The server path of the PHP version used to run Omeka S (auto-detected by default; e.g. "/usr/bin/php55").
+
+## Columns
+
+(Since 4.0) Configuration for column settings in the admin interface.
+
+- `column_types`: Available column types for use in the interface (this is a Laminas plugin manager config)
+- `column_defaults`: Default column config for views, keyed by interface (admin vs. public), then view.
 
 ## Controllers
 
@@ -43,6 +77,8 @@ Configuration for executing PHP-CLI.
 
 - `data_types`: A list of data types for Omeka S resource templates
 
+(Since 3.1) In addition to the usual Laminas plugin manager keys, this additionally takes the key `value_annotating`, an array of data type names that are available for value annotations).
+
 ## Entity Manager
 
 Doctrine entity manager settings.
@@ -54,6 +90,7 @@ Doctrine entity manager settings.
     - `filters`: A list of SQL filters (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html))
     - `functions`: A list of user defined numeric, string, and datetime DQL functions (see [Doctrine docs](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html))
     - `proxy_paths`: A list of server paths to directories containing Doctrine proxies
+    - `data_types` (Since 4.1) An array of Doctrine DBAL custom data types to register
 
 ## File Renderers
 
@@ -115,12 +152,12 @@ Configuration for Omeka S installation.
 
 ## Logger
 
-Logging settings for application-level messages.
+Logging settings for application-level messages. These settings are commonly overridden in the `local.config.php`, particularly the `log` setting to turn on logging.
 
 - `logger`
-    - `log`: Log errors? (`false` (default) or `true`)
+    - `log`: Log errors? (boolean, default `false`)
     - `priority`: The priority level at which to start logging (default `\Laminas\Log\Logger::NOTICE`; see [laminas-log docs](https://docs.laminas.dev/laminas-log/intro/#using-built-in-priorities))
-    - `path`: The server path to the log file
+    - `path`: The server path to the log file (the preconfigured path is the default log path within the site, but this can be set to any server-writable path to change where the log is stored)
 
 ## Mail
 
@@ -168,7 +205,13 @@ If using SMTP, use this example configuration, added to the end of `local.config
 
 ## oEmbed
 
-- `oembed`: A whitelist of allowable URL patterns for ingesting oEmbed media
+- `oembed`:
+    - `whitelist`: An array of allowable URL patterns for ingesting oEmbed media
+        - Before version 4.2, the values here are just string regexes for allowed URLs. In 4.2 each value can also be a two-element array where the first element is the regex as before, and the second is the URL to the oEmbed endpoint for that site.
+
+## Page Templates
+
+- `page_templates`: (Since 4.2) An array of [page templates](../themes/theme_templates.md), used to allow modules to add their own templates.
 
 ## Password
 
@@ -186,6 +229,13 @@ Configuration for the access control list (ACL).
 
 - `permissions`:
     - `acl_resources`: A list of resources to load into the access control list. API adapters, Doctrine entities, and controllers that are registered in configuration are automatically loaded.
+ 
+## Resource Page Block Layouts
+
+(Since 4.0) Configuration for [Resource Page Block Layouts](../themes/theme_use_resource_page_blocks.md) for themes.
+
+- `resource_page_block_layouts`: Available layouts. (this is a Laminas plugin manager config)
+- `resource_page_blocks_default`: Default theme config for resource page blocks, per resource. This is blank in the default configuration, meaning that only the themes' default settings are used.
 
 ## Service Manager
 
@@ -198,6 +248,25 @@ Configuration for saving state between requests.
 - `session`:
     - `config`: Session configuration options (see [laminas-session docs](https://docs.laminas.dev/laminas-session/config/))
     - `save_handler`: Session save handler (leave `null` to use default database handler; see [laminas-session docs](https://docs.laminas.dev/laminas-session/save-handler/)))
+
+## Sort Defaults
+
+- `sort_defaults` (Since 4.0) Default available choices for the sort selector on browse pages. Keyed by interface (admin vs. public), then controller name.
+
+```php-inline
+'sort_defaults' => [
+    'admin' => [
+        'items' => [
+            'title' => 'Title', // @translate
+            'resource_class_label' => 'Resource class', // @translate
+            'owner_name' => 'Owner', // @translate
+            'created' => 'Created', // @translate
+        ],
+    ],
+],
+```
+
+Note: since the values in the innermost array here are user-facing, they're typically marked with the `// @translate` comment to mark them as translatable strings.
 
 ## Temporary Directory
 

@@ -1,3 +1,5 @@
+> :warning: For StaticSiteExport versions <= 1.0.0, you must use Hugo versions < 0.146.0. For StaticSiteExport versions > 1.0.0, you must use Hugo versions >= 0.146.0.
+
 ### Modifying the Hugo theme
 
 To modify the Hugo theme, first clone it in the module's data/ directory:

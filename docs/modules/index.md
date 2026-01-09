@@ -20,18 +20,22 @@ MyModule/
     asset/
         <asset-directories-and files>/
     view/
-        <module-namespace>/
+        my-module/
             <controller-directories>/
                 <action-template-files>.phtml
         common/
-          mymodule-<template-files>.phtml
+            mymodule-<template-files>.phtml
 ```
 
 The name of the module directory (`MyModule` above) is significant. It must be a
-reasonably unique, concise, and descriptive name of your module in CamelCase format.
+unique, concise, and descriptive name of your module in CamelCase format.
 
 The `asset` directory contains assets such as JavaScript, CSS, and image files,
 usually in their own subdirectories.
+
+View templates for pages are stored under the `view/my-module` folder. The name of
+the folder under `view` is a lowercase, hyphen-separated version of your module's
+name (so `MyModule` becomes `my-module`).
 
 When using a shared directory in the `view` directory (such as `common` above) be
 sure to name the templates in such a way to avoid naming collisions. A good practice
@@ -135,6 +139,8 @@ in config/module.ini and use the `getConfigForm()` and `handleConfigForm()` meth
 in your module class, like below:
 
 ```php-inline
+namespace MyModule;
+
 use Omeka\Module\AbstractModule;
 use Laminas\View\Model\ViewModel;
 use Laminas\Mvc\Controller\AbstractController;
@@ -175,6 +181,8 @@ in the `Module.php` file. Use the `attachListeners` method in your module class,
 like below:
 
 ```php-inline
+namespace MyModule;
+
 use Omeka\Module\AbstractModule;
 use Laminas\EventManager\Event;
 use Laminas\EventManager\SharedEventManagerInterface;

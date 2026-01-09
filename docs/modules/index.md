@@ -87,6 +87,8 @@ method. Even so, we recommend that you include a `config/module.config.php` file
 to better organize your code.
 
 ```php-inline
+namespace MyModule;
+
 use Omeka\Module\AbstractModule;
 use Laminas\View\Model\ViewModel;
 use Laminas\Mvc\Controller\AbstractController;

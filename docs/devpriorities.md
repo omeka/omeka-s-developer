@@ -1,4 +1,19 @@
-# 2025 Development Priorities
+# 2026 Development Priorities
+
+During 2026, the Omeka Team have identified the following key priorities to guide their work:
+
+- Infrastructure maintenance and updates
+- Continued accessibility review, improvement, and documentation
+- Continued workflow optimization
+- Improved page block organization
+- Continued attention to global language and authoring issues
+- Enabling child themes
+- Continued integration paths for external computational services
+- Additional archives and preservation support (ArchiveSpace and Archivematica connectors)
+- Continued improvements to developer and designer documentation
+- Continued improvement of community engagement and support pathways
+
+## 2025 Development Priorities
 
 During 2025, the Omeka Team have identified the following key priorities to guide their work:
 
@@ -14,7 +29,7 @@ During 2025, the Omeka Team have identified the following key priorities to guid
 - Ongoing infrastructure maintenance and updates
 - Supporting community formation and communication
 
-# 2024 Development Priorities
+## 2024 Development Priorities
 
 During 2024, the Omeka Team have identified the following key priorities to guide their work:
 

@@ -144,7 +144,7 @@ in your module class, like below:
 namespace MyModule;
 
 use Omeka\Module\AbstractModule;
-use Laminas\View\Model\ViewModel;
+use Laminas\View\Renderer\PhpRenderer;
 use Laminas\Mvc\Controller\AbstractController;
 
 class Module extends AbstractModule
@@ -157,7 +157,7 @@ class Module extends AbstractModule
      * @param ViewModel $view
      * @return string
      */
-    public function getConfigForm(ViewModel $view)
+    public function getConfigForm(PhpRenderer $renderer)
     {
         return '<input name="foo">';
     }

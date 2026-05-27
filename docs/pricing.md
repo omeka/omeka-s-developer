@@ -2,4 +2,4 @@
 template: 'landing.html'
 ---
 
-# Home
+# Pricing

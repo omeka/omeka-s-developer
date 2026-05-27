@@ -1,11 +1,18 @@
 site_name: Omeka S Developer Documentation
 theme:
     name: 'material'
+    custom_dir: 'overrides'
     include_homepage_in_sidebar: false
     navigation_depth: 3
     logo: assets/omeka-logo.png
     font:
         text: Lato
+    static_templates:
+        - landing.html
+plugins:
+    - search
+    - blog:
+        blog_dir: blog
 repo_url: 'http://github.com/omeka/omeka-s-developer'
 extra_css:
     - css/extra.css
@@ -27,71 +34,71 @@ markdown_extensions:
     - pymdownx.snippets
     - pymdownx.superfences
 nav:
-    - index.md
+    - developer/index.md
     - Changes:
-        - whatsnew.md
-        - for_classic_developers.md
-        - devpriorities.md
+        - developer/whatsnew.md
+        - developer/for_classic_developers.md
+        - developer/devpriorities.md
     - API:
-        - api/index.md
-        - api/php_api.md
-        - api/rest_api.md
-        - api/representations.md
-        - api/api_reference.md
-        - api/rest_api_reference.md
+        - developer/api/index.md
+        - developer/api/php_api.md
+        - developer/api/rest_api.md
+        - developer/api/representations.md
+        - developer/api/api_reference.md
+        - developer/api/rest_api_reference.md
     - Concepts:
-        - miscellaneous/acl.md
-        - miscellaneous/doctrine_orm.md
-        - miscellaneous/forms.md
-        - miscellaneous/internationalization.md
+        - developer/miscellaneous/acl.md
+        - developer/miscellaneous/doctrine_orm.md
+        - developer/miscellaneous/forms.md
+        - developer/miscellaneous/internationalization.md
     - Configuration:
-        - configuration/index.md
-        - configuration/config_reference.md
-        - configuration/services_and_factories.md
+        - developer/configuration/index.md
+        - developer/configuration/config_reference.md
+        - developer/configuration/services_and_factories.md
     - Events:
-        - events/server_events.md
-        - events/client_events.md
-        - events/server_event_reference.md
-        - events/client_event_reference.md
+        - developer/events/server_events.md
+        - developer/events/client_events.md
+        - developer/events/server_event_reference.md
+        - developer/events/client_event_reference.md
     - Theme Development:
-        - themes/index.md
-        - themes/font_icons.md
-        - themes/sass_and_css.md
-        - themes/style_guide.md
-        - themes/theme_functions.md
-        - themes/theme_modifications.md
-        - themes/theme_settings.md
-        - themes/theme_templates.md
-        - themes/theme_use_resource_page_blocks.md
+        - developer/themes/index.md
+        - developer/themes/font_icons.md
+        - developer/themes/sass_and_css.md
+        - developer/themes/style_guide.md
+        - developer/themes/theme_functions.md
+        - developer/themes/theme_modifications.md
+        - developer/themes/theme_settings.md
+        - developer/themes/theme_templates.md
+        - developer/themes/theme_use_resource_page_blocks.md
     - Module Development:
-        - modules/index.md
-        - modules/controller_plugins.md
-        - modules/data_model.md
-        - modules/data_types.md
-        - modules/internationalization.md
-        - modules/media_ingesters_renderers.md
-        - modules/page_blocks.md
-        - modules/routes_and_navigation.md
-        - modules/view_helpers.md
-        - modules/viewmodel.md
+        - developer/modules/index.md
+        - developer/modules/controller_plugins.md
+        - developer/modules/data_model.md
+        - developer/modules/data_types.md
+        - developer/modules/internationalization.md
+        - developer/modules/media_ingesters_renderers.md
+        - developer/modules/page_blocks.md
+        - developer/modules/routes_and_navigation.md
+        - developer/modules/view_helpers.md
+        - developer/modules/viewmodel.md
     - Modules (Omeka Team):
-        - module_docs/Collecting.md
-        - module_docs/CopyResources.md
-        - module_docs/CustomVocab.md
-        - module_docs/Datavis.md
-        - module_docs/Exports.md
-        - module_docs/ExtractMetadata.md
-        - module_docs/ExtractText.md
-        - module_docs/FacetedBrowse.md
-        - module_docs/IiifPresentation.md
-        - module_docs/InverseProperties.md
-        - module_docs/Mapping.md
-        - module_docs/Osii.md
-        - module_docs/RedactValues.md
-        - module_docs/Scripto.md
-        - module_docs/StaticSiteExport.md
-        - module_docs/UriDereferencer.md
-        - module_docs/ZoteroImport.md
-    - contributing.md
-    - debugging.md
-    - register_an_addon.md
+        - developer/module_docs/Collecting.md
+        - developer/module_docs/CopyResources.md
+        - developer/module_docs/CustomVocab.md
+        - developer/module_docs/Datavis.md
+        - developer/module_docs/Exports.md
+        - developer/module_docs/ExtractMetadata.md
+        - developer/module_docs/ExtractText.md
+        - developer/module_docs/FacetedBrowse.md
+        - developer/module_docs/IiifPresentation.md
+        - developer/module_docs/InverseProperties.md
+        - developer/module_docs/Mapping.md
+        - developer/module_docs/Osii.md
+        - developer/module_docs/RedactValues.md
+        - developer/module_docs/Scripto.md
+        - developer/module_docs/StaticSiteExport.md
+        - developer/module_docs/UriDereferencer.md
+        - developer/module_docs/ZoteroImport.md
+    - developer/contributing.md
+    - developer/debugging.md
+    - developer/register_an_addon.md

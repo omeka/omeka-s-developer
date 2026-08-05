@@ -63,3 +63,6 @@ Before registring your releases we check that certain things are true:
 If all these things are true we register and publish the release. Keep in mind
 that we do not check if the addon works as expected. It is your responsibility to
 set your release to a tag or commit that's in working condition.
+
+### Submissions
+The Omeka Team (Digital Scholar), in its sole discretion, may refuse to post, remove, or refuse to remove, any Submissions, in whole or in part, alleged to be unacceptable, undesirable, inappropriate, or in violation of the Terms of Service.  

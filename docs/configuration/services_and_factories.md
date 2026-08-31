@@ -17,10 +17,32 @@ For many common tasks, Omeka S provides helpers for obtaining the necessary serv
 $this->logger()->warn('Something bad is happening.');
 ```
 
+The `service_manager` config key provides global services like `Omeka\Connection` and `Omeka\Logger` mentioned above. The same "services" pattern and configuration is also used with many other keys like `controllers`, `api_adapters`, and more. These configurations are often recognizable by their having subkeys `invokables` or `factories`, which represent the two common ways of registering services.
+
+This page focuses on these commonly-used cases, but there are more that are used in more specific situations. For more information about all the configuration options for service managers, see [the Laminas documentation](https://docs.laminas.dev/laminas-servicemanager/v3/configuring-the-service-manager/).
+
+## Invokables
+
+The `invokables` subkey is used for simple services that have no dependencies. An invokable links a key with a class name, and when that service is needed, the class is simply instantiated.
+
+A good rule of thumb is that `invokables` is usually suitable for services whose class either has no constructor, or has a constructor that takes no arguments. If the class needs to take arguments, or otherwise needs to be set up beyond simple instantiation, then a factory is probably needed (see the next section).
+
+For an invokable, all that's necessary is one line that maps the key to the class name. For example, the Mapping module registers two API adapters to add resources to the Omeka S API:
+
+```php-inline
+    'api_adapters' => [
+        'invokables' => [
+            'mappings' => Api\Adapter\MappingAdapter::class,
+            'mapping_features' => Api\Adapter\MappingFeatureAdapter::class,
+        ],
+    ],
+```
+
+The key needs to be unique; reusing a key means you'll be overriding an existing service rather than registering a new one.
 
 ## Factories
 
-Among other things, factories are used to instantiate a class and inject other related data and classes into it. In Omeka S, this commonly means making a service available to address a special condition in which the service serves a special need.
+Factories are used to instantiate a class and inject other related data and classes into it. Often, a factory gets used when a class has a dependency on one or more other services.
 
 Take, for example, the Omeka2Importer plugin. Its first job is to retrieve data from an existing Omeka Classic site. A client for interacting with Omeka Classic's API had already been developed to handle the tasks of requesting and processing data. That client just needed to be included into the Omeka S module to make it available. That happens by using a Factory to inject the Service into the Controller.
 
@@ -90,15 +112,16 @@ Those services will now be available within the form.
 
 ### Factory Configuration
 
-In `module.config.php`, you will need to assert that the class in question is produced by a factory:
+Factories use the `factories` subkey. The key of the entry for a service works the same way as for `invokables`, but the value for a factory is instead the name of the *factory* class.
+
+Taking the Omeka2Importer example, in `module.config.php` the index controller is registered using the `factories` subkey:
 
 ```php-inline
-    'controllers' => array(
-        'factories' => array(
+    'controllers' => [
+        'factories' => [
             'Omeka2Importer\Controller\Index' => 'Omeka2Importer\Service\Controller\IndexControllerFactory',
-        ),
-    ),
-
+        ],
+    ],
 ```
 
 ## See also

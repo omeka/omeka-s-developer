@@ -1,6 +1,6 @@
 # Configurable Resource Page Blocks
 
-Omeka S comes with exciting new features, notably configurable blocks for show pages for items, item sets, and media. This feature allows site authors to include and position different types of content on these show pages. This configurable content, organized as “blocks”,  includes the resource’s values, item sets, linked resources, as well as different ways to present associated media.
+Omeka S 4.0 introduces configurable blocks for show pages for items, item sets, and media. This feature allows site authors to include and position different types of content on these show pages. This configurable content, organized as “blocks”,  includes the resource’s values, item sets, linked resources, as well as different ways to present associated media.
 
 ## Adding Resource Page Block Configuration to Themes
 
@@ -58,7 +58,7 @@ If you want a block to be available for every resource type, you must define it 
 ```ini
 resouce_page_blocks.items.main[] = "values"
 resouce_page_blocks.item_sets.main[] = "values"
-resouce_page_blocks.menu.main[] = "values"
+resouce_page_blocks.media.main[] = "values"
 ```
 
 ### Default Content On Show Pages
@@ -210,3 +210,25 @@ Then the `show.phtml` file’s content area looks like this.
 ```
 
 The end result reproduces the previous content output, but now users can decide what content to include or omit, as well as the order of that content.
+
+## Adding New Block Layouts
+
+The set of available resource page blocks includes ones provided by the core, like the default ones discussed above. Modules can also [add resource page blocks](../modules/resource_page_blocks.md).
+
+Since Omeka S 4.2, a theme can add its own resource page block layouts to give users more options without needing a separate module.
+
+These are also set in the `theme.ini` file, using the key `resource_page_block_layouts`:
+
+```ini
+resource_page_block_layouts.custom_block.label = "Custom Block"
+resource_page_block_layouts.custom_block.compatible_resource_names[] = "items"
+resource_page_block_layouts.custom_block.partial = "custom-block"
+```
+
+The `custom_block` part of these lines is an internal identifier for your block layout; it just has to be the same between the three lines that define each block. This internal identifier needs to be unique, so it's a good idea to include your theme's name in the identifier you choose to avoid conflicts.
+
+- `label` is the label for this block that a user will see when configuring the resource page blocks in the site's theme settings.
+- `compatible_resource_names[]` sets which resources this block works with: `items`, `item_sets`, or `media`. For blocks that work with more than one resource, you can repeat the line with each value you need.
+- `partial` is the name of the partial view file that render's the block's content. The view file must be located at `view/common/resource-page-block-layout/<partial>.phtml` in the theme, where `<partial>` is the value given on this line.
+
+So for the above example, the block will appear as "Custom Block" for a user to select, it will only be selectable for the item show page, and its content will be controlled by the file `custom-block.phtml` in the `view/common/resource-page-block-layout` folder of the theme.

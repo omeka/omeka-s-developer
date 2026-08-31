@@ -232,7 +232,7 @@ Configuration for the access control list (ACL).
  
 ## Resource Page Block Layouts
 
-(Since 4.0) Configuration for [Resource Page Block Layouts](../themes/theme_use_resource_page_blocks.md) for themes.
+(Since 4.0) Configuration for [Resource Page Block Layouts](../modules/resource_page_blocks.md) for themes.
 
 - `resource_page_block_layouts`: Available layouts. (this is a Laminas plugin manager config)
 - `resource_page_blocks_default`: Default theme config for resource page blocks, per resource. This is blank in the default configuration, meaning that only the themes' default settings are used.

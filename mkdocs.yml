@@ -71,6 +71,7 @@ nav:
         - modules/internationalization.md
         - modules/media_ingesters_renderers.md
         - modules/page_blocks.md
+        - modules/resource_page_blocks.md
         - modules/routes_and_navigation.md
         - modules/view_helpers.md
         - modules/viewmodel.md
